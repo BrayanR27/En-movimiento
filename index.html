@@ -160,8 +160,8 @@
         /* --- NUEVO: REGLAS ESTRICTAS PARA GENERAR PDF DESDE EL NAVEGADOR --- */
         @media print {
             @page {
-                size: A4 portrait;
-                margin: 0; /* Elimina márgenes extra para que la página ocupe todo */
+                size: landscape; /* IMPRESIÓN HORIZONTAL PARA MEJOR AJUSTE */
+                margin: 0.5cm; /* Margen muy pequeño */
             }
             body { 
                 background: white !important; 
@@ -170,6 +170,8 @@
                 min-height: auto !important; 
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important; /* Fuerza a imprimir los colores de fondo */
+                justify-content: flex-start !important;
+                align-items: flex-start !important;
             }
             
             /* Ocultar botón al imprimir */
@@ -177,7 +179,9 @@
             
             /* Desarmar contenedores de la librería */
             .flipbook-container, #magazine, .stf__wrapper, .stf__block { 
-                display: block !important; 
+                display: flex !important; 
+                flex-direction: column !important;
+                align-items: center !important;
                 position: relative !important;
                 width: 100% !important; 
                 height: auto !important;
@@ -185,25 +189,42 @@
                 transform: none !important; /* Elimina efectos 3D */
             }
             
-            /* Forzar a mostrar TODAS las páginas (incluso las ocultas por el libro 3D) */
+            /* FORMATO DE TARJETA CENTRADA EN LA HOJA */
             .page { 
                 display: block !important; 
                 visibility: visible !important;
                 opacity: 1 !important;
                 position: relative !important; 
-                width: 100% !important; 
-                height: 100vh !important; /* Cada div de clase .page forzará a ocupar el alto de una hoja */
-                page-break-after: always !important; /* Obliga a hacer salto de página al terminar el div */
+                
+                /* Mantener el tamaño original del diseño para que no se deforme */
+                width: 320px !important; 
+                height: 480px !important; 
+                
+                /* Centrar la "tarjeta" en la página impresa */
+                margin: 0 auto !important; 
+                
+                /* Obliga a hacer salto de página al terminar el div */
+                page-break-after: always !important; 
                 break-after: page !important;
-                left: 0 !important; 
-                top: 0 !important; 
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
+                
+                left: auto !important; 
+                top: auto !important; 
                 transform: none !important;
-                box-shadow: none !important;
-                margin: 0 !important;
                 z-index: 1 !important;
+                
+                /* Bordes para que se vea como una página real impresa */
+                border: 1px solid #e5e7eb !important;
+                background-color: #FDFBF7 !important;
             }
 
-            /* Eliminar sombras del medio del libro */
+            /* Portada y contraportada (fondo oscuro) */
+            .page.hard {
+                background: linear-gradient(135deg, #0B2046 0%, #061126 100%) !important;
+            }
+
+            /* Eliminar sombras raras del medio del libro interactivo */
             .page.--left .page-content, .page.--right .page-content { 
                 box-shadow: none !important; 
                 border: none !important; 
@@ -211,6 +232,13 @@
 
             /* Ocultar sombras y efectos residuales de page-flip.js */
             .stf__outer { display: none !important; }
+            
+            /* Asegurar que las imágenes no se salgan de sus contenedores */
+            img {
+                max-width: 100% !important;
+                break-inside: avoid !important;
+                page-break-inside: avoid !important;
+            }
         }
     </style>
 </head>
