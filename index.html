@@ -157,11 +157,10 @@
             border: 1px solid #e5e7eb;
         }
 
-        /* --- NUEVO: REGLAS ESTRICTAS PARA GENERAR PDF DESDE EL NAVEGADOR --- */
         @media print {
             @page {
-                size: portrait; /* IMPRESIÓN VERTICAL PARA LLENAR LA HOJA */
-                margin: 0cm; /* Sin márgenes del navegador para que ocupe todo */
+                size: letter portrait; /* FUERZA EL TAMAÑO CARTA Y ORIENTACIÓN VERTICAL */
+                margin: 0; /* ELIMINA TODOS LOS MÁRGENES */
             }
             body { 
                 background: white !important; 
@@ -169,83 +168,87 @@
                 height: auto !important; 
                 min-height: auto !important; 
                 -webkit-print-color-adjust: exact !important;
-                print-color-adjust: exact !important; /* Fuerza a imprimir los colores de fondo */
-                justify-content: flex-start !important;
-                align-items: flex-start !important;
+                print-color-adjust: exact !important;
             }
             
             /* Ocultar botón al imprimir */
             .btn-imprimir { display: none !important; }
             
-            /* Desarmar contenedores de la librería */
+            /* Contenedor principal ajustado al tamaño exacto de la hoja Carta */
             .flipbook-container, #magazine, .stf__wrapper, .stf__block { 
                 display: block !important; 
                 position: relative !important;
-                width: 100% !important; 
+                width: 215.9mm !important; /* Ancho exacto Carta */
                 height: auto !important;
                 padding: 0 !important;
-                transform: none !important; /* Elimina efectos 3D */
+                margin: 0 !important;
+                transform: none !important;
             }
             
-            /* FORMATO DE PÁGINA COMPLETA */
+            /* FORMATO DE PÁGINA COMPLETA ADAPTADO A CARTA */
             .page { 
-                display: block !important; 
+                display: flex !important; 
                 visibility: visible !important;
                 opacity: 1 !important;
                 position: relative !important; 
                 
-                /* Mantenemos la proporción original para que no se deforme */
-                width: 320px !important; 
-                height: 480px !important; 
+                /* Tamaño exacto Carta */
+                width: 215.9mm !important; 
+                height: 279.4mm !important; 
                 
-                /* EL SECRETO: Escalamos el contenido un 225% para que llene la hoja A4/Carta */
-                zoom: 2.25 !important; 
+                /* Centrado perfecto del contenido interior */
+                justify-content: center !important;
+                align-items: center !important;
                 
-                /* Centrar en la página impresa */
-                margin: 0 auto !important; 
-                
-                /* Obliga a hacer salto de página al terminar el div */
                 page-break-after: always !important; 
                 break-after: page !important;
                 page-break-inside: avoid !important;
                 break-inside: avoid !important;
                 
-                left: auto !important; 
-                top: auto !important; 
-                transform: none !important;
+                left: 0 !important; 
+                top: 0 !important; 
                 z-index: 1 !important;
                 
-                /* Sin bordes para que parezca una revista real */
                 border: none !important;
                 background-color: #FDFBF7 !important;
+                overflow: hidden !important;
+                box-sizing: border-box !important;
+                margin: 0 !important;
+                
+                /* Desactiva el zoom problemático */
+                zoom: normal !important;
             }
 
-            /* Portada y contraportada (fondo oscuro) */
+            /* Contenedor del contenido interno escalado dinámicamente */
+            .page > div {
+                /* Mantiene el tamaño base del diseño */
+                width: 320px !important;
+                height: 480px !important;
+                
+                /* Escala el contenido para que llene el espacio disponible (2.1x es un aproximado ideal para Carta) */
+                transform: scale(2.1) !important;
+                transform-origin: center center !important;
+                
+                /* Asegura que no haya márgenes extra que descuadren el centro */
+                margin: 0 !important;
+                position: absolute !important;
+            }
+
             .page.hard {
                 background: linear-gradient(135deg, #0B2046 0%, #061126 100%) !important;
             }
 
-            /* Eliminar sombras raras del medio del libro interactivo */
             .page.--left .page-content, .page.--right .page-content { 
                 box-shadow: none !important; 
                 border: none !important; 
             }
 
-            /* Ocultar sombras y efectos residuales de page-flip.js */
             .stf__outer { display: none !important; }
-            
-            /* Asegurar que las imágenes no se salgan de sus contenedores */
-            img {
-                max-width: 100% !important;
-                break-inside: avoid !important;
-                page-break-inside: avoid !important;
-            }
         }
     </style>
 </head>
 <body>
 
-    <!-- NUEVO: BOTÓN QUE ABRE EL MENÚ DE IMPRESIÓN/PDF DEL NAVEGADOR -->
     <button onclick="window.print()" title="Imprimir o Guardar como PDF" class="btn-imprimir fixed bottom-6 right-6 z-[100] bg-upngold text-upnblue font-bold py-3 px-5 rounded-full shadow-[0_4px_15px_rgba(0,0,0,0.4)] hover:bg-yellow-400 hover:scale-105 transition-all duration-300 flex items-center gap-2">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
@@ -256,7 +259,6 @@
     <div class="flipbook-container">
         <div id="magazine">
             
-            <!-- PAGINA 1: PORTADA -->
             <div class="page hard">
                 <div class="w-full h-full bg-gradient-to-br from-[#0B2046] to-[#020617] p-5 flex flex-col justify-center items-center text-center relative overflow-hidden">
                     <div class="absolute -top-10 -right-10 w-60 h-60 bg-upngold rounded-full mix-blend-multiply filter blur-3xl opacity-40 z-0"></div>
@@ -279,7 +281,6 @@
                 </div>
             </div>
 
-            <!-- PAGINA 2: EDITORIAL -->
             <div class="page pattern-dots">
                 <div class="page-content content-z">
                     <div class="absolute top-10 right-4 text-[8rem] font-display text-upngold opacity-10 leading-none">"</div>
@@ -315,7 +316,6 @@
                 </div>
             </div>
 
-            <!-- PAGINA 3: MAPA DEL CURSO -->
             <div class="page">
                 <div class="page-content content-z">
                     <span class="header-line">Índice Temático</span>
@@ -373,7 +373,6 @@
                 </div>
             </div>
 
-            <!-- PAGINA 4: PRIMERA CLASE -->
             <div class="page pattern-dots">
                 <div class="page-content content-z flex flex-col">
                     <span class="header-line">Introducción al Curso</span>
@@ -404,7 +403,6 @@
                 </div>
             </div>
 
-            <!-- PAGINA 5: FUTSALA -->
             <div class="page">
                 <div class="page-content content-z flex flex-col">
                     <div class="watermark text-[6rem] top-0 right-0">01</div>
@@ -442,7 +440,6 @@
                 </div>
             </div>
 
-            <!-- PAGINA 6: BANQUITAS -->
             <div class="page pattern-dots">
                 <div class="page-content content-z flex flex-col">
                     <span class="header-line">Deportes de Conjunto</span>
@@ -475,7 +472,6 @@
                 </div>
             </div>
 
-            <!-- PAGINA 7: FUTBOL 11 -->
             <div class="page">
                 <div class="page-content content-z flex flex-col">
                     <span class="header-line">Deportes de Conjunto</span>
@@ -488,7 +484,6 @@
                         <p class="text-[7px] text-gray-700 leading-snug">Aprender e identificar los fundamentos técnicos básicos del fútbol 11 en estaciones de trabajo y lograr aplicarlos correctamente en un contexto de juego real.</p>
                     </div>
 
-                    <!-- FOTO RECORTADA HORIZONTALMENTE -->
                    <div class="w-[80%] h-[130px] mx-auto mb-1 mt-1 rounded shadow-md border border-gray-200 overflow-hidden bg-white p-1">
     <img src="https://i.postimg.cc/tTpfQry0/fut.jpg" alt="Fútbol 11" class="w-full h-full object-cover object-[center_50%] rounded-sm">
  </div>
@@ -512,7 +507,6 @@
                 </div>
             </div>
 
-            <!-- PAGINA 8: VOLEIBOL -->
             <div class="page pattern-dots">
                 <div class="page-content content-z flex flex-col">
                     <span class="header-line">Deportes de Conjunto</span>
@@ -547,7 +541,6 @@
                 </div>
             </div>
 
-            <!-- PAGINA 9: ULTIMATE -->
             <div class="page">
                 <div class="page-content content-z flex flex-col">
                     <span class="header-line">Deportes Alternativos</span>
@@ -582,7 +575,6 @@
                 </div>
             </div>
 
-            <!-- PAGINA 10: BALONCESTO -->
             <div class="page pattern-dots">
                 <div class="page-content content-z flex flex-col">
                     <span class="header-line">Deportes de Conjunto</span>
@@ -617,7 +609,6 @@
                 </div>
             </div>
 
-            <!-- PAGINA 11: FUERZA -->
             <div class="page hard" style="background: linear-gradient(135deg, #0B2046 0%, #1e3a8a 100%); color: white;">
                 <div class="page-content content-z border border-white/10 m-1 rounded-lg flex flex-col">
                     <div class="watermark watermark-gold text-[6rem] top-5 right-0">FIT</div>
@@ -653,7 +644,6 @@
                 </div>
             </div>
 
-            <!-- PAGINA 12: AJEDREZ 1 -->
             <div class="page">
                 <div class="page-content content-z flex flex-col">
                     <span class="header-line">Deporte Mental</span>
@@ -679,7 +669,6 @@
                 </div>
             </div>
 
-            <!-- PAGINA 13: AJEDREZ 2 -->
             <div class="page pattern-dots">
                 <div class="page-content content-z flex flex-col">
                     <span class="header-line">Deporte Mental</span>
@@ -716,7 +705,6 @@
                 </div>
             </div>
 
-            <!-- PAGINA 14: FOLKLORE 1 -->
             <div class="page overflow-hidden">
                 <div class="page-content content-z relative flex flex-col h-full">
                     <div class="absolute -top-10 -left-10 w-40 h-40 bg-yellow-300 rounded-full mix-blend-multiply filter blur-[40px] opacity-20 z-0"></div>
@@ -747,7 +735,6 @@
                 </div>
             </div>
 
-            <!-- PAGINA 15: FOLKLORE 2 -->
             <div class="page pattern-dots">
                 <div class="page-content content-z flex flex-col">
                     <span class="header-line">Cultura y Cuerpo</span>
@@ -784,7 +771,6 @@
                 </div>
             </div>
 
-            <!-- PAGINA 16: TENIS -->
             <div class="page pattern-dots">
                 <div class="page-content content-z flex flex-col">
                     <span class="header-line">Deportes de Raqueta</span>
@@ -825,7 +811,6 @@
                 </div>
             </div>
 
-            <!-- PAGINA 17: BÉISBOL -->
             <div class="page">
                 <div class="page-content content-z flex flex-col">
                     <span class="header-line">Deportes de Precisión</span>
@@ -860,7 +845,6 @@
                 </div>
             </div>
 
-            <!-- PAGINA 18: NATACIÓN -->
             <div class="page pattern-dots">
                 <div class="page-content content-z flex flex-col">
                     <span class="header-line">Deportes Acuáticos</span>
@@ -895,7 +879,6 @@
                 </div>
             </div>
 
-            <!-- PAGINA 19: PCP -->
             <div class="page">
                 <div class="page-content content-z flex flex-col">
                     <span class="header-line">Dimensión Humana</span>
@@ -924,7 +907,6 @@
                 </div>
             </div>
 
-            <!-- PAGINA 20: HITO PEDAGÓGICO -->
             <div class="page pattern-dots">
                 <div class="page-content content-z flex flex-col text-center justify-center">
                     <span class="header-line">Hito Pedagógico</span>
@@ -944,7 +926,6 @@
                 </div>
             </div>
 
-            <!-- PAGINA 21: REFLEXION FINAL -->
             <div class="page">
                 <div class="page-content content-z flex flex-col justify-center items-center text-center">
                     <h2 class="article-title text-2xl text-upnblue mb-4">REFLEXIÓN PEDAGÓGICA<br>GENERAL</h2>
@@ -964,7 +945,6 @@
                 </div>
             </div>
 
-            <!-- PAGINA 22: CONTRAPORTADA -->
             <div class="page hard">
                 <div class="page-content bg-gradient-to-br from-[#0B2046] to-[#040a14] flex flex-col items-center justify-center relative overflow-hidden">
                     <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center mb-8 shadow-lg relative z-10 border-2 border-upngold overflow-hidden">
