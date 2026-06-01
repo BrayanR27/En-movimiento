@@ -160,8 +160,8 @@
         /* --- NUEVO: REGLAS ESTRICTAS PARA GENERAR PDF DESDE EL NAVEGADOR --- */
         @media print {
             @page {
-                size: landscape; /* IMPRESIÓN HORIZONTAL PARA MEJOR AJUSTE */
-                margin: 0.5cm; /* Margen muy pequeño */
+                size: portrait; /* IMPRESIÓN VERTICAL PARA LLENAR LA HOJA */
+                margin: 0cm; /* Sin márgenes del navegador para que ocupe todo */
             }
             body { 
                 background: white !important; 
@@ -179,9 +179,7 @@
             
             /* Desarmar contenedores de la librería */
             .flipbook-container, #magazine, .stf__wrapper, .stf__block { 
-                display: flex !important; 
-                flex-direction: column !important;
-                align-items: center !important;
+                display: block !important; 
                 position: relative !important;
                 width: 100% !important; 
                 height: auto !important;
@@ -189,18 +187,21 @@
                 transform: none !important; /* Elimina efectos 3D */
             }
             
-            /* FORMATO DE TARJETA CENTRADA EN LA HOJA */
+            /* FORMATO DE PÁGINA COMPLETA */
             .page { 
                 display: block !important; 
                 visibility: visible !important;
                 opacity: 1 !important;
                 position: relative !important; 
                 
-                /* Mantener el tamaño original del diseño para que no se deforme */
+                /* Mantenemos la proporción original para que no se deforme */
                 width: 320px !important; 
                 height: 480px !important; 
                 
-                /* Centrar la "tarjeta" en la página impresa */
+                /* EL SECRETO: Escalamos el contenido un 225% para que llene la hoja A4/Carta */
+                zoom: 2.25 !important; 
+                
+                /* Centrar en la página impresa */
                 margin: 0 auto !important; 
                 
                 /* Obliga a hacer salto de página al terminar el div */
@@ -214,8 +215,8 @@
                 transform: none !important;
                 z-index: 1 !important;
                 
-                /* Bordes para que se vea como una página real impresa */
-                border: 1px solid #e5e7eb !important;
+                /* Sin bordes para que parezca una revista real */
+                border: none !important;
                 background-color: #FDFBF7 !important;
             }
 
