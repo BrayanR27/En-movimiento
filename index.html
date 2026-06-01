@@ -48,12 +48,22 @@
             background-color: #FDFBF7;
             box-shadow: 0 0 20px rgba(0,0,0,0.2);
             overflow: hidden; position: relative;
+            /* Previene el texto invertido fantasma en pantalla */
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
         }
 
         .page-content {
             padding: 1rem; height: 100%;
             display: flex; flex-direction: column;
             position: relative;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+
+        .stf__item {
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
         }
 
         .page.--left .page-content {
@@ -67,7 +77,7 @@
         }
 
         /* AZULEJOS DEL LOGO PARA RELLENAR ESPACIOS BLANCOS */
-        .page:not(.hard)::before {
+        .page:not(.cover-dark):not(.page-blue)::before {
             content: ""; position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
             background-image: url('https://yt3.googleusercontent.com/qZ8muXjJPWvW7CWToE4W36wFn37nkrGMcm4ysUwANhNG3UQlReF8QsQH6V1xbvJMoOKZUIjI=s900-c-k-c0x00ffffff-no-rj');
@@ -99,9 +109,15 @@
 
         .content-z { position: relative; z-index: 10; }
 
-        .page.hard {
+        /* PORTADAS OSCURAS */
+        .page.cover-dark {
             background: linear-gradient(135deg, #0B2046 0%, #061126 100%);
             color: white; border: 2px solid rgba(255,255,255,0.1);
+        }
+
+        /* NUEVA CLASE PARA EL FONDO AZUL COMPLETO DE LA PÁGINA 11 */
+        .page-blue {
+            background-color: #0f2b5a !important; 
         }
 
         .page-number {
@@ -175,14 +191,14 @@
             .btn-imprimir { display: none !important; }
             
             /* Contenedor principal ajustado al tamaño exacto de la hoja Carta */
-            .flipbook-container, #magazine, .stf__wrapper, .stf__block { 
+            .flipbook-container, #magazine, .stf__wrapper, .stf__block, .stf__item { 
                 display: block !important; 
                 position: relative !important;
                 width: 215.9mm !important; /* Ancho exacto Carta */
                 height: auto !important;
                 padding: 0 !important;
                 margin: 0 !important;
-                transform: none !important;
+                transform: none !important; /* MATA LA ROTACIÓN ESPEJO */
             }
             
             /* FORMATO DE PÁGINA COMPLETA ADAPTADO A CARTA */
@@ -190,6 +206,8 @@
                 display: flex !important; 
                 visibility: visible !important;
                 opacity: 1 !important;
+                backface-visibility: hidden !important; 
+                -webkit-backface-visibility: hidden !important;
                 position: relative !important; 
                 
                 /* Tamaño exacto Carta */
@@ -215,8 +233,8 @@
                 box-sizing: border-box !important;
                 margin: 0 !important;
                 
-                /* Desactiva el zoom problemático */
                 zoom: normal !important;
+                transform: none !important;
             }
 
             /* Contenedor del contenido interno escalado dinámicamente */
@@ -225,17 +243,20 @@
                 width: 320px !important;
                 height: 480px !important;
                 
-                /* Escala el contenido para que llene el espacio disponible (2.1x es un aproximado ideal para Carta) */
+                /* Escala el contenido para que llene el espacio disponible */
                 transform: scale(2.1) !important;
                 transform-origin: center center !important;
                 
-                /* Asegura que no haya márgenes extra que descuadren el centro */
                 margin: 0 !important;
                 position: absolute !important;
             }
 
-            .page.hard {
+            .page.cover-dark {
                 background: linear-gradient(135deg, #0B2046 0%, #061126 100%) !important;
+            }
+
+            .page.page-blue {
+                background-color: #0f2b5a !important; 
             }
 
             .page.--left .page-content, .page.--right .page-content { 
@@ -243,7 +264,7 @@
                 border: none !important; 
             }
 
-            .stf__outer { display: none !important; }
+            .stf__outer, .stf__clone { display: none !important; }
         }
     </style>
 </head>
@@ -259,10 +280,9 @@
     <div class="flipbook-container">
         <div id="magazine">
             
-            <div class="page hard">
-                <div class="w-full h-full bg-gradient-to-br from-[#0B2046] to-[#020617] p-5 flex flex-col justify-center items-center text-center relative overflow-hidden">
-                    <div class="absolute -top-10 -right-10 w-60 h-60 bg-upngold rounded-full mix-blend-multiply filter blur-3xl opacity-40 z-0"></div>
-                    
+            <!-- PAGINA 1: PORTADA -->
+            <div class="page hard cover-dark">
+                <div class="w-full h-full p-5 flex flex-col justify-center items-center text-center relative overflow-hidden">
                     <div class="my-auto flex flex-col items-center w-full relative z-10 flex-col justify-center">
                         <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-6 overflow-hidden border-[3px] border-upngold shadow-lg">
                             <img src="https://yt3.googleusercontent.com/qZ8muXjJPWvW7CWToE4W36wFn37nkrGMcm4ysUwANhNG3UQlReF8QsQH6V1xbvJMoOKZUIjI=s900-c-k-c0x00ffffff-no-rj" alt="Logo UPN" class="w-full h-full object-contain p-1.5">
@@ -272,7 +292,7 @@
                         
                         <p class="text-upngold text-[9px] tracking-[0.3em] uppercase mb-2 font-semibold">Manual Pedagógico</p>
                         <h1 class="font-display text-[2.2rem] sm:text-[2.5rem] leading-[1] font-bold mb-3 text-white drop-shadow-lg">
-                            EN <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-upngold via-yellow-300 to-upngold">MOVIMIENTO</span>
+                            EN <br><span class="text-white">MOVIMIENTO</span>
                         </h1>
                         <div class="h-px w-20 bg-gradient-to-r from-transparent via-upngold to-transparent my-4"></div>
                         <p class="text-[9px] font-light tracking-widest text-gray-300 uppercase">Taller de Prácticas 1</p>
@@ -281,7 +301,8 @@
                 </div>
             </div>
 
-            <div class="page pattern-dots">
+            <!-- PAGINA 2: EDITORIAL (Reverso de Portada) -->
+            <div class="page hard pattern-dots">
                 <div class="page-content content-z">
                     <div class="absolute top-10 right-4 text-[8rem] font-display text-upngold opacity-10 leading-none">"</div>
                     <div class="mb-4 border-b-2 border-upngold/30 pb-2 mt-4">
@@ -301,7 +322,7 @@
                         </p>
                     </div>
 
-                    <div class="mt-auto mb-2 bg-white/90 backdrop-blur p-2 rounded shadow-sm border-l-2 border-upngold relative z-10 w-[95%] mx-auto">
+                    <div class="mt-auto mb-2 bg-gray-100 p-2 rounded shadow-sm border-l-2 border-upngold relative z-10 w-[95%] mx-auto">
                         <h3 class="text-[7px] font-bold text-upnblue uppercase tracking-widest mb-1.5 border-b border-gray-200 pb-1 text-center">Equipo Creador</h3>
                         <div class="text-[6.5px] text-gray-700 leading-snug text-center flex flex-col gap-0.5 font-medium">
                             <span>Andrés Felipe Camacho Pinzón</span>
@@ -316,6 +337,7 @@
                 </div>
             </div>
 
+            <!-- PAGINA 3: MAPA DEL CURSO -->
             <div class="page">
                 <div class="page-content content-z">
                     <span class="header-line">Índice Temático</span>
@@ -373,6 +395,7 @@
                 </div>
             </div>
 
+            <!-- PAGINA 4: PRIMERA CLASE -->
             <div class="page pattern-dots">
                 <div class="page-content content-z flex flex-col">
                     <span class="header-line">Introducción al Curso</span>
@@ -403,6 +426,7 @@
                 </div>
             </div>
 
+            <!-- PAGINA 5: FUTSALA -->
             <div class="page">
                 <div class="page-content content-z flex flex-col">
                     <div class="watermark text-[6rem] top-0 right-0">01</div>
@@ -440,6 +464,7 @@
                 </div>
             </div>
 
+            <!-- PAGINA 6: BANQUITAS -->
             <div class="page pattern-dots">
                 <div class="page-content content-z flex flex-col">
                     <span class="header-line">Deportes de Conjunto</span>
@@ -472,6 +497,7 @@
                 </div>
             </div>
 
+            <!-- PAGINA 7: FUTBOL 11 -->
             <div class="page">
                 <div class="page-content content-z flex flex-col">
                     <span class="header-line">Deportes de Conjunto</span>
@@ -484,6 +510,7 @@
                         <p class="text-[7px] text-gray-700 leading-snug">Aprender e identificar los fundamentos técnicos básicos del fútbol 11 en estaciones de trabajo y lograr aplicarlos correctamente en un contexto de juego real.</p>
                     </div>
 
+                    <!-- FOTO RECORTADA HORIZONTALMENTE -->
                    <div class="w-[80%] h-[130px] mx-auto mb-1 mt-1 rounded shadow-md border border-gray-200 overflow-hidden bg-white p-1">
     <img src="https://i.postimg.cc/tTpfQry0/fut.jpg" alt="Fútbol 11" class="w-full h-full object-cover object-[center_50%] rounded-sm">
  </div>
@@ -507,6 +534,7 @@
                 </div>
             </div>
 
+            <!-- PAGINA 8: VOLEIBOL -->
             <div class="page pattern-dots">
                 <div class="page-content content-z flex flex-col">
                     <span class="header-line">Deportes de Conjunto</span>
@@ -541,6 +569,7 @@
                 </div>
             </div>
 
+            <!-- PAGINA 9: ULTIMATE -->
             <div class="page">
                 <div class="page-content content-z flex flex-col">
                     <span class="header-line">Deportes Alternativos</span>
@@ -575,6 +604,7 @@
                 </div>
             </div>
 
+            <!-- PAGINA 10: BALONCESTO -->
             <div class="page pattern-dots">
                 <div class="page-content content-z flex flex-col">
                     <span class="header-line">Deportes de Conjunto</span>
@@ -609,34 +639,35 @@
                 </div>
             </div>
 
-            <div class="page hard" style="background: linear-gradient(135deg, #0B2046 0%, #1e3a8a 100%); color: white;">
-                <div class="page-content content-z border border-white/10 m-1 rounded-lg flex flex-col">
-                    <div class="watermark watermark-gold text-[6rem] top-5 right-0">FIT</div>
-                    <span class="header-line !color-white/50" style="color: rgba(255,255,255,0.5);">Acondicionamiento</span>
+            <!-- PAGINA 11: FUERZA PURA (Color azul completo y bordes restaurados) -->
+            <div class="page page-blue">
+                <div class="page-content content-z flex flex-col text-white">
+                    <div class="watermark watermark-gold text-[6rem] top-5 right-0 opacity-10 !text-white font-display">FIT</div>
+                    <span class="header-line !text-white/60 font-bold uppercase tracking-widest text-[6px]">Acondicionamiento</span>
                     
-                    <div class="mt-4 mb-2 relative z-10">
+                    <div class="mt-4 mb-2 relative z-10 border-b border-upnblue/30 pb-1">
                         <h2 class="article-title text-2xl text-white leading-none">FUERZA PURA</h2>
                     </div>
 
-                    <div class="box-proposito mb-2 !bg-white/10 !border-upngold backdrop-blur">
+                    <div class="box-proposito mb-2 bg-[#0a1d40] border-l-[3px] border-upngold shadow-none">
                         <h3 class="font-bold text-upngold text-[8px] uppercase mb-0.5">Propósito</h3>
-                        <p class="text-[7px] text-gray-200 leading-snug">Acercar a los estudiantes a una práctica enfocada en el trabajo de la fuerza como capacidad física condicional aplicada al fitness.</p>
+                        <p class="text-[7px] text-gray-300 leading-snug">Acercar a los estudiantes a una práctica enfocada en el trabajo de la fuerza como capacidad física condicional aplicada al fitness.</p>
                     </div>
                     
-                    <div class="space-y-1.5 relative z-10 text-[7px] text-gray-200">
-                        <p>Iniciamos con un círculo compartiendo <em>"qué emoción nos representa hoy"</em>. Tras el calentamiento céfalo-caudal, iniciamos la carga:</p>
-                        <div class="bg-white/10 backdrop-blur p-1 rounded border-l-2 border-white">
+                    <div class="space-y-1.5 relative z-10 text-[7px] text-gray-300">
+                        <p class="mb-1 text-white/90">Iniciamos con un círculo compartiendo <em>"qué emoción nos representa hoy"</em>. Tras el calentamiento céfalo-caudal, iniciamos la carga:</p>
+                        <div class="bg-[#0b2046]/50 p-1.5 rounded border-l-2 border-white/30">
                             <strong class="text-white">Estática a Dinámica:</strong> Planchas aguantando 20s y pasando a toques de hombro. Sentadillas isométricas a 90° pasando a saltos (4 series).
                         </div>
-                        <div class="bg-white/10 backdrop-blur p-1 rounded border-l-2 border-white">
+                        <div class="bg-[#0b2046]/50 p-1.5 rounded border-l-2 border-white/30">
                             <strong class="text-white">Fuerza de Resistencia:</strong> Circuito de skipping intenso, angelitos y mountain climbers (15-30 reps).
                         </div>
-                        <div class="bg-white/10 backdrop-blur p-1 rounded border-l-2 border-white">
+                        <div class="bg-[#0b2046]/50 p-1.5 rounded border-l-2 border-white/30">
                             <strong class="text-white">Explosiva (Competencia):</strong> Relevos en equipos realizando los ejercicios a máxima velocidad.
                         </div>
                     </div>
 
-                    <div class="box-reflexion mt-auto !bg-black/30 !border-upngold">
+                    <div class="box-reflexion mt-auto bg-[#0a1d40] border-l-[3px] border-upngold">
                         <h4 class="font-bold text-upngold text-[8px] uppercase mb-0.5">Reflexión Pedagógica</h4>
                         <p class="text-[7px] italic text-gray-300 leading-snug">"Conocer el estado anímico inicial permite adaptar la carga. Apoyarse en el reto y la competencia grupal es ideal para motivar a quienes estaban exhaustos. El trabajo autónomo es un pilar formativo."</p>
                     </div>
@@ -644,7 +675,8 @@
                 </div>
             </div>
 
-            <div class="page">
+            <!-- PAGINA 12: AJEDREZ 1 -->
+            <div class="page pattern-dots">
                 <div class="page-content content-z flex flex-col">
                     <span class="header-line">Deporte Mental</span>
                     <div class="mt-5 mb-1.5">
@@ -669,7 +701,8 @@
                 </div>
             </div>
 
-            <div class="page pattern-dots">
+            <!-- PAGINA 13: AJEDREZ 2 -->
+            <div class="page">
                 <div class="page-content content-z flex flex-col">
                     <span class="header-line">Deporte Mental</span>
                     <div class="mt-5 mb-1.5">
@@ -705,26 +738,25 @@
                 </div>
             </div>
 
-            <div class="page overflow-hidden">
-                <div class="page-content content-z relative flex flex-col h-full">
-                    <div class="absolute -top-10 -left-10 w-40 h-40 bg-yellow-300 rounded-full mix-blend-multiply filter blur-[40px] opacity-20 z-0"></div>
-
-                    <span class="header-line relative z-10">Cultura y Cuerpo</span>
-                    <div class="mt-5 mb-1.5 relative z-10">
+            <!-- PAGINA 14: FOLKLORE 1 -->
+            <div class="page pattern-dots">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Cultura y Cuerpo</span>
+                    <div class="mt-5 mb-1.5">
                         <h2 class="article-title text-2xl text-upnblue leading-none">IDENTIDAD Y FOLKLORE</h2>
                     </div>
 
-                    <div class="box-proposito relative z-10">
+                    <div class="box-proposito">
                         <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Propósito</h3>
                         <p class="text-[7px] text-gray-700 leading-snug">Acercar a los estudiantes al folklore colombiano conectándolos con los pasos básicos y la historia de los ritmos más representativos de nuestras regiones.</p>
                     </div>
 
-                    <div class="text-[7px] text-gray-800 space-y-1 leading-snug mb-2 relative z-10">
+                    <div class="text-[7px] text-gray-800 space-y-1 leading-snug mb-2">
                         <p><strong>Alistamiento y Calentamiento:</strong> Nos preparamos portando faldas anchas, sombreros y rabos de gallo. Formamos un gran círculo e hicimos una movilidad articular distal-proximal. Bailamos en parejas bachata, carranga, merengue y salsa choke cambiando de pareja por cada ritmo.</p>
                     </div>
 
                     <!-- FOTO FALDAS Polaroid -->
-                    <div class="relative z-10 mt-1 mb-2 bg-white p-1.5 pb-4 shadow-lg border border-gray-200 rounded-xl rotate-1 w-[65%] mx-auto">
+                    <div class="mt-1 mb-2 bg-white p-1.5 pb-4 shadow-lg border border-gray-200 rounded-xl rotate-1 w-[65%] mx-auto">
                         <div class="w-full aspect-[4/5] bg-gray-100 overflow-hidden rounded-md">
                             <img src="https://i.postimg.cc/QM6SNz4C/Imagen10.png" alt="Folklore Faldas" class="w-full h-full object-cover object-[center_20%]">
                         </div>
@@ -735,7 +767,8 @@
                 </div>
             </div>
 
-            <div class="page pattern-dots">
+            <!-- PAGINA 15: FOLKLORE 2 -->
+            <div class="page">
                 <div class="page-content content-z flex flex-col">
                     <span class="header-line">Cultura y Cuerpo</span>
                     
@@ -771,6 +804,7 @@
                 </div>
             </div>
 
+            <!-- PAGINA 16: TENIS -->
             <div class="page pattern-dots">
                 <div class="page-content content-z flex flex-col">
                     <span class="header-line">Deportes de Raqueta</span>
@@ -811,6 +845,7 @@
                 </div>
             </div>
 
+            <!-- PAGINA 17: BÉISBOL -->
             <div class="page">
                 <div class="page-content content-z flex flex-col">
                     <span class="header-line">Deportes de Precisión</span>
@@ -845,6 +880,7 @@
                 </div>
             </div>
 
+            <!-- PAGINA 18: NATACIÓN -->
             <div class="page pattern-dots">
                 <div class="page-content content-z flex flex-col">
                     <span class="header-line">Deportes Acuáticos</span>
@@ -879,6 +915,7 @@
                 </div>
             </div>
 
+            <!-- PAGINA 19: PCP -->
             <div class="page">
                 <div class="page-content content-z flex flex-col">
                     <span class="header-line">Dimensión Humana</span>
@@ -907,6 +944,7 @@
                 </div>
             </div>
 
+            <!-- PAGINA 20: HITO PEDAGÓGICO -->
             <div class="page pattern-dots">
                 <div class="page-content content-z flex flex-col text-center justify-center">
                     <span class="header-line">Hito Pedagógico</span>
@@ -926,11 +964,12 @@
                 </div>
             </div>
 
-            <div class="page">
+            <!-- PAGINA 21: REFLEXION FINAL (Reverso de Contraportada) -->
+            <div class="page hard">
                 <div class="page-content content-z flex flex-col justify-center items-center text-center">
                     <h2 class="article-title text-2xl text-upnblue mb-4">REFLEXIÓN PEDAGÓGICA<br>GENERAL</h2>
                     
-                    <div class="bg-white p-3 rounded-xl shadow-sm border border-gray-200 text-left relative w-[95%]">
+                    <div class="bg-gray-100 p-3 rounded-xl shadow-sm border border-gray-200 text-left relative w-[95%]">
                         <div class="absolute -top-3 -left-2 text-[3rem] font-display text-upngold opacity-20 leading-none">"</div>
                         <p class="text-[7.5px] text-gray-700 italic mb-2 text-justify">
                             El feedback personal, la comunicación asertiva y el juego como herramienta táctica, transforman la simple práctica física en una verdadera herramienta de formación integral para la vida y el carácter del futuro docente.
@@ -945,8 +984,9 @@
                 </div>
             </div>
 
-            <div class="page hard">
-                <div class="page-content bg-gradient-to-br from-[#0B2046] to-[#040a14] flex flex-col items-center justify-center relative overflow-hidden">
+            <!-- PAGINA 22: CONTRAPORTADA -->
+            <div class="page hard cover-dark">
+                <div class="w-full h-full p-5 flex flex-col items-center justify-center relative overflow-hidden">
                     <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center mb-8 shadow-lg relative z-10 border-2 border-upngold overflow-hidden">
                         <img src="https://yt3.googleusercontent.com/qZ8muXjJPWvW7CWToE4W36wFn37nkrGMcm4ysUwANhNG3UQlReF8QsQH6V1xbvJMoOKZUIjI=s900-c-k-c0x00ffffff-no-rj" alt="UPN Logo" class="w-full h-full object-cover p-1">
                     </div>
@@ -969,7 +1009,7 @@
                 size: "fixed", 
                 showCover: true,
                 mobileScrollSupport: false, 
-                usePortrait: true, // ¡CAMBIO APLICADO! (Activa 1 sola página en celular)
+                usePortrait: true, // Formato individual para móvil/impresión general
                 maxShadowOpacity: 0.5,
             });
 
@@ -981,7 +1021,7 @@
                 
                 pages.forEach((page, index) => {
                     page.classList.remove('--left', '--right');
-                    // Solo aplica el borde central oscuro si la vista NO es de una sola página en celular
+                    // Solo aplica el borde central oscuro si la vista NO es de una sola página
                     if (isLandscape && index > 0 && index < pages.length - 1) {
                         if (index % 2 === 0) page.classList.add('--right');
                         else page.classList.add('--left');
