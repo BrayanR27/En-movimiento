@@ -2,29 +2,18 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="color-scheme" content="dark">
+    <link rel="icon" href="data:,">
     <title>En Movimiento - Guía Pedagógica UPN</title>
     
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        display: ['Oswald', 'sans-serif'],
-                    },
-                    colors: {
-                        upnblue: '#0B2046',
-                        upngold: '#F2A900',
-                        paper: '#FDFBF7',
-                    }
-                }
-            }
-        }
-    </script>
+    <style>
+        /* Fuentes locales (Inter y Oswald, subconjunto latino) */
+        @font-face { font-family: 'Inter'; src: url('assets/font-01.woff2') format('woff2'); font-weight: 300 700; font-style: normal; font-display: swap; }
+        @font-face { font-family: 'Oswald'; src: url('assets/font-02.woff2') format('woff2'); font-weight: 400 700; font-style: normal; font-display: swap; }
+        /* Utilidades generadas a partir de las clases del diseño original (Tailwind CSS) */
+*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.19 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:Inter,sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.visible{visibility:visible}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.-left-2{left:-.5rem}.-top-3{top:-.75rem}.bottom-6{bottom:1.5rem}.right-0{right:0}.right-4{right:1rem}.right-6{right:1.5rem}.top-0{top:0}.top-10{top:2.5rem}.top-5{top:1.25rem}.z-10{z-index:10}.z-\[100\]{z-index:100}.mx-auto{margin-left:auto;margin-right:auto}.my-0\.5{margin-top:.125rem;margin-bottom:.125rem}.my-4{margin-top:1rem;margin-bottom:1rem}.my-auto{margin-top:auto;margin-bottom:auto}.mb-0\.5{margin-bottom:.125rem}.mb-1{margin-bottom:.25rem}.mb-1\.5{margin-bottom:.375rem}.mb-2{margin-bottom:.5rem}.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mt-0\.5{margin-top:.125rem}.mt-1{margin-top:.25rem}.mt-1\.5{margin-top:.375rem}.mt-2{margin-top:.5rem}.mt-4{margin-top:1rem}.mt-5{margin-top:1.25rem}.mt-6{margin-top:1.5rem}.mt-auto{margin-top:auto}.block{display:block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.aspect-\[4\/5\]{aspect-ratio:4/5}.aspect-square{aspect-ratio:1/1}.h-10{height:2.5rem}.h-16{height:4rem}.h-20{height:5rem}.h-24{height:6rem}.h-32{height:8rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-\[130px\]{height:130px}.h-\[190\%\]{height:190%}.h-full{height:100%}.h-px{height:1px}.w-1\/2{width:50%}.w-10{width:2.5rem}.w-20{width:5rem}.w-24{width:6rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-\[190\%\]{width:190%}.w-\[65\%\]{width:65%}.w-\[80\%\]{width:80%}.w-\[85\%\]{width:85%}.w-\[95\%\]{width:95%}.w-full{width:100%}.flex-grow{flex-grow:1}.rotate-1{--tw-rotate:1deg}.rotate-1,.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.resize{resize:both}.list-disc{list-style-type:disc}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-0\.5{gap:.125rem}.gap-1\.5{gap:.375rem}.gap-2{gap:.5rem}.space-y-0\.5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.125rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.125rem*var(--tw-space-y-reverse))}.space-y-1>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.25rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.25rem*var(--tw-space-y-reverse))}.space-y-1\.5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.375rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.375rem*var(--tw-space-y-reverse))}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem*var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.rounded{border-radius:.25rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-md{border-radius:.375rem}.rounded-sm{border-radius:.125rem}.rounded-xl{border-radius:.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-\[3px\]{border-width:3px}.border-b{border-bottom-width:1px}.border-b-2{border-bottom-width:2px}.border-l-2{border-left-width:2px}.border-l-\[3px\]{border-left-width:3px}.border-blue-300{--tw-border-opacity:1;border-color:rgb(147 197 253/var(--tw-border-opacity,1))}.border-blue-400{--tw-border-opacity:1;border-color:rgb(96 165 250/var(--tw-border-opacity,1))}.border-blue-500{--tw-border-opacity:1;border-color:rgb(59 130 246/var(--tw-border-opacity,1))}.border-blue-700{--tw-border-opacity:1;border-color:rgb(29 78 216/var(--tw-border-opacity,1))}.border-cyan-500{--tw-border-opacity:1;border-color:rgb(6 182 212/var(--tw-border-opacity,1))}.border-gray-200{--tw-border-opacity:1;border-color:rgb(229 231 235/var(--tw-border-opacity,1))}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219/var(--tw-border-opacity,1))}.border-gray-400{--tw-border-opacity:1;border-color:rgb(156 163 175/var(--tw-border-opacity,1))}.border-gray-800{--tw-border-opacity:1;border-color:rgb(31 41 55/var(--tw-border-opacity,1))}.border-green-500{--tw-border-opacity:1;border-color:rgb(34 197 94/var(--tw-border-opacity,1))}.border-green-600{--tw-border-opacity:1;border-color:rgb(22 163 74/var(--tw-border-opacity,1))}.border-orange-500{--tw-border-opacity:1;border-color:rgb(249 115 22/var(--tw-border-opacity,1))}.border-pink-500{--tw-border-opacity:1;border-color:rgb(236 72 153/var(--tw-border-opacity,1))}.border-purple-600{--tw-border-opacity:1;border-color:rgb(147 51 234/var(--tw-border-opacity,1))}.border-red-500{--tw-border-opacity:1;border-color:rgb(239 68 68/var(--tw-border-opacity,1))}.border-red-600{--tw-border-opacity:1;border-color:rgb(220 38 38/var(--tw-border-opacity,1))}.border-teal-500{--tw-border-opacity:1;border-color:rgb(20 184 166/var(--tw-border-opacity,1))}.border-upnblue{--tw-border-opacity:1;border-color:rgb(11 32 70/var(--tw-border-opacity,1))}.border-upnblue\/20{border-color:rgba(11,32,70,.2)}.border-upnblue\/30{border-color:rgba(11,32,70,.3)}.border-upngold{--tw-border-opacity:1;border-color:rgb(242 169 0/var(--tw-border-opacity,1))}.border-upngold\/30{border-color:rgba(242,169,0,.3)}.border-white\/30{border-color:hsla(0,0%,100%,.3)}.border-yellow-500{--tw-border-opacity:1;border-color:rgb(234 179 8/var(--tw-border-opacity,1))}.bg-\[\#0a1d40\]{--tw-bg-opacity:1;background-color:rgb(10 29 64/var(--tw-bg-opacity,1))}.bg-\[\#0b2046\]\/50{background-color:rgba(11,32,70,.5)}.bg-\[\#f8fafc\]{--tw-bg-opacity:1;background-color:rgb(248 250 252/var(--tw-bg-opacity,1))}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246/var(--tw-bg-opacity,1))}.bg-gray-600{--tw-bg-opacity:1;background-color:rgb(75 85 99/var(--tw-bg-opacity,1))}.bg-upnblue{--tw-bg-opacity:1;background-color:rgb(11 32 70/var(--tw-bg-opacity,1))}.bg-upngold{--tw-bg-opacity:1;background-color:rgb(242 169 0/var(--tw-bg-opacity,1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.bg-gradient-to-r{background-image:linear-gradient(to right,var(--tw-gradient-stops))}.from-transparent{--tw-gradient-from:transparent var(--tw-gradient-from-position);--tw-gradient-to:transparent var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.via-upngold{--tw-gradient-to:rgba(242,169,0,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),#f2a900 var(--tw-gradient-via-position),var(--tw-gradient-to)}.to-transparent{--tw-gradient-to:transparent var(--tw-gradient-to-position)}.object-contain{-o-object-fit:contain;object-fit:contain}.object-cover{-o-object-fit:cover;object-fit:cover}.object-\[center_100\%\]{-o-object-position:center 100%;object-position:center 100%}.object-\[center_20\%\]{-o-object-position:center 20%;object-position:center 20%}.object-\[center_35\%\]{-o-object-position:center 35%;object-position:center 35%}.object-\[center_50\%\]{-o-object-position:center 50%;object-position:center 50%}.object-\[center_60\%\]{-o-object-position:center 60%;object-position:center 60%}.object-\[center_80\%\]{-o-object-position:center 80%;object-position:center 80%}.object-top{-o-object-position:top;object-position:top}.p-0\.5{padding:.125rem}.p-1{padding:.25rem}.p-1\.5{padding:.375rem}.p-2{padding:.5rem}.p-3{padding:.75rem}.p-5{padding:1.25rem}.px-1{padding-left:.25rem;padding-right:.25rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.pb-1{padding-bottom:.25rem}.pb-2{padding-bottom:.5rem}.pb-4{padding-bottom:1rem}.pl-3{padding-left:.75rem}.text-left{text-align:left}.text-center{text-align:center}.text-justify{text-align:justify}.font-display{font-family:Oswald,sans-serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-\[2\.2rem\]{font-size:2.2rem}.text-\[3rem\]{font-size:3rem}.text-\[6\.5px\]{font-size:6.5px}.text-\[6px\]{font-size:6px}.text-\[6rem\]{font-size:6rem}.text-\[7\.5px\]{font-size:7.5px}.text-\[7px\]{font-size:7px}.text-\[8px\]{font-size:8px}.text-\[8rem\]{font-size:8rem}.text-\[9px\]{font-size:9px}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-bold{font-weight:700}.font-light{font-weight:300}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-\[1\],.leading-none{line-height:1}.leading-snug{line-height:1.375}.leading-tight{line-height:1.25}.tracking-\[0\.2em\]{letter-spacing:.2em}.tracking-\[0\.3em\]{letter-spacing:.3em}.tracking-\[0\.4em\]{letter-spacing:.4em}.tracking-wider{letter-spacing:.05em}.tracking-widest{letter-spacing:.1em}.\!text-white{--tw-text-opacity:1!important;color:rgb(255 255 255/var(--tw-text-opacity,1))!important}.\!text-white\/60{color:hsla(0,0%,100%,.6)!important}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219/var(--tw-text-opacity,1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175/var(--tw-text-opacity,1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128/var(--tw-text-opacity,1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81/var(--tw-text-opacity,1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55/var(--tw-text-opacity,1))}.text-upnblue{--tw-text-opacity:1;color:rgb(11 32 70/var(--tw-text-opacity,1))}.text-upngold{--tw-text-opacity:1;color:rgb(242 169 0/var(--tw-text-opacity,1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.text-white\/90{color:hsla(0,0%,100%,.9)}.opacity-10{opacity:.1}.opacity-20{opacity:.2}.shadow{--tw-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px -1px rgba(0,0,0,.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color),0 1px 2px -1px var(--tw-shadow-color)}.shadow,.shadow-\[0_4px_15px_rgba\(0\2c 0\2c 0\2c 0\.4\)\]{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-\[0_4px_15px_rgba\(0\2c 0\2c 0\2c 0\.4\)\]{--tw-shadow:0 4px 15px rgba(0,0,0,.4);--tw-shadow-colored:0 4px 15px var(--tw-shadow-color)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color)}.shadow-lg,.shadow-md{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color)}.shadow-none{--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000}.shadow-none,.shadow-sm{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgba(0,0,0,.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color)}.blur{--tw-blur:blur(8px)}.blur,.drop-shadow-lg{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.drop-shadow-lg{--tw-drop-shadow:drop-shadow(0 10px 8px rgba(0,0,0,.04)) drop-shadow(0 4px 3px rgba(0,0,0,.1))}.backdrop-filter{-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.duration-300{transition-duration:.3s}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:bg-yellow-400:hover{--tw-bg-opacity:1;background-color:rgb(250 204 21/var(--tw-bg-opacity,1))}@media (min-width:640px){.sm\:block{display:block}.sm\:text-\[2\.5rem\]{font-size:2.5rem}}
+    </style>
 
     <style>
         body {
@@ -80,7 +69,7 @@
         .page:not(.cover-dark):not(.page-blue)::before {
             content: ""; position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background-image: url('https://yt3.googleusercontent.com/qZ8muXjJPWvW7CWToE4W36wFn37nkrGMcm4ysUwANhNG3UQlReF8QsQH6V1xbvJMoOKZUIjI=s900-c-k-c0x00ffffff-no-rj');
+            background-image: url('assets/img-01.jpg');
             background-size: 30px; background-repeat: repeat;
             background-position: center;
             opacity: 0.03; z-index: 0; pointer-events: none;
@@ -266,15 +255,86 @@
 
             .stf__outer, .stf__clone { display: none !important; }
         }
+
+        /* === Segundo semestre: fichas de bitácora === */
+        .ficha { background: rgba(255,255,255,0.94); border: 1px solid #e5e7eb; border-radius: 6px; padding: 0.35rem 0.5rem; margin-bottom: 0.4rem; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+        .ficha .fila { display: flex; gap: 0.4rem; padding: 0.1rem 0; border-bottom: 1px dashed rgba(11,32,70,0.14); }
+        .ficha .fila:last-child { border-bottom: none; }
+        .ficha .k { flex: none; width: 3.4rem; font-weight: 700; color: #0B2046; text-transform: uppercase; font-size: 0.42rem; letter-spacing: 0.05em; line-height: 1.5; }
+        .ficha .v { flex: 1; color: #374151; font-size: 0.5rem; line-height: 1.4; }
+        .ficha .fila.mat { background: rgba(242,169,0,0.15); border-radius: 3px; }
+        .ficha .fila.mat .v { font-weight: 700; color: #0B2046; }
+        .tag-confirmar { display: inline-block; background: #F2A900; color: #0B2046; font-size: 0.42rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; border-radius: 999px; padding: 0.08rem 0.4rem; margin-left: 0.25rem; vertical-align: middle; white-space: nowrap; }
+        .sec-h { font-size: 0.5rem; font-weight: 700; color: #0B2046; text-transform: uppercase; letter-spacing: 0.07em; border-bottom: 1px solid rgba(11,32,70,0.22); padding-bottom: 0.12rem; margin: 0.4rem 0 0.3rem; }
+        .bit-text { font-size: 0.44rem; line-height: 1.5; color: #1f2937; text-align: justify; }
+        .bit-text p { margin-bottom: 0.32rem; }
+        .bit-text ul { list-style: disc; padding-left: 0.85rem; margin-bottom: 0.32rem; }
+        .bit-text li { margin-bottom: 0.22rem; }
+        .bit-dense { font-size: 0.415rem; line-height: 1.5; }
+        .fotos-row { display: flex; gap: 0.4rem; justify-content: center; align-items: flex-start; margin: 0.35rem 0; }
+        .foto-bit { background: #fff; padding: 3px; border: 1px solid #e5e7eb; border-radius: 6px; box-shadow: 0 3px 6px rgba(0,0,0,0.15); object-fit: cover; }
+        .foto-plano { width: 100%; height: auto; object-fit: contain; background: #fff; padding: 3px; border: 1px solid #e5e7eb; border-radius: 6px; box-shadow: 0 3px 6px rgba(0,0,0,0.15); }
+
+        /* === Sistematización 4: fotos con pie de foto === */
+        .foto-wrap { display: flex; flex-direction: column; align-items: center; }
+        .foto-cap { font-size: 0.45rem; color: #6b7280; font-style: italic; text-align: center; margin-top: 0.2rem; line-height: 1.3; }
+        .video-frame { background: #fff; padding: 3px; border: 1px solid #e5e7eb; border-radius: 6px; box-shadow: 0 3px 6px rgba(0,0,0,0.15); }
+        .video-frame video { width: 100%; height: auto; display: block; border-radius: 4px; background: #000; }
+
+        /* === Controles del espacio (navegación y vista completa) === */
+        .btn-imprimir { position: fixed !important; bottom: auto !important; top: calc(0.9rem + env(safe-area-inset-top)); right: 0.9rem; min-height: 44px; z-index: 100; }
+        .book-nav {
+            position: fixed; left: 50%; transform: translateX(-50%);
+            bottom: calc(0.9rem + env(safe-area-inset-bottom)); z-index: 100;
+            display: flex; align-items: center; gap: 0.5rem;
+            background: rgba(6, 17, 38, 0.88); border: 1px solid rgba(242, 169, 0, 0.45);
+            border-radius: 999px; padding: 0.35rem 0.5rem;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.45); backdrop-filter: blur(6px);
+        }
+        .book-nav button {
+            width: 44px; height: 44px; min-height: 44px; border-radius: 999px; border: none; cursor: pointer;
+            background: #F2A900; color: #0B2046; font-size: 1.35rem; font-weight: 700; line-height: 1;
+            display: flex; align-items: center; justify-content: center; transition: background .2s ease, transform .2s ease;
+        }
+        .book-nav button:hover { background: #ffc21f; }
+        .book-nav button:active { transform: scale(0.94); }
+        .book-nav button:disabled { opacity: 0.35; cursor: default; transform: none; }
+        .book-nav .page-indicator {
+            color: #fff; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em;
+            min-width: 6.8rem; text-align: center; white-space: nowrap;
+        }
+        .book-nav .page-indicator small { display: block; color: rgba(255,255,255,0.55); font-size: 0.58rem; font-weight: 400; letter-spacing: 0.04em; }
+        #vistaCompleta {
+            position: fixed; inset: 0; z-index: 200; display: none;
+            background: radial-gradient(circle at center, #1e293b 0%, #020617 100%);
+            overflow-y: auto; -webkit-overflow-scrolling: touch;
+        }
+        #vistaCompleta.abierta { display: block; }
+        .vc-header {
+            position: sticky; top: 0; z-index: 5; display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+            background: rgba(6, 17, 38, 0.95); border-bottom: 2px solid #F2A900;
+            padding: calc(0.7rem + env(safe-area-inset-top)) 1rem 0.7rem;
+        }
+        .vc-header h2 { margin: 0; color: #F2A900; font-family: 'Oswald', sans-serif; letter-spacing: 0.12em; font-size: 0.95rem; text-transform: uppercase; }
+        .vc-header p { margin: 0.15rem 0 0; color: rgba(255,255,255,0.65); font-size: 0.68rem; line-height: 1.4; max-width: 34rem; }
+        .vc-close {
+            flex: none; min-height: 44px; padding: 0.6rem 1.1rem; border: none; border-radius: 999px; cursor: pointer;
+            background: #F2A900; color: #0B2046; font-weight: 700; font-size: 0.78rem; letter-spacing: 0.05em; text-transform: uppercase;
+        }
+        .vc-list { display: flex; flex-direction: column; align-items: center; gap: 1.4rem; padding: 1.4rem 0.6rem 3rem; }
+        .vc-item { position: relative; flex: none; overflow: hidden; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); background: #FDFBF7; }
+        .vc-item > .page { position: absolute; top: 0; left: 0; transform-origin: top left; box-shadow: none; }
+        @media print { .book-nav { display: none !important; } }
+        @media (max-height: 540px) { #magazine { transform: scale(0.66); } }
     </style>
 </head>
 <body>
 
-    <button onclick="window.print()" title="Imprimir o Guardar como PDF" class="btn-imprimir fixed bottom-6 right-6 z-[100] bg-upngold text-upnblue font-bold py-3 px-5 rounded-full shadow-[0_4px_15px_rgba(0,0,0,0.4)] hover:bg-yellow-400 hover:scale-105 transition-all duration-300 flex items-center gap-2">
+    <button id="btnVistaCompleta" type="button" title="Ver todas las páginas para leer o guardar como PDF" class="btn-imprimir fixed bottom-6 right-6 z-[100] bg-upngold text-upnblue font-bold py-3 px-5 rounded-full shadow-[0_4px_15px_rgba(0,0,0,0.4)] hover:bg-yellow-400 hover:scale-105 transition-all duration-300 flex items-center gap-2">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
         </svg>
-        <span class="hidden sm:block uppercase tracking-wider text-xs">Generar PDF</span>
+        <span class="hidden sm:block uppercase tracking-wider text-xs">Ver todo / PDF</span>
     </button>
 
     <div class="flipbook-container">
@@ -285,7 +345,7 @@
                 <div class="w-full h-full p-5 flex flex-col justify-center items-center text-center relative overflow-hidden">
                     <div class="my-auto flex flex-col items-center w-full relative z-10 flex-col justify-center">
                         <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-6 overflow-hidden border-[3px] border-upngold shadow-lg">
-                            <img src="https://yt3.googleusercontent.com/qZ8muXjJPWvW7CWToE4W36wFn37nkrGMcm4ysUwANhNG3UQlReF8QsQH6V1xbvJMoOKZUIjI=s900-c-k-c0x00ffffff-no-rj" alt="Logo UPN" class="w-full h-full object-contain p-1.5">
+                            <img src="assets/img-01.jpg" alt="Logo UPN" class="w-full h-full object-contain p-1.5">
                         </div>
                         
                         <h2 class="text-upngold font-display tracking-[0.2em] text-[8px] mb-4 uppercase">Universidad Pedagógica Nacional</h2>
@@ -457,7 +517,7 @@
                     </div>
 
                     <div class="flex justify-center mb-1">
-                        <img src="https://i.postimg.cc/6QB9pffG/futssal.jpg" alt="Futsala" class="foto-original">
+                        <img src="assets/img-02.jpg" alt="Futsala" class="foto-original">
                     </div>
 
                     <div class="text-[7px] text-gray-800 space-y-1 leading-snug mb-1">
@@ -492,7 +552,7 @@
                         <p class="text-[7px] text-gray-700 leading-snug">Aprender la importancia del juego colectivo mediante ejercicios que fortalecen la coordinación y el dominio del balón en espacios reducidos.</p>
                     </div>
 <div class="w-[80%] h-[130px] mx-auto mb-1 mt-1 rounded shadow-md border border-gray-200 overflow-hidden bg-white p-1">
-    <img src="https://i.postimg.cc/g0GY2HHj/banquitas.jpg" alt="Banquitas" class="w-full h-full object-cover object-[center_50%] rounded-sm">
+    <img src="assets/img-03.jpg" alt="Banquitas" class="w-full h-full object-cover object-[center_50%] rounded-sm">
 </div>
 
                     <div class="text-[7px] text-gray-800 space-y-1.5 leading-snug mb-2">
@@ -526,7 +586,7 @@
                     </div>
 
                    <div class="w-[80%] h-[130px] mx-auto mb-1 mt-1 rounded shadow-md border border-gray-200 overflow-hidden bg-white p-1">
-    <img src="https://i.postimg.cc/tTpfQry0/fut.jpg" alt="Fútbol 11" class="w-full h-full object-cover object-[center_50%] rounded-sm">
+    <img src="assets/img-04.jpg" alt="Fútbol 11" class="w-full h-full object-cover object-[center_50%] rounded-sm">
  </div>
 
                     <div class="text-[7px] text-gray-800 space-y-1 leading-snug mb-1">
@@ -562,7 +622,7 @@
                     </div>
 
                    <div class="w-[80%] h-[130px] mx-auto mb-1 mt-1 rounded shadow-md border border-gray-200 overflow-hidden bg-white p-1">
-                        <img src="https://i.postimg.cc/cJTdgtFr/voleibol.jpg" alt="Voleibol" class="w-full h-full object-cover object-[center_100%] rounded-sm">
+                        <img src="assets/img-05.jpg" alt="Voleibol" class="w-full h-full object-cover object-[center_100%] rounded-sm">
                     </div>
 
                     <div class="text-[7px] text-gray-800 space-y-1.5 leading-snug mb-2">
@@ -597,7 +657,7 @@
                     </div>
 
                     <div class="w-[80%] h-[130px] mx-auto mb-1 mt-1 rounded shadow-md border border-gray-200 overflow-hidden bg-white p-1">
-                        <img src="https://i.postimg.cc/wBF9yRwT/frisbee.jpg" alt="Frisbee" class="w-full h-full object-cover object-[center_100%] rounded-sm">
+                        <img src="assets/img-06.jpg" alt="Frisbee" class="w-full h-full object-cover object-[center_100%] rounded-sm">
                     </div>
 
                     <div class="text-[7px] text-gray-800 space-y-1.5 leading-snug mb-2">
@@ -632,7 +692,7 @@
                     </div>
 
                     <div class="w-[80%] h-[130px] mx-auto mb-1 mt-1 rounded shadow-md border border-gray-200 overflow-hidden bg-white p-1">
-                        <img src="https://i.postimg.cc/YC0S63m1/BALONCESTO.jpg" alt="Baloncesto" class="w-full h-full object-cover object-[center_100%] rounded-sm">
+                        <img src="assets/img-07.jpg" alt="Baloncesto" class="w-full h-full object-cover object-[center_100%] rounded-sm">
                     </div>
 
                     <div class="text-[7px] text-gray-800 space-y-1.5 leading-snug mb-2">
@@ -703,8 +763,8 @@
                     </div>
                     
                     <div class="flex gap-2 mb-2">
-                        <img src="https://i.postimg.cc/rphgyHnR/profesor.png" alt="Profesor Ajedrez" class="w-1/2 h-20 object-cover rounded shadow object-top border border-gray-200">
-                        <img src="https://i.postimg.cc/HLS3WNZ7/tablero.png" alt="Tablero" class="w-1/2 h-20 object-cover rounded shadow border border-gray-200">
+                        <img src="assets/img-08.png" alt="Profesor Ajedrez" class="w-1/2 h-20 object-cover rounded shadow object-top border border-gray-200">
+                        <img src="assets/img-09.png" alt="Tablero" class="w-1/2 h-20 object-cover rounded shadow border border-gray-200">
                     </div>
 
                     <div class="text-[7px] text-gray-800 text-justify leading-snug">
@@ -731,16 +791,16 @@
                     <!-- Cuadricula 2x2 Fichas -->
                     <div class="grid grid-cols-2 gap-1.5 w-[85%] mx-auto mb-2">
                         <div class="w-full aspect-square rounded shadow border border-gray-300 overflow-hidden">
-                            <img src="https://i.postimg.cc/SKQDh4rX/Imagen3.png" alt="Reina" class="w-full h-full object-cover">
+                            <img src="assets/img-10.png" alt="Reina" class="w-full h-full object-cover">
                         </div>
                         <div class="w-full aspect-square rounded shadow border border-gray-300 overflow-hidden">
-                            <img src="https://i.postimg.cc/ZqYVSmc3/Imagen4.png" alt="Rey" class="w-full h-full object-cover">
+                            <img src="assets/img-11.png" alt="Rey" class="w-full h-full object-cover">
                         </div>
                         <div class="w-full aspect-square rounded shadow border border-gray-300 overflow-hidden">
-                            <img src="https://i.postimg.cc/XvNQbW8B/Imagen6.png" alt="Peón" class="w-full h-full object-cover">
+                            <img src="assets/img-12.png" alt="Peón" class="w-full h-full object-cover">
                         </div>
                         <div class="w-full aspect-square rounded shadow border border-gray-300 overflow-hidden">
-                            <img src="https://i.postimg.cc/XvNQbW8C/Imagen5.png" alt="Caballo" class="w-full h-full object-cover">
+                            <img src="assets/img-13.png" alt="Caballo" class="w-full h-full object-cover">
                         </div>
                     </div>
 
@@ -772,7 +832,7 @@
                     <!-- FOTO FALDAS Polaroid -->
                     <div class="mt-1 mb-2 bg-white p-1.5 pb-4 shadow-lg border border-gray-200 rounded-xl rotate-1 w-[65%] mx-auto">
                         <div class="w-full aspect-[4/5] bg-gray-100 overflow-hidden rounded-md">
-                            <img src="https://i.postimg.cc/QM6SNz4C/Imagen10.png" alt="Folklore Faldas" class="w-full h-full object-cover object-[center_20%]">
+                            <img src="assets/img-14.png" alt="Folklore Faldas" class="w-full h-full object-cover object-[center_20%]">
                         </div>
                         <p class="text-[6px] text-center mt-1.5 text-gray-500 font-display tracking-widest">VESTUARIO TRADICIONAL</p>
                     </div>
@@ -807,7 +867,7 @@
 
                     <!-- FOTO PANORAMICA GIGANTE -->
                     <div class="w-full mt-1 mb-2 bg-white p-1 rounded-xl shadow-md border border-gray-200">
-                        <img src="https://i.postimg.cc/jj8vq1gL/Imagen11.png" alt="Folklore Circulo" class="w-full h-32 object-cover object-[center_35%] rounded-lg">
+                        <img src="assets/img-15.png" alt="Folklore Circulo" class="w-full h-32 object-cover object-[center_35%] rounded-lg">
                     </div>
 
                     <div class="box-reflexion mt-auto">
@@ -832,7 +892,7 @@
                     </div>
 
                    <div class="w-[80%] h-[130px] mx-auto mb-1 mt-1 rounded shadow-md border border-gray-200 overflow-hidden bg-white p-1">
-                        <img src="https://i.postimg.cc/Gpzb8TX3/tenis.jpg" alt="Tenis" class="w-full h-full object-cover object-[center_80%] rounded-sm">
+                        <img src="assets/img-16.jpg" alt="Tenis" class="w-full h-full object-cover object-[center_80%] rounded-sm">
                     </div>
 
                     <div class="text-[7px] text-gray-800 space-y-1.5 leading-snug mb-2">
@@ -873,7 +933,7 @@
                     </div>
 
                     <div class="w-[80%] h-[130px] mx-auto mb-1 mt-1 rounded shadow-md border border-gray-200 overflow-hidden bg-white p-1">
-    <img src="https://imagenes.pedagogica.edu.co/_data/i/upload/2022/10/07/20221007151636-b36fa6a0-sm.jpg" alt="Béisbol" class="w-[190%] h-[190%] object-cover object-[center_60%] rounded-sm">
+    <img src="assets/img-17.jpg" alt="Béisbol" class="w-[190%] h-[190%] object-cover object-[center_60%] rounded-sm">
 </div>
 
                     <div class="text-[7px] text-gray-800 space-y-1.5 leading-snug mb-2">
@@ -908,7 +968,7 @@
                     </div>
 
                     <div class="relative mb-2 mt-1 bg-white p-1 rounded shadow-md border border-gray-200">
-                        <img src="https://i.postimg.cc/4dNVVtZW/natcion.jpg" alt="Piscina UPN" class="w-full h-16 object-cover object-[center_60%] rounded-sm">
+                        <img src="assets/img-18.jpg" alt="Piscina UPN" class="w-full h-16 object-cover object-[center_60%] rounded-sm">
                     </div>
 
                     <div class="text-[7px] text-gray-800 space-y-1.5 leading-snug mb-2">
@@ -943,7 +1003,7 @@
                     </div>
 
                   <div class="w-[80%] h-[130px] mx-auto mb-1 mt-1 rounded shadow-md border border-gray-200 overflow-hidden bg-white p-1">
-                        <img src="https://i.postimg.cc/d0c9kLhM/pcp.jpg" alt="PCP" class="w-full h-full object-cover object-[center_50%] rounded-sm">
+                        <img src="assets/img-19.jpg" alt="PCP" class="w-full h-full object-cover object-[center_50%] rounded-sm">
                     </div>
 
                     <div class="text-[7px] text-gray-800 space-y-1.5 leading-snug mb-1">
@@ -1002,7 +1062,7 @@
             <div class="page hard cover-dark">
                 <div class="w-full h-full p-5 flex flex-col items-center justify-center relative overflow-hidden">
                     <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center mb-8 shadow-lg relative z-10 border-2 border-upngold overflow-hidden">
-                        <img src="https://yt3.googleusercontent.com/qZ8muXjJPWvW7CWToE4W36wFn37nkrGMcm4ysUwANhNG3UQlReF8QsQH6V1xbvJMoOKZUIjI=s900-c-k-c0x00ffffff-no-rj" alt="UPN Logo" class="w-full h-full object-cover p-1">
+                        <img src="assets/img-01.jpg" alt="UPN Logo" class="w-full h-full object-cover p-1">
                     </div>
                     <h2 class="text-upngold font-display tracking-[0.4em] text-sm mb-4 uppercase relative z-10 text-center">EN MOVIMIENTO</h2>
                     <p class="text-gray-400 text-[8px] uppercase tracking-widest font-light mb-1.5 relative z-10 text-center">Taller de Prácticas Corporales I<br>Manual Pedagógico</p>
@@ -1011,10 +1071,1372 @@
                 </div>
             </div>
 
+            <!-- PAGINA 23: PORTADA PRIMER SEMESTRE -->
+            <div class="page hard cover-dark">
+                <div class="w-full h-full p-5 flex flex-col justify-center items-center text-center relative overflow-hidden">
+                    <div class="my-auto flex flex-col items-center w-full relative z-10">
+                        <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-6 overflow-hidden border-[3px] border-upngold shadow-lg">
+                            <img src="assets/img-01.jpg" alt="Logo UPN" class="w-full h-full object-contain p-1.5">
+                        </div>
+                        <p class="text-upngold text-[9px] tracking-[0.3em] uppercase mb-2 font-semibold">Bitácoras</p>
+                        <h2 class="font-display text-[2.2rem] sm:text-[2.5rem] leading-[1] font-bold mb-3 text-white drop-shadow-lg">PRIMER<br><span class="text-white">SEMESTRE</span></h2>
+                        <div class="h-px w-20 bg-gradient-to-r from-transparent via-upngold to-transparent my-4"></div>
+                        <p class="text-[9px] font-light tracking-widest text-gray-300 uppercase">Taller de Prácticas Corporales 1</p>
+                        <p class="text-[8px] text-gray-400 mt-2">Bitácoras • Licenciatura en Educación Física</p>
+                        <p class="text-[8px] text-gray-400 mt-2">Profesora: Adriana</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGINA 24: BITACORA PRIMER SEMESTRE - EXPRESION CORPORAL (1/2) -->
+            <div class="page pattern-dots">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Primer Semestre • Bitácora 01</span>
+                    <div class="mt-5 mb-1.5">
+                        <h2 class="article-title text-xl text-upnblue leading-tight">EXPRESIÓN CORPORAL Y PRESENTACIÓN EN ESCENARIO</h2>
+                    </div>
+
+                    <div class="ficha">
+                        <div class="fila"><span class="k">Fecha</span><span class="v">Por confirmar<span class="tag-confirmar">Por confirmar</span></span></div>
+                        <div class="fila"><span class="k">Lugar</span><span class="v">Por confirmar<span class="tag-confirmar">Por confirmar</span></span></div>
+                        <div class="fila"><span class="k">Profesora</span><span class="v">Adriana</span></div>
+                        <div class="fila"><span class="k">Dirigido a</span><span class="v">Estudiantes de primer semestre de la licenciatura en educación física</span></div>
+                        <div class="fila mat"><span class="k">Materiales</span><span class="v">Ninguno</span></div>
+                        <div class="fila"><span class="k">Tema</span><span class="v">Expresión corporal y presentación en escenario</span></div>
+                        <div class="fila"><span class="k">Subtemas</span><span class="v">Postura corporal, expresión, ubicación del 1 al 7, coreografía</span></div>
+                    </div>
+
+                    <div class="box-proposito">
+                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Propósito u objetivo</h3>
+                        <p class="text-[6.5px] text-gray-700 leading-snug">Reconocer herramientas corporales y expresivas que permitan presentarnos con mayor seguridad ante un público, ubicarnos en el espacio escénico y cuidar la postura antes, durante y después de una presentación.</p>
+                    </div>
+
+                    <h3 class="sec-h">Desarrollo</h3>
+                    <div class="bit-text bit-dense">
+                        <p>La clase estuvo dedicada principalmente a conocer a una nueva profesora, Adriana. Durante el encuentro, nos orientó sobre cómo mostrarnos mejor al momento de realizar una presentación y cómo ubicarnos en el espacio utilizando las posiciones numeradas del uno al siete.</p>
+                        <p>También trabajamos en maneras de expresarnos con mayor claridad y seguridad. La profesora explicó la importancia de mantener una postura adecuada antes, durante y después de una presentación en escenario, prestando atención a la disposición corporal y a la presencia frente al público.</p>
+                        <p>Como parte práctica de la clase, realizamos una coreografía, en la que pudimos poner en uso algunas de las indicaciones trabajadas y explorar la expresión y la ubicación en el espacio.</p>
+                        <p>Se participó en las actividades y ejercicios propuestos por la profesora, atendiendo a las indicaciones para explorar la postura, la expresión corporal y la ubicación en el espacio.</p>
+                    </div>
+                    <span class="page-number">24</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 25: BITACORA PRIMER SEMESTRE - EXPRESION CORPORAL (2/2) -->
+            <div class="page">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Primer Semestre • Bitácora 01</span>
+                    <div class="mt-5 mb-1">
+                        <h2 class="article-title text-sm text-upnblue leading-none">EXPRESIÓN CORPORAL — FOTOS Y REFLEXIÓN</h2>
+                    </div>
+
+                    <div class="fotos-row">
+                        <div class="foto-wrap">
+                            <img src="assets/img-20.jpg" alt="Escenario de la presentación, con el letrero «El valor de Gilma»" class="foto-bit" style="width:138px;height:62px">
+                            <p class="foto-cap">Escenario de la presentación, con el letrero «El valor de Gilma»</p>
+                        </div>
+                        <div class="foto-wrap">
+                            <img src="assets/img-21.jpg" alt="Coreografía en escena, con vestuario tradicional" class="foto-bit" style="width:138px;height:62px">
+                            <p class="foto-cap">Coreografía en escena, con vestuario tradicional</p>
+                        </div>
+                    </div>
+                    <div class="fotos-row">
+                        <div class="foto-wrap">
+                            <img src="assets/img-22.jpg" alt="Presentación en escenario con micrófono y vestuario" class="foto-bit" style="width:138px;height:62px">
+                            <p class="foto-cap">Presentación en escenario con micrófono y vestuario</p>
+                        </div>
+                        <div class="foto-wrap">
+                            <img src="assets/img-23.jpg" alt="El grupo completo en el cierre de la presentación" class="foto-bit" style="width:138px;height:62px">
+                            <p class="foto-cap">El grupo completo en el cierre de la presentación</p>
+                        </div>
+                    </div>
+
+                    <h3 class="sec-h">Reflexión pedagógica</h3>
+                    <div class="bit-text">
+                        <p>La clase permitió acercarnos a recursos básicos para desenvolvernos en una presentación escénica. Comprendí que la postura, la ubicación espacial y la expresión corporal influyen en la manera en que comunicamos y en la seguridad que proyectamos. La coreografía fue una oportunidad para llevar estas ideas a la práctica y empezar a conocer la orientación de la profesora Adriana.</p>
+                    </div>
+
+                    <p class="text-[7px] font-bold text-gray-400 tracking-widest uppercase mt-4 text-center">Fin de la Bitácora • Taller 1</p>
+                    <span class="page-number">25</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 26: PORTADA SEGUNDO SEMESTRE -->
+            <div class="page hard cover-dark">
+                <div class="w-full h-full p-5 flex flex-col justify-center items-center text-center relative overflow-hidden">
+                    <div class="my-auto flex flex-col items-center w-full relative z-10">
+                        <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-6 overflow-hidden border-[3px] border-upngold shadow-lg">
+                            <img src="assets/img-01.jpg" alt="Logo UPN" class="w-full h-full object-contain p-1.5">
+                        </div>
+                        <p class="text-upngold text-[9px] tracking-[0.3em] uppercase mb-2 font-semibold">Segunda parte</p>
+                        <h2 class="font-display text-[2.2rem] sm:text-[2.5rem] leading-[1] font-bold mb-3 text-white drop-shadow-lg">SEGUNDO<br><span class="text-white">SEMESTRE</span></h2>
+                        <div class="h-px w-20 bg-gradient-to-r from-transparent via-upngold to-transparent my-4"></div>
+                        <p class="text-[9px] font-light tracking-widest text-gray-300 uppercase">Taller de Prácticas Corporales 2</p>
+                        <p class="text-[8px] text-gray-400 mt-2">Bitácoras • Licenciatura en Educación Física</p>
+                        <p class="text-[8px] text-gray-400">Campus Valmaría • 2026-2</p>
+                        <p class="text-[8px] text-gray-400 mt-2">Profesora titular: Lina Rocío Egea</p>
+                        <p class="text-[7px] text-gray-500 mt-4 italic">Continuación de la guía del primer semestre</p>
+                    </div>
+                </div>
+            </div>
+
+<!-- PAGINA 27: INDICE SEGUNDO SEMESTRE -->
+            <div class="page pattern-dots">
+                <div class="page-content content-z">
+                    <span class="header-line">Segundo Semestre • Índice</span>
+                    <div class="mt-5 mb-2">
+                        <h2 class="article-title text-xl text-upnblue leading-tight">BITÁCORAS<br>POR CLASE</h2>
+                    </div>
+                    <p class="text-[7px] text-gray-700 mb-2 text-justify">Taller de Prácticas Corporales 2 — Licenciatura en Educación Física, Universidad Pedagógica Nacional, Campus Valmaría. Una entrada por cada clase, en orden cronológico.</p>
+
+                    <div class="text-[7.5px] text-gray-800 space-y-0.5">
+                        <div class="bg-white p-1 px-1.5 rounded shadow-sm border-l-2 border-upnblue">
+                            <strong class="text-upnblue">1. Presentación del programa semestral</strong><br>
+                            <span class="text-gray-500 text-[6.5px]">3 de agosto · Prof. Lina Rocío Egea</span>
+                        </div>
+                        <div class="bg-white p-1 px-1.5 rounded shadow-sm border-l-2 border-blue-400">
+                            <strong class="text-upnblue">2. Debate sobre la lectura y aproximaciones al concepto de cuerpo</strong><br>
+                            <span class="text-gray-500 text-[6.5px]">3 de agosto · Prof. Lina Rocío Egea</span>
+                        </div>
+                        <div class="bg-white p-1 px-1.5 rounded shadow-sm border-l-2 border-blue-700">
+                            <strong class="text-upnblue">3. Tenis</strong><br>
+                            <span class="text-gray-500 text-[6.5px]">10 de agosto · Prof. Samuel Calderón y Alejandro Bautista</span>
+                        </div>
+                        <div class="bg-white p-1 px-1.5 rounded shadow-sm border-l-2 border-red-500">
+                            <strong class="text-upnblue">4. Béisbol</strong><br>
+                            <span class="text-gray-500 text-[6.5px]">10 de agosto · Prof. Luis Romano</span>
+                        </div>
+                        <div class="bg-white p-1 px-1.5 rounded shadow-sm border-l-2 border-pink-500">
+                            <strong class="text-upnblue">5. Gimnasia</strong><br>
+                            <span class="text-gray-500 text-[6.5px]">24 de agosto · Prof. Daniela Narváez</span>
+                        </div>
+                        <div class="bg-white p-1 px-1.5 rounded shadow-sm border-l-2 border-yellow-500">
+                            <strong class="text-upnblue">6. Porrismo</strong><br>
+                            <span class="text-gray-500 text-[6.5px]">24 de agosto · Prof. Dereck Sánchez</span>
+                        </div>
+                        <div class="bg-white p-1 px-1.5 rounded shadow-sm border-l-2 border-cyan-500">
+                            <strong class="text-upnblue">7. Patinaje</strong><br>
+                            <span class="text-gray-500 text-[6.5px]">24 de agosto · Prof. Angela Virgüez y Ana Maria</span>
+                        </div>
+                        <div class="bg-white p-1 px-1.5 rounded shadow-sm border-l-2 border-orange-500">
+                            <strong class="text-upnblue">8. Street Hockey</strong><br>
+                            <span class="text-gray-500 text-[6.5px]">24 de agosto · Prof. Dereck Sánchez</span>
+                        </div>
+                        <div class="bg-white p-1 px-1.5 rounded shadow-sm border-l-2 border-green-600">
+                            <strong class="text-upnblue">9. Música</strong><br>
+                            <span class="text-gray-500 text-[6.5px]">7 de septiembre · Prof. Ana Ortiz, Lauren Herrera y Samuel Chávez</span>
+                        </div>
+                        <div class="bg-white p-1 px-1.5 rounded shadow-sm border-l-2 border-red-600">
+                            <strong class="text-upnblue">10. Clase de Pulsos</strong><br>
+                            <span class="text-gray-500 text-[6.5px]">7 de septiembre · Prof. Francisco Lozada</span>
+                        </div>
+                        <div class="bg-white p-1 px-1.5 rounded shadow-sm border-l-2 border-purple-600">
+                            <strong class="text-upnblue">11. Conclusiones y reflexiones</strong><br>
+                            <span class="text-gray-500 text-[6.5px]">14 de septiembre · Sin profesor</span>
+                        </div>
+                    </div>
+                    <span class="page-number">27</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 28: BITACORA 1 - PRESENTACION DEL PROGRAMA (1/3) -->
+            <div class="page">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Segundo Semestre • Bitácora 01</span>
+                    <div class="mt-5 mb-1.5">
+                        <h2 class="article-title text-xl text-upnblue leading-none">PRESENTACIÓN DEL PROGRAMA SEMESTRAL</h2>
+                    </div>
+
+                    <div class="ficha">
+                        <div class="fila"><span class="k">Fecha</span><span class="v">3 agosto 2026</span></div>
+                        <div class="fila"><span class="k">Lugar</span><span class="v">Campus Valmaría, salón MO 019</span></div>
+                        <div class="fila"><span class="k">Profesor</span><span class="v">Lina Rocío Egea</span></div>
+                        <div class="fila"><span class="k">Dirigido a</span><span class="v">Estudiantes de segundo semestre de la licenciatura en educación física</span></div>
+                        <div class="fila mat"><span class="k">Materiales</span><span class="v">ninguno</span></div>
+                        <div class="fila"><span class="k">Tema</span><span class="v">presentación del programa semestral</span></div>
+                        <div class="fila"><span class="k">Subtemas</span><span class="v">calendario académico, núcleos temáticos, metodología, evaluación, acuerdos</span></div>
+                    </div>
+
+                    <div class="box-proposito">
+                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Propósito u objetivo</h3>
+                        <p class="text-[6.5px] text-gray-700 leading-snug">dar a conocer el programa académico de la asignatura prácticas corporales 2 a los estudiantes de educación física semestre 2026-2</p>
+                    </div>
+
+                    <h3 class="sec-h">Desarrollo</h3>
+                    <div class="bit-text">
+                        <p>se empieza la clase a las 7:30 en el salon modular 019</p>
+                        <p>empezamos recordando que practicas corporales hacían falta por desarrollar y se planteó el siguiente calendario</p>
+                        <ul>
+                            <li>10 08 26 clase de béisbol y tenis</li>
+                            <li>24 08 26 clase de gimnasia y porras</li>
+                            <li>31 08 26 clase de patinaje y hockey</li>
+                            <li>07 09 26 clase de cocina instrumentos y pulso</li>
+                        </ul>
+                        <p><strong class="text-upnblue">Núcleo temático</strong></p>
+                        <p>son las experiencias corporales y el desarrollo humano, en sí como estas se relacionan y cómo influye una sobre la otra</p>
+                        <p>asi como la ampliación de las prácticas corporales en lo global y en lo segmentado (cuerpo-tiempo-espacio)</p>
+                    </div>
+                    <span class="page-number">28</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 29: BITACORA 1 - PRESENTACION DEL PROGRAMA (2/3) -->
+            <div class="page pattern-dots">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Segundo Semestre • Bitácora 01</span>
+                    <div class="mt-5 mb-1">
+                        <h2 class="article-title text-sm text-upnblue leading-none">PRESENTACIÓN DEL PROGRAMA — CONTINUACIÓN</h2>
+                    </div>
+
+                    <h3 class="sec-h">Desarrollo (continuación)</h3>
+                    <div class="bit-text">
+                        <p><strong class="text-upnblue">Lecturas y textos de apropiación del tema</strong></p>
+                        <ul>
+                            <li>para el 14-09-26 se plantea un conversatorio y puesta en escena por grupos correspondiente al texto de concepto de cuerpo</li>
+                            <li>28 09 26 lectura del análisis del movimiento con la elaboración de un mapa mental dando cuenta de la apropiación del tema tratado</li>
+                            <li>del 26 10 26 al 9 11 26 lectura acerca de lúdica, juego, recreación, tiempo libre ocio</li>
+                            <li>23 11 26 evaluaciones finales de bitácoras y cierre del espacio académico</li>
+                        </ul>
+                    </div>
+
+                    <h3 class="sec-h">Metodología</h3>
+                    <div class="bit-text">
+                        <p>La clase se desarrollará bajo el trabajo experiencial propio y colectivo.</p>
+                    </div>
+
+                    <div class="bit-text">
+                        <p><strong class="text-upnblue">Evaluación</strong></p>
+                        <p>bajo las premisas de el factor actitudinal dentro del espacio y la puntualidad de cada uno de los participantes del espacio de encuentro académico</p>
+                        <ul>
+                            <li>primer corte con un valor del 20%</li>
+                            <li>segundo y tercer corte con un valor del 40% cada uno</li>
+                        </ul>
+                        <p><strong class="text-upnblue">Acuerdos de la clase</strong></p>
+                        <ul>
+                            <li>con 9 fallas (horas) se pierde el espacio académico así que con 3 clases que no asistamos lo perdemos</li>
+                            <li>La llegada es a las 7:15 am como máximo incluyendo profe y estudiantes -la profe prometió llevar compartir si ella llegaba tarde-.</li>
+                            <li>entrega de trabajos dentro de las fechas límites establecidas</li>
+                            <li>la presentación personal acorde a las clases</li>
+                            <li>el uso de dispositivos tecnológicos sólo cuando se requiera</li>
+                            <li>comportamiento respetuoso y el vocabulario</li>
+                            <li>evitar los plagios para evitar sanciones académicas y mas alla reforzar nuestro potencial</li>
+                        </ul>
+                    </div>
+                    <span class="page-number">29</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 30: BITACORA 1 - PRESENTACION DEL PROGRAMA (3/3) -->
+            <div class="page">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Segundo Semestre • Bitácora 01</span>
+                    <div class="mt-5 mb-1">
+                        <h2 class="article-title text-sm text-upnblue leading-none">PRESENTACIÓN DEL PROGRAMA — FOTO Y REFLEXIÓN</h2>
+                    </div>
+
+                    <img src="assets/img-24.png" alt="Plano del salón MO 019 con la distribución de los puestos de los estudiantes y el escritorio del docente" class="foto-plano">
+
+                    <h3 class="sec-h">Reflexión pedagógica</h3>
+                    <div class="bit-text">
+                        <p>tener claros los acuerdos de la clase nos permite como estudiantes universitario programar nuestro tiempo y tener la disponibilidad actitudinal y los trabajos a tiempo así no tener ninguna dificultad al momento de realizar dichas entregas</p>
+                        <p>la importancia de saber que temas se van a tratar y adelantarnos o ir viendo material educativo que nos ayude a nutrir dichos temas</p>
+                        <p>los consensos y acuerdos son relevantes al momento de crear conductas apropiadas a cada uno de los espacios</p>
+                    </div>
+                    <span class="page-number">30</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 31: BITACORA 2 - DEBATE CONCEPTO DE CUERPO (1/3) -->
+            <div class="page pattern-dots">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Segundo Semestre • Bitácora 02</span>
+                    <div class="mt-5 mb-1.5">
+                        <h2 class="article-title text-xl text-upnblue leading-none">DEBATE SOBRE LA LECTURA</h2>
+                        <p class="text-[7px] text-gray-500 mt-0.5">Aproximaciones al concepto de cuerpo</p>
+                    </div>
+
+                    <div class="ficha">
+                        <div class="fila"><span class="k">Fecha</span><span class="v">3 agosto 2026</span></div>
+                        <div class="fila"><span class="k">Lugar</span><span class="v">Campus Valmaría, salón MO 019</span></div>
+                        <div class="fila"><span class="k">Profesor</span><span class="v">Lina Rocío Egea</span></div>
+                        <div class="fila"><span class="k">Dirigido a</span><span class="v">Estudiantes de segundo semestre de la licenciatura en educación física</span></div>
+                        <div class="fila mat"><span class="k">Materiales</span><span class="v">ninguno</span></div>
+                        <div class="fila"><span class="k">Tema</span><span class="v">Debate sobre la lectura y aproximaciones al concepto de cuerpo l</span></div>
+                        <div class="fila"><span class="k">Subtemas</span><span class="v">cuerpo objeto, dualismo, poder, modernidad</span></div>
+                    </div>
+
+                    <div class="box-proposito">
+                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Propósito u objetivo</h3>
+                        <p class="text-[6.5px] text-gray-700 leading-snug">tratar de identificar los diferentes significados que se le han dado al cuerpo, generar debate y reflexión sobre dichas posturas</p>
+                    </div>
+
+                    <h3 class="sec-h">Desarrollo</h3>
+                    <div class="bit-text bit-dense">
+                        <p>La clase inicio a las 7:15 después del llamado a lista. La profe abre el debate con lo que nos haya llamado la atención del texto aproximaciones al concepto de cuerpo: se debe dejar a un lado la visión dualista del cuerpo y tomarlo como unidad, estos 2 polos de cuerpo y alma van unidos y son dependientes uno del otro, sin uno no se puede dar el otro.</p>
+                        <p>Otro interrogante era si el cuerpo construye a la cultura o la cultura va construyendo el cuerpo: sin cuerpos no hay posibilidades de transmitir culturas, pero a su vez estos cuerpos son el reflejo de las culturas. Decimos también que la cultura si crea cuerpos y a su vez moldea subjetividades, y que la cultura nos rige por normas, represores de deseos, que permiten vivir en armonía y moldean el comportamiento de sus integrantes; se deja a cuestionamiento quienes son los que imponen estas normas y con que fines, porque ya sabemos que en las relaciones de poder se promueven los ideales de unos pocos.</p>
+                    </div>
+                    <span class="page-number">31</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 32: BITACORA 2 - DEBATE CONCEPTO DE CUERPO (2/3) -->
+            <div class="page">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Segundo Semestre • Bitácora 02</span>
+                    <div class="mt-5 mb-1">
+                        <h2 class="article-title text-sm text-upnblue leading-none">DEBATE SOBRE LA LECTURA — CONTINUACIÓN</h2>
+                    </div>
+
+                    <h3 class="sec-h">Desarrollo (continuación)</h3>
+                    <div class="bit-text bit-dense">
+                        <p>Hacemos un tránsito del dualismo, pasamos a la edad media donde el cuerpo era visto como pecado, pasamos a la modernidad y vemos el cuerpo como una máquina de trabajo, después visto el cuerpo objeto como capital físico, pero esas ideas aún se mantienen sobre el tiempo porque hay personas que las siguen replicando. Nos preguntamos a qué cuerpos nos vamos a enfrentar como educadores físicos: cuerpos utilizados como mercancía, compra y venta de ideas y estereotipos, cuerpos superficiales marcados por la vanidad y la estética, por ende cuerpos poco funcionales; los pocos niños que hay están predispuestos a las pantallas y por ende una vida muy sedentaria.</p>
+                        <p>Como segundo momento de la clase leímos un texto relacionado con las técnicas y movimientos corporales, luego por indicaciones de la profesora Lina nos hicimos de parejas y la finalidad es que cada uno le transmite una técnica de nuestro dominio al otro compañero. Cuando volvimos al salon hicimos la retroalimentación: a algunas se les facilitaba enseñar mediante la expresión oral, otros mediante el ejemplo con el cuerpo; los que aprendieron dijeron que se les era más fácil a partir de la experiencia directa, ensayo error, y a otros mediante lo visual, el ver primero los movimientos y después desarrollarlos.</p>
+                    </div>
+                    <span class="page-number">32</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 33: BITACORA 2 - DEBATE CONCEPTO DE CUERPO (3/3) -->
+            <div class="page pattern-dots">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Segundo Semestre • Bitácora 02</span>
+                    <div class="mt-5 mb-1">
+                        <h2 class="article-title text-sm text-upnblue leading-none">DEBATE SOBRE LA LECTURA — FOTO</h2>
+                    </div>
+
+                    <img src="assets/img-24.png" alt="Plano del salón MO 019 con la distribución de los puestos de los estudiantes y el escritorio del docente" class="foto-plano">
+
+                    <h3 class="sec-h">Metodología</h3>
+                    <div class="bit-text">
+                        <p>Debate abierto a partir del texto aproximaciones al concepto de cuerpo, lectura de un texto sobre técnicas y movimientos corporales, trabajo en parejas en el que cada uno le transmite una técnica de su dominio al compañero, y retroalimentación en el salón sobre las sensaciones al enseñar y al aprender.</p>
+                    </div>
+
+                    <div class="box-reflexion">
+                        <h4 class="font-bold text-upngold text-[8px] uppercase mb-0.5">Reflexión pedagógica</h4>
+                        <p class="text-[6.5px] italic text-gray-700 leading-snug">En el documento, esta bitácora termina en el Desarrollo: no incluye reflexión pedagógica.</p>
+                    </div>
+                    <span class="page-number">33</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 34: BITACORA 3 - TENIS (1/2) -->
+            <div class="page">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Segundo Semestre • Bitácora 03</span>
+                    <div class="mt-5 mb-1.5">
+                        <h2 class="article-title text-xl text-upnblue leading-none">TENIS</h2>
+                    </div>
+
+                    <div class="ficha">
+                        <div class="fila"><span class="k">Fecha</span><span class="v">10 de agosto de 2026</span></div>
+                        <div class="fila"><span class="k">Lugar</span><span class="v">Campus Valmaría — Canchas deportivas</span></div>
+                        <div class="fila"><span class="k">Profesor</span><span class="v">Samuel Calderón y Alejandro Bautista</span></div>
+                        <div class="fila"><span class="k">Dirigido a</span><span class="v">Estudiantes de segundo semestre de la Licenciatura en Educación Física</span></div>
+                        <div class="fila mat"><span class="k">Materiales</span><span class="v">Raquetas, pelotas y elementos propios del tenis.</span></div>
+                        <div class="fila"><span class="k">Tema</span><span class="v">Tenis</span></div>
+                    </div>
+
+                    <div class="box-proposito">
+                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Propósito u objetivo</h3>
+                        <p class="text-[6.5px] text-gray-700 leading-snug">Reconocer y vivenciar la práctica corporal del tenis mediante la experiencia práctica, fortaleciendo la comprensión de sus elementos técnicos y reglas básicas a través del trabajo individual y colectivo.</p>
+                    </div>
+
+                    <h3 class="sec-h">Desarrollo</h3>
+                    <div class="bit-text">
+                        <p>La segunda clase del espacio académico se desarrolló el 10 de agosto de 2026 y estuvo enfocada en la práctica de tenis. Durante la práctica de tenis se realizaron diferentes actividades orientadas al reconocimiento y manejo de la raqueta y la pelota.</p>
+                        <p>Sin embargo, la clase tuvo que ser interrumpida debido al terremoto de Colombia del 10 de agosto. Como medida de seguridad, nos trasladamos a otra cancha y permanecimos allí mientras esperábamos a que la situación pasara y se verificaba que no se presentaran nuevas réplicas. Esta situación modificó temporalmente el desarrollo de la actividad, pero también permitió comprender la importancia de atender los protocolos de seguridad y mantener la calma ante situaciones inesperadas.</p>
+                    </div>
+                    <span class="page-number">34</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 35: BITACORA 3 - TENIS (2/2) -->
+            <div class="page pattern-dots">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Segundo Semestre • Bitácora 03</span>
+                    <div class="mt-5 mb-1">
+                        <h2 class="article-title text-sm text-upnblue leading-none">TENIS — FOTOS Y REFLEXIÓN</h2>
+                    </div>
+
+                    <div class="fotos-row">
+                        <img src="assets/img-25.jpg" alt="Mano sosteniendo una raqueta de tenis sobre el césped de la cancha" class="foto-bit" style="width:140px;height:140px">
+                        <img src="assets/img-26.jpg" alt="Estudiantes reunidos en la cancha de tenis en un día soleado" class="foto-bit" style="width:140px;height:140px">
+                    </div>
+
+                    <h3 class="sec-h">Metodología</h3>
+                    <div class="bit-text bit-dense">
+                        <p>Práctica directa, individual y colectiva: reconocimiento y manejo de la raqueta y la pelota en tenis.</p>
+                    </div>
+
+                    <h3 class="sec-h">Reflexión pedagógica</h3>
+                    <div class="bit-text">
+                        <p>La clase permitió comprender que el aprendizaje de una práctica corporal no se limita a conocer sus reglas de manera teórica, sino que la experiencia directa facilita su apropiación. En el tenis, además, la interrupción por el terremoto mostró la importancia de priorizar la seguridad y saber responder ante situaciones imprevistas.</p>
+                    </div>
+                    <span class="page-number">35</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 36: BITACORA 4 - BEISBOL (1/2) -->
+            <div class="page">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Segundo Semestre • Bitácora 04</span>
+                    <div class="mt-5 mb-1.5">
+                        <h2 class="article-title text-xl text-upnblue leading-none">BÉISBOL</h2>
+                    </div>
+
+                    <div class="ficha">
+                        <div class="fila"><span class="k">Fecha</span><span class="v">10 de agosto de 2026</span></div>
+                        <div class="fila"><span class="k">Lugar</span><span class="v">Campus Valmaría — Canchas deportivas</span></div>
+                        <div class="fila"><span class="k">Profesor</span><span class="v">Luis Romano</span></div>
+                        <div class="fila"><span class="k">Dirigido a</span><span class="v">Estudiantes de segundo semestre de la Licenciatura en Educación Física</span></div>
+                        <div class="fila mat"><span class="k">Materiales</span><span class="v">Pelotas y elementos propios del béisbol.</span></div>
+                        <div class="fila"><span class="k">Tema</span><span class="v">Béisbol</span></div>
+                    </div>
+
+                    <div class="box-proposito">
+                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Propósito u objetivo</h3>
+                        <p class="text-[6.5px] text-gray-700 leading-snug">Reconocer y vivenciar la práctica corporal del béisbol mediante la experiencia práctica, fortaleciendo la comprensión de sus elementos técnicos y reglas básicas a través del trabajo individual y colectivo.</p>
+                    </div>
+
+                    <h3 class="sec-h">Desarrollo</h3>
+                    <div class="bit-text">
+                        <p>Posteriormente se desarrolló la práctica de béisbol. En esta parte de la clase se realizaron ejercicios para acercarnos a las dinámicas propias del deporte y, finalmente, se llevó a cabo un partido entre todos los estudiantes. El partido permitió poner en práctica lo aprendido y comprender de una manera más clara las reglas del béisbol, ya que al participar directamente en el juego fue posible identificar situaciones de juego, turnos, posiciones y formas de conseguir puntos</p>
+                    </div>
+                    <span class="page-number">36</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 37: BITACORA 4 - BEISBOL (2/2) -->
+            <div class="page pattern-dots">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Segundo Semestre • Bitácora 04</span>
+                    <div class="mt-5 mb-1">
+                        <h2 class="article-title text-sm text-upnblue leading-none">BÉISBOL — FOTOS Y REFLEXIÓN</h2>
+                    </div>
+
+                    <div class="fotos-row">
+                        <img src="assets/img-27.jpg" alt="Estudiantes con guantes de béisbol en la cancha" class="foto-bit" style="width:140px;height:140px">
+                        <img src="assets/img-28.jpg" alt="Estudiante en el lanzamiento durante la práctica de béisbol" class="foto-bit" style="width:140px;height:140px">
+                    </div>
+
+                    <h3 class="sec-h">Metodología</h3>
+                    <div class="bit-text bit-dense">
+                        <p>Práctica directa, individual y colectiva: ejercicios para acercarse a las dinámicas del béisbol y partido final entre todos los estudiantes para comprender las reglas desde la práctica.</p>
+                    </div>
+
+                    <h3 class="sec-h">Reflexión pedagógica</h3>
+                    <div class="bit-text">
+                        <p>La clase permitió comprender que el aprendizaje de una práctica corporal no se limita a conocer sus reglas de manera teórica, sino que la experiencia directa facilita su apropiación. En el béisbol, el partido entre todos fue una estrategia útil para comprender las reglas desde la práctica, pues permitió aprender mientras jugábamos y compartíamos con los demás.</p>
+                    </div>
+                    <span class="page-number">37</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 38: BITACORA 5 - GIMNASIA (1/3) -->
+            <div class="page">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Segundo Semestre • Bitácora 05</span>
+                    <div class="mt-5 mb-1.5">
+                        <h2 class="article-title text-xl text-upnblue leading-none">GIMNASIA</h2>
+                        <p class="text-[7px] text-gray-500 mt-0.5">Gimnasia rítmica</p>
+                    </div>
+
+                    <div class="ficha">
+                        <div class="fila"><span class="k">Fecha</span><span class="v">24 de agosto de 2026</span></div>
+                        <div class="fila"><span class="k">Lugar</span><span class="v">Campus Valmaría, salón MO 019</span></div>
+                        <div class="fila"><span class="k">Profesor</span><span class="v">Daniela Narváez</span></div>
+                        <div class="fila"><span class="k">Dirigido a</span><span class="v">Estudiantes de segundo semestre de la licenciatura en educación física</span></div>
+                        <div class="fila mat"><span class="k">Materiales</span><span class="v">Sillas, platillos</span></div>
+                        <div class="fila"><span class="k">Tema</span><span class="v">Gimnasia (gimnasia rítmica)</span></div>
+                    </div>
+
+                    <div class="box-proposito">
+                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Propósito u objetivo</h3>
+                        <p class="text-[6.5px] text-gray-700 leading-snug">dar a conocer el programa académico de la asignatura prácticas corporales 2 a los estudiantes de educación física semestre 2026-2</p>
+                    </div>
+
+                    <h3 class="sec-h">Desarrollo</h3>
+                    <div class="bit-text bit-dense">
+                        <p>La clase inició a las 8:40 am aproximadamente con la fase teórica. El docente empezó explicando qué es la gimnasia rítmica: una disciplina deportiva que combina elementos de ballet, danza y gimnasia al ritmo de la música sobre un tapiz. La primera parte fue calentar el cuerpo con movimientos básicos de articulaciones, cadera, hombros, etc. Luego la profesora Daniela pasó a la actividad de relevos con las sillas, que consistía en que el grupo asignado tenía que traer las sillas de un extremo al otro corriendo, haciendo rollitos y otras cosas. Después pasamos a hacer grupos de 4 personas para trabajar con las sillas el Split y el spagat. Posterior a esa actividad hicimos un círculo y allí la profesora profundizó más el Split y el spagat, nos exigió hacer la mayor flexibilidad posible. Después la clase se interrumpió por una presentación sobre el modelo educativo y la importancia de la Educación Física en las universidades de China, caracterizadas por su gran escala y número de estudiantes. Luego de la interrupción la profesora nos enseñó a hacer rollitos hacia adelante, rollitos hacia atrás, media luna y chassé, y terminamos haciendo una rutina con esos pasos que la profesora nos enseñó.</p>
+                    </div>
+                    <span class="page-number">38</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 39: BITACORA 5 - GIMNASIA (2/3) -->
+            <div class="page pattern-dots">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Segundo Semestre • Bitácora 05</span>
+                    <div class="mt-5 mb-1">
+                        <h2 class="article-title text-sm text-upnblue leading-none">GIMNASIA — CONTINUACIÓN</h2>
+                    </div>
+
+                    <h3 class="sec-h">Núcleo temático</h3>
+                    <div class="bit-text bit-dense">
+                        <p>Gimnasia rítmica como disciplina que combina ballet, danza y gimnasia sobre música. Fundamentos técnicos de flexibilidad articular: Split y spagat. Elementos básicos de suelo: rollito hacia adelante, rollito hacia atrás, media luna y chassé. Principios de calentamiento articular y preparación corporal previa al trabajo de flexibilidad. Integración de los elementos técnicos aprendidos en una rutina final.</p>
+                    </div>
+
+                    <h3 class="sec-h">Metodología</h3>
+                    <div class="bit-text bit-dense">
+                        <p>La clase combinó una breve explicación teórica con práctica guiada por la docente.</p>
+                        <ul>
+                            <li><strong>a) Fase Teórica:</strong> El docente explicó brevemente qué es la gimnasia rítmica, como disciplina que combina ballet, danza y gimnasia al ritmo de la música.</li>
+                            <li><strong>b) Fase de Calentamiento:</strong> Se activaron las articulaciones (cadera, hombros, etc.) y se realizó una actividad de relevos con sillas dirigida por la profesora Daniela.</li>
+                            <li><strong>c) Fase de Flexibilidad:</strong> Trabajo en grupos de 4 y luego en círculo, practicando split y spagat con exigencia de máxima flexibilidad.</li>
+                            <li><strong>d) Interrupción:</strong> La clase se vio interrumpida por una presentación sobre el modelo educativo y la Educación Física en universidades de China.</li>
+                            <li><strong>e) Fase de Elementos de Suelo:</strong> Retomada la clase, se enseñaron rollitos hacia adelante, hacia atrás, media luna y chassé.</li>
+                            <li><strong>f) Fase de Integración:</strong> Se cerró con una rutina final que integró todos los pasos aprendidos.</li>
+                        </ul>
+                    </div>
+
+                    <h3 class="sec-h">Evaluación</h3>
+                    <div class="bit-text bit-dense">
+                        <p>Evaluación formativa y cualitativa, sin carácter sumativo ni asignación de nota. Heteroevaluación: observación de la profesora sobre la correcta ejecución del split, el spagat y los elementos de suelo (rollitos y media luna). Coevaluación: entre compañeros, al trabajar en grupos de 4 con las sillas, corrigiéndose mutuamente la postura y la flexibilidad. Autoevaluación: al reconocer las propias limitaciones de flexibilidad durante la exigencia de máxima amplitud en el círculo. La rutina final funcionó como evaluación práctica del proceso, integrando los elementos aprendidos, más que como una medición de rendimiento individual.</p>
+                    </div>
+                    <span class="page-number">39</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 40: BITACORA 5 - GIMNASIA (3/3) -->
+            <div class="page">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Segundo Semestre • Bitácora 05</span>
+                    <div class="mt-5 mb-1">
+                        <h2 class="article-title text-sm text-upnblue leading-none">GIMNASIA — FOTOS Y REFLEXIÓN</h2>
+                    </div>
+
+                    <h3 class="sec-h">Reflexión pedagógica</h3>
+                    <div class="bit-text bit-dense">
+                        <p>La clase mostró que la gimnasia rítmica no es solo flexibilidad, sino también disciplina, cuidado corporal y trabajo en equipo. Lo más valioso fue el trabajo en grupos de 4, donde los compañeros se apoyaban y corregían entre sí para lograr el split y el spagat, lo cual fomenta la confianza y el acompañamiento entre pares. La actividad de relevos con sillas permitió integrar diversión y esfuerzo físico de una manera dinámica y motivante.</p>
+                        <p>La enseñanza de la gimnasia requiere organizar las tareas con una progresión que vaya de movimientos conocidos y sencillos hacia otros que demanden mayor coordinación, equilibrio y control. Antes de realizar los movimientos es importante explicar y demostrar la acción y ofrecer oportunidades suficientes para ensayar. El acompañamiento docente debe priorizar el cuidado y la seguridad, y la retroalimentación puede centrarse en un aspecto concreto cada vez. Los movimientos no tienen que ejecutarse todos de la misma manera ni al mismo ritmo: el docente puede proponer variantes o niveles de dificultad. Como futuro licenciado, me quedo con la importancia del calentamiento articular previo (cadera, hombros, etc.) antes de exigir flexibilidad extrema, ya que es clave para prevenir lesiones, el riesgo principal de esta práctica cuando se realiza sin una preparación adecuada del cuerpo. Finalmente, reflexionar después de la clase ayuda a valorar qué explicaciones y progresiones funcionaron y qué cambios podrían hacer más segura y significativa una próxima sesión.</p>
+                    </div>
+
+                    <div class="fotos-row">
+                        <img src="assets/img-29.jpg" alt="Estudiantes haciendo ejercicios de flexibilidad en la cancha" class="foto-bit" style="flex:1;min-width:0;height:88px">
+                        <img src="assets/img-30.jpg" alt="Estudiante practicando el split apoyado en una silla" class="foto-bit" style="flex:1;min-width:0;height:88px">
+                    </div>
+                    <div class="fotos-row">
+                        <img src="assets/img-31.jpg" alt="Vista general de la cancha durante la clase de gimnasia rítmica" class="foto-bit" style="flex:1;min-width:0;height:88px">
+                        <img src="assets/img-32.jpg" alt="Estudiantes en ejercicios de calentamiento y flexibilidad en la cancha" class="foto-bit" style="flex:1;min-width:0;height:88px">
+                        <img src="assets/img-33.jpg" alt="Estudiantes practicando split y spagat en la cancha" class="foto-bit" style="flex:1;min-width:0;height:88px">
+                    </div>
+                    <span class="page-number">40</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 41: BITACORA 6 - PORRISMO (1/2) -->
+            <div class="page pattern-dots">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Segundo Semestre • Bitácora 06</span>
+                    <div class="mt-5 mb-1.5">
+                        <h2 class="article-title text-xl text-upnblue leading-none">PORRISMO</h2>
+                    </div>
+
+                    <div class="ficha">
+                        <div class="fila"><span class="k">Fecha</span><span class="v">24 de agosto de 2026</span></div>
+                        <div class="fila"><span class="k">Lugar</span><span class="v">Campus Valmaría, cancha alterna</span></div>
+                        <div class="fila"><span class="k">Profesor</span><span class="v">Dereck Sánchez</span></div>
+                        <div class="fila"><span class="k">Dirigido a</span><span class="v">Estudiantes de segundo semestre de la licenciatura en educación física</span></div>
+                        <div class="fila mat"><span class="k">Materiales</span><span class="v">Ninguno</span></div>
+                        <div class="fila"><span class="k">Tema</span><span class="v">Porrismo</span></div>
+                    </div>
+
+                    <div class="box-proposito">
+                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Propósito u objetivo</h3>
+                        <p class="text-[6.5px] text-gray-700 leading-snug">Conocer los elementos básicos del porrismo y practicar las posiciones corporales, la coordinación y las elevaciones o figuras grupales, fortaleciendo la flexibilidad, la movilidad y la expresión corporal en el trabajo en grupo.</p>
+                    </div>
+
+                    <h3 class="sec-h">Desarrollo</h3>
+                    <div class="bit-text">
+                        <p>La clase inició con una práctica de porrismo, comenzando con un calentamiento diferente al que normalmente realizamos en otras prácticas corporales. En ese calentamiento se realizaron movimientos que requerían mayor flexibilidad, movilidad y expresión corporal, aspectos característicos de esta disciplina. Posteriormente, nos organizamos en filas para continuar con el calentamiento y preparar el cuerpo para las actividades principales.</p>
+                        <p>Después, nos dividimos en grupos para trabajar los elementos de la clase. Derick trabajó inicialmente con los hombres, mientras que su hermana acompañó y explicó a las mujeres los movimientos y posiciones que realizaríamos. Allí se enseñaron algunos elementos básicos del porrismo relacionados con las posiciones corporales, la coordinación y las elevaciones o figuras grupales.</p>
+                    </div>
+                    <span class="page-number">41</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 42: BITACORA 6 - PORRISMO (2/2) -->
+            <div class="page">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Segundo Semestre • Bitácora 06</span>
+                    <div class="mt-5 mb-1">
+                        <h2 class="article-title text-sm text-upnblue leading-none">PORRISMO — FOTO, METODOLOGÍA Y REFLEXIÓN</h2>
+                    </div>
+
+                    <div class="fotos-row" style="margin-bottom:0.15rem">
+                        <img src="assets/img-34.jpg" alt="Elevación grupal durante la clase de porrismo" class="foto-bit" style="width:104px;height:139px">
+                    </div>
+                    <p class="text-[6.5px] text-gray-500 text-center italic mb-1">Elevación grupal durante la clase de porrismo</p>
+
+                    <h3 class="sec-h">Metodología</h3>
+                    <div class="bit-text bit-dense">
+                        <p>Calentamiento diferente al habitual, con movimientos de mayor flexibilidad, movilidad y expresión corporal; organización en filas para continuar el calentamiento; división en grupos para el trabajo principal, con Derick acompañando a los hombres y su hermana a las mujeres; enseñanza de los elementos básicos del porrismo: posiciones corporales, coordinación y elevaciones o figuras grupales.</p>
+                    </div>
+
+                    <h3 class="sec-h">Reflexión pedagógica</h3>
+                    <div class="bit-text bit-dense">
+                        <p>El porrismo muestra que el trabajo corporal no es solo individual: las posiciones y las elevaciones dependen de la coordinación con los demás y de la confianza entre quienes participan. El calentamiento, distinto al habitual, recuerda que cada disciplina pide al cuerpo algo diferente, aquí más flexibilidad, movilidad y expresión. Trabajar en grupos, con los hombres y las mujeres por separado al inicio, permite que cada quien se apropie de los movimientos y las posiciones a su ritmo antes de armar las figuras grupales. Como futuro licenciado, me quedo con la importancia de la confianza y la comunicación en las figuras grupales: sin ellas no hay elevación segura, y el cuidado del compañero es parte de la técnica.</p>
+                    </div>
+                    <span class="page-number">42</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 43: BITACORA 7 - PATINAJE (1/2) -->
+            <div class="page pattern-dots">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Segundo Semestre • Bitácora 07</span>
+                    <div class="mt-5 mb-1.5">
+                        <h2 class="article-title text-xl text-upnblue leading-none">PATINAJE</h2>
+                    </div>
+
+                    <div class="ficha">
+                        <div class="fila"><span class="k">Fecha</span><span class="v">24 de agosto de 2026</span></div>
+                        <div class="fila"><span class="k">Lugar</span><span class="v">Pista de atletismo</span></div>
+                        <div class="fila"><span class="k">Profesor</span><span class="v">Angela Virgüez, Ana Maria</span></div>
+                        <div class="fila"><span class="k">Dirigido a</span><span class="v">Estudiantes de segundo semestre de la licenciatura en educación física</span></div>
+                        <div class="fila mat"><span class="k">Materiales</span><span class="v">Platillos/conos, patines, silbato</span></div>
+                        <div class="fila"><span class="k">Tema</span><span class="v">Patinaje</span></div>
+                    </div>
+
+                    <div class="box-proposito">
+                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Propósito u objetivo</h3>
+                        <p class="text-[6.5px] text-gray-700 leading-snug">Conocer aspectos introductorios del patinaje y practicar posturas y desplazamientos iniciales, fortaleciendo el equilibrio, la coordinación y la agilidad</p>
+                    </div>
+
+                    <h3 class="sec-h">Desarrollo</h3>
+                    <div class="bit-text">
+                        <p>En esta fase, las profesoras Ángela y Ana María comenzaron con una introducción a la historia del patinaje. Luego se pasó a la práctica de las posturas básicas: posición de seguridad, posición inicial y posición de salida. Primero se practicó con un solo patín en el pie derecho y después con ambos patines, realizando desplazamientos entre platos y conos para agilizar el movimiento.</p>
+                    </div>
+
+                    <h3 class="sec-h">Reflexión pedagógica</h3>
+                    <div class="bit-text">
+                        <p>Enseñar patinaje supone atender de manera especial a la seguridad y a la confianza. La secuencia observada —conocer las posturas básicas, practicar inicialmente con un patín y avanzar luego al uso de ambos— muestra la importancia de construir los aprendizajes paso a paso. La demostración de la posición de seguridad, la posición inicial y la posición de salida ofrece referencias visuales y corporales.</p>
+                    </div>
+                    <span class="page-number">43</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 44: BITACORA 7 - PATINAJE (2/2) -->
+            <div class="page">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Segundo Semestre • Bitácora 07</span>
+                    <div class="mt-5 mb-1">
+                        <h2 class="article-title text-sm text-upnblue leading-none">PATINAJE — CONTINUACIÓN</h2>
+                    </div>
+
+                    <div class="fotos-row">
+                        <div class="foto-wrap">
+                            <img src="assets/img-35.jpg" alt="Patinadores en la pista con conos" class="foto-bit" style="width:104px;height:139px">
+                            <p class="foto-cap">Patinadores en la pista con conos</p>
+                        </div>
+                        <div class="foto-wrap">
+                            <img src="assets/img-36.jpg" alt="Slalom entre conos con patines" class="foto-bit" style="width:139px;height:104px">
+                            <p class="foto-cap">Slalom entre conos con patines</p>
+                        </div>
+                    </div>
+
+                    <h3 class="sec-h">Metodología</h3>
+                    <div class="bit-text">
+                        <p>Introducción a la historia del patinaje, demostración de las posturas básicas (posición de seguridad, posición inicial y posición de salida), práctica primero con un solo patín y después con ambos, y desplazamientos entre platos y conos para agilizar el movimiento.</p>
+                    </div>
+
+                    <h3 class="sec-h">Reflexión pedagógica (continuación)</h3>
+                    <div class="bit-text">
+                        <p>El recorrido entre platos y conos puede graduarse de acuerdo con el dominio del grupo. El acompañamiento pedagógico debe reconocer que el equilibrio y el desplazamiento pueden generar inseguridad al principio. La breve referencia a la historia del patinaje también puede dar sentido cultural a la práctica corporal. Al terminar, es valioso recuperar lo aprendido con preguntas sencillas: qué postura ayudó a sentirse más estable, qué resultó difícil y qué estrategia permitió avanzar.</p>
+                    </div>
+                    <span class="page-number">44</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 45: BITACORA 8 - STREET HOCKEY (1/2) -->
+            <div class="page pattern-dots">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Segundo Semestre • Bitácora 08</span>
+                    <div class="mt-5 mb-1.5">
+                        <h2 class="article-title text-xl text-upnblue leading-none">STREET HOCKEY</h2>
+                    </div>
+
+                    <div class="ficha">
+                        <div class="fila"><span class="k">Fecha</span><span class="v">24 de agosto de 2026</span></div>
+                        <div class="fila"><span class="k">Lugar</span><span class="v">Cancha multipropósito</span></div>
+                        <div class="fila"><span class="k">Profesor</span><span class="v">Dereck Sánchez</span></div>
+                        <div class="fila"><span class="k">Dirigido a</span><span class="v">Estudiantes de segundo semestre de la licenciatura en educación física</span></div>
+                        <div class="fila mat"><span class="k">Materiales</span><span class="v">Patines, stick (palo), aro y pelota de tenis</span></div>
+                        <div class="fila"><span class="k">Tema</span><span class="v">Street Hockey</span></div>
+                        <div class="fila"><span class="k">Subtemas</span><span class="v">Fundamentos técnicos y práctica de hockey callejero sobre patines</span></div>
+                    </div>
+
+                    <div class="box-proposito">
+                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Propósito u objetivo</h3>
+                        <p class="text-[6.5px] text-gray-700 leading-snug">Conocer nociones teóricas y componentes del stick, y experimentar habilidades iniciales de manejo, pase y remate con stick y pelota mientras se utilizan patines, integrando lo practicado en un partido</p>
+                    </div>
+
+                    <h3 class="sec-h">Desarrollo</h3>
+                    <div class="bit-text">
+                        <p><strong class="text-upnblue">Fase 1: Aproximación teórica.</strong> La clase comenzó con una explicación teórica sobre el origen de esta práctica, incluyendo cuándo se fundó y quién la fundó. También se reconocieron las partes del stick: mango o vara, grip, empuñadura, empalme, caña, unión y cabeza o pala.</p>
+                        <p><strong class="text-upnblue">Fase 2: Calentamiento.</strong> Después de la parte teórica se realizó un calentamiento básico como preparación para la actividad física y el trabajo con los implementos.</p>
+                        <p><strong class="text-upnblue">Fase 3: Manejo del stick y desplazamiento del aro.</strong> Se hicieron ejercicios con un aro y el stick, practicando el desplazamiento del aro mediante el contacto y la conducción con el palo.</p>
+                        <p><strong class="text-upnblue">Fase 4: Pases y remates.</strong> Posteriormente, se practicaron pases con el stick y la pelota de tenis entre compañeros, tanto en parejas como con otros compañeros. Luego se realizaron ejercicios de remate con el stick y la pelota.</p>
+                        <p><strong class="text-upnblue">Fase 5: Partido.</strong> La clase finalizó con un partido de hockey de 7 contra 7, en el que se integraron los ejercicios y habilidades practicados durante la sesión.</p>
+                    </div>
+                    <span class="page-number">45</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 46: BITACORA 8 - STREET HOCKEY (2/2) -->
+            <div class="page">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Segundo Semestre • Bitácora 08</span>
+                    <div class="mt-5 mb-1">
+                        <h2 class="article-title text-sm text-upnblue leading-none">STREET HOCKEY — CONTINUACIÓN</h2>
+                    </div>
+
+                    <div class="fotos-row" style="margin-bottom:0.15rem">
+                        <img src="assets/img-37.jpg" alt="Partido de hockey sobre patines en la cancha" class="foto-bit" style="width:104px;height:139px">
+                    </div>
+                    <p class="text-[6.5px] text-gray-500 text-center italic mb-1">Partido de hockey sobre patines en la cancha</p>
+
+                    <h3 class="sec-h">Metodología</h3>
+                    <div class="bit-text">
+                        <p>Aproximación teórica sobre el origen de la práctica y las partes del stick, calentamiento básico, ejercicios de manejo del aro con el stick, pases y remates con la pelota de tenis, y partido final de 7 contra 7.</p>
+                    </div>
+
+                    <h3 class="sec-h">Reflexión pedagógica</h3>
+                    <div class="bit-text">
+                        <p>La sesión organizó los aprendizajes desde una aproximación teórica hacia la práctica y, finalmente, hacia una situación de juego. Conocer las partes del stick y su función puede ayudar a que los estudiantes comprendan cómo sujetarlo y utilizarlo. El ejercicio de desplazar un aro con el stick ofrece una oportunidad inicial para familiarizarse con el control del palo antes de trabajar con la pelota. La práctica de pases en parejas favorece la coordinación entre quien envía y quien recibe. Los remates permiten explorar la precisión y la dirección del golpe. El partido de 7 contra 7 brinda un contexto para aplicar las habilidades en una situación colectiva y hace visibles la comunicación, la cooperación, la toma de decisiones y el respeto por los acuerdos de juego. Una reflexión final con preguntas sobre qué fue fácil o difícil, cómo se comunicaron en los pases y qué decisiones tomaron durante el partido permitiría a los estudiantes reconocer sus avances.</p>
+                    </div>
+                    <span class="page-number">46</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 47: BITACORA 9 - MUSICA (1/3) -->
+            <div class="page pattern-dots">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Segundo Semestre • Bitácora 09</span>
+                    <div class="mt-5 mb-1.5">
+                        <h2 class="article-title text-xl text-upnblue leading-none">MÚSICA</h2>
+                    </div>
+
+                    <div class="ficha">
+                        <div class="fila"><span class="k">Fecha</span><span class="v">7 Septiembre 2026</span></div>
+                        <div class="fila"><span class="k">Lugar</span><span class="v">Campus Valmaría, salón MO 019</span></div>
+                        <div class="fila"><span class="k">Profesor</span><span class="v">Ana Ortiz, Lauren Herrera y Samuel Chávez</span></div>
+                        <div class="fila"><span class="k">Dirigido a</span><span class="v">Estudiantes de segundo semestre de la licenciatura en educación física</span></div>
+                        <div class="fila mat"><span class="k">Materiales</span><span class="v">ninguno</span></div>
+                        <div class="fila"><span class="k">Tema</span><span class="v">Música</span></div>
+                    </div>
+
+                    <div class="box-proposito">
+                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Propósito u objetivo</h3>
+                        <p class="text-[6.5px] text-gray-700 leading-snug">dar a conocer el programa académico de la asignatura prácticas corporales 2 a los estudiantes de educación física semestre 2026-2</p>
+                    </div>
+
+                    <h3 class="sec-h">Desarrollo</h3>
+                    <div class="bit-text bit-dense">
+                        <p>La clase comenzó en el aula con la fase teórica: la escala de Do mayor, la más sencilla porque no tiene alteraciones, compuesta por las siete notas naturales: Do, Re, Mi, Fa, Sol, La, Si. Después, los diferentes tipos de notas musicales y figuras rítmicas: qué es una corchea, cuánto vale, cómo se escribe y cómo se diferencia de otras figuras como la negra o la blanca. Luego se presentó la guacharaca: de qué material está hecha, cómo se raspa y cuál es su función principal, un instrumento fundamental en el vallenato, que lleva la base rítmica y el brillo de ese género.</p>
+                        <p>Cuando iba a iniciar la parte práctica de guacharaca, se presentó un imprevisto: ningún estudiante había llevado guacharaca. Por eso, la actividad planeada no se pudo hacer. Los docentes reorganizaron la clase y dividieron al curso en dos grupos. Grupo 1 - Flauta: postura, manos (izquierda arriba y derecha abajo), respiración suave y controlada, y nota por nota la escala de Do mayor. Grupo 2 – Canto: clase netamente de voz, muy dinámica, divertida y con mucha risa, con juegos vocales y técnica vocal básica. La clase finalizó sin una muestra final conjunta.</p>
+                    </div>
+                    <span class="page-number">47</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 48: BITACORA 9 - MUSICA (2/3) -->
+            <div class="page">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Segundo Semestre • Bitácora 09</span>
+                    <div class="mt-5 mb-1">
+                        <h2 class="article-title text-sm text-upnblue leading-none">MÚSICA — CONTINUACIÓN</h2>
+                    </div>
+
+                    <h3 class="sec-h">Núcleo temático</h3>
+                    <div class="bit-text bit-dense">
+                        <p>Iniciación musical. Fundamentos teóricos y prácticos de la música como lenguaje expresivo. La escala de Do mayor como escala más sencilla y base de la iniciación musical (Do, Re, Mi, Fa, Sol, La, Si). Figuras musicales: qué es una corchea y los diferentes tipos de notas. Instrumento de percusión: la guacharaca, su función y uso principal en el vallenato. Iniciación a la flauta dulce: digitación, postura y emisión del sonido. Iniciación al canto: técnica vocal básica.</p>
+                    </div>
+
+                    <h3 class="sec-h">Metodología</h3>
+                    <div class="bit-text bit-dense">
+                        <p>Metodología teórica-práctica con trabajo por grupos y aprendizaje cooperativo.</p>
+                        <ul>
+                            <li><strong>a) Fase Teórica (15 min):</strong> el docente explicó la escala de Do, los tipos de notas y figuras como la corchea, y la guacharaca.</li>
+                            <li><strong>b) Fase de Ajuste (5 min):</strong> como ningún estudiante llevó guacharaca, la clase se reorganizó dividiendo al curso en dos grupos.</li>
+                            <li><strong>c) Fase Práctica - Grupo 1: Flauta (30 min):</strong> postura, posición de los dedos, respiración y las notas Do, Re, Mi, Fa, Sol, La, Si.</li>
+                            <li><strong>d) Fase Práctica - Grupo 2: Canto (30 min):</strong> grupo de trabajo ajeno, enfocado netamente en voz, ambiente dinámico y lúdico de técnica vocal.</li>
+                        </ul>
+                    </div>
+
+                    <span class="page-number">48</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 49: BITACORA 9 - MUSICA (3/3) -->
+            <div class="page pattern-dots">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Segundo Semestre • Bitácora 09</span>
+                    <div class="mt-5 mb-1">
+                        <h2 class="article-title text-sm text-upnblue leading-none">MÚSICA — EVALUACIÓN Y REFLEXIÓN</h2>
+                    </div>
+
+                    <h3 class="sec-h">Evaluación</h3>
+                    <div class="bit-text bit-dense">
+                        <p>Evaluación formativa, cualitativa y práctica. Heteroevaluación: el docente observaba y corregía la postura de manos en la flauta y la digitación de cada nota. Autoevaluación: cada estudiante debía escuchar su propia afinación y corregir la emisión del aire en la flauta. No hubo evaluación sumativa.</p>
+                    </div>
+
+                    <h3 class="sec-h">Reflexión pedagógica</h3>
+                    <div class="bit-text bit-dense">
+                        <p>La clase evidenció que no siempre se cuenta con el material, nadie llevó guacharaca, y el docente tuvo que aplicar un plan B dividiendo el grupo. Eso muestra la importancia de la flexibilidad pedagógica. Como futuro licenciado, rescato la conexión de la música con lo corporal: tocar flauta exige control respiratorio, postura y coordinación fina, que son contenidos de la Educación Física. También deja como aprendizaje que cuando la clase es lúdica, como se vio en el grupo de canto que estaba riendo y disfrutando, el aprendizaje es más significativo.</p>
+                    </div>
+
+                    <span class="page-number">49</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 50: BITACORA 10 - CLASE DE PULSOS (1/2) -->
+            <div class="page">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Segundo Semestre • Bitácora 10</span>
+                    <div class="mt-5 mb-1.5">
+                        <h2 class="article-title text-xl text-upnblue leading-none">CLASE DE PULSOS</h2>
+                    </div>
+
+                    <div class="ficha">
+                        <div class="fila"><span class="k">Fecha</span><span class="v">7 Septiembre 2026</span></div>
+                        <div class="fila"><span class="k">Lugar</span><span class="v">Campus Valmaría, salón MO 019</span></div>
+                        <div class="fila"><span class="k">Profesor</span><span class="v">Francisco Lozada</span></div>
+                        <div class="fila"><span class="k">Dirigido a</span><span class="v">Estudiantes de segundo semestre de la licenciatura en educación física</span></div>
+                        <div class="fila mat"><span class="k">Materiales</span><span class="v">ninguno</span></div>
+                        <div class="fila"><span class="k">Tema</span><span class="v">Clase de Pulsos</span></div>
+                    </div>
+
+                    <div class="box-proposito">
+                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Propósito u objetivo</h3>
+                        <p class="text-[6.5px] text-gray-700 leading-snug">dar a conocer el programa académico de la asignatura prácticas corporales 2 a los estudiantes de educación física semestre 2026-2</p>
+                    </div>
+
+                    <div class="fotos-row" style="margin:0.05rem 0 0">
+                        <div class="foto-wrap">
+                            <img src="assets/img-38.jpg" alt="Pulso en grupo con el trofeo de dulces" class="foto-bit" style="width:56px;height:74px">
+                            <p class="foto-cap">Pulso en grupo con el trofeo de dulces</p>
+                        </div>
+                        <div class="foto-wrap">
+                            <img src="assets/img-39.jpg" alt="Pulso en primer plano" class="foto-bit" style="width:56px;height:74px">
+                            <p class="foto-cap">Pulso en primer plano</p>
+                        </div>
+                    </div>
+
+                    <h3 class="sec-h">Desarrollo</h3>
+                    <div class="bit-text bit-dense">
+                        <p>La clase dio inicio a las 7:10 am con la fase teórica: los pulsos son un enfrentamiento de fuerza directa entre dos personas, donde el objetivo principal es lograr llevar el brazo del oponente hasta hacer contacto con el apoyo físico o directamente con la mesa; no es solo fuerza bruta, implica técnica, agarre, posición del cuerpo y seguridad. Luego el calentamiento general, donde cada estudiante propuso un ejercicio de estiramiento, y el calentamiento específico para prevenir lesiones de muñeca, codo y hombro: estiramientos de muñeca, antebrazo, bíceps y tríceps, y movilidad de hombro. En la fase técnica el profesor enseñó tres técnicas básicas (Top Roll, Hook / Gancho y Press), con demostración de cada una. Después la práctica por parejas, rotando de compañero para sentir diferentes niveles de fuerza. Para finalizar, un mini torneo en dos categorías, femenina y masculina, y a los ganadores de cada categoría se les premió con una copa de dulces artesanal.</p>
+                    </div>
+                    <span class="page-number">50</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 51: BITACORA 10 - CLASE DE PULSOS (2/2) -->
+            <div class="page pattern-dots">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Segundo Semestre • Bitácora 10</span>
+                    <div class="mt-5 mb-1">
+                        <h2 class="article-title text-sm text-upnblue leading-none">CLASE DE PULSOS — CONTINUACIÓN</h2>
+                    </div>
+
+                    <h3 class="sec-h">Núcleo temático</h3>
+                    <div class="bit-text bit-dense">
+                        <p>Fuerza máxima y resistencia a la fuerza en miembro superior. Fundamentos técnicos y reglamentarios de los pulsos como práctica de confrontación directa. Concepto e historia básica de los pulsos. Principios de seguridad y prevención de lesiones en articulaciones de muñeca, codo y hombro. Tres técnicas básicas de ejecución (Ej: Top Roll, Hook / Gancho y Press).</p>
+                    </div>
+
+                    <h3 class="sec-h">Metodología</h3>
+                    <div class="bit-text bit-dense">
+                        <p>Se desarrolló bajo una metodología participativa y de aprendizaje por descubrimiento guiado.</p>
+                        <ul>
+                            <li><strong>a) Fase Teórica (10 min):</strong> qué son los pulsos, objetivo y reglas básicas de la victoria.</li>
+                            <li><strong>b) Fase de Calentamiento General (15 min):</strong> cada estudiante propuso un ejercicio de estiramiento.</li>
+                            <li><strong>c) Fase de Calentamiento Específico (15 min):</strong> estiramientos de muñeca, antebrazo y bíceps/tríceps, y movilidad de hombro.</li>
+                            <li><strong>d) Fase de Desarrollo Técnico (20 min):</strong> tres técnicas básicas con demostración.</li>
+                            <li><strong>e) Fase de Práctica Aplicada (20 min):</strong> trabajo por parejas con rotación de compañeros.</li>
+                            <li><strong>f) Fase de Cierre y Competición (10 min):</strong> concurso en dos categorías, mujeres y hombres, con copa de dulces artesanal para los ganadores.</li>
+                        </ul>
+                    </div>
+
+                    <h3 class="sec-h">Evaluación</h3>
+                    <div class="bit-text bit-dense">
+                        <p>Evaluación formativa, cualitativa y de carácter co-evaluativo. No fue sumativa con nota. Heteroevaluación: observación del profesor sobre la correcta ejecución técnica y el cuidado por el compañero. Coevaluación: entre pares. Autoevaluación: al proponer el calentamiento y reconocer sus propias limitaciones de fuerza.</p>
+                    </div>
+
+                    <h3 class="sec-h">Reflexión pedagógica</h3>
+                    <div class="bit-text bit-dense">
+                        <p>La clase mostró que los pulsos no son solo fuerza, sino respeto por el cuerpo del otro, control de la fuerza y juego limpio. Lo más valioso fue el calentamiento colaborativo donde cada estudiante propuso un ejercicio, eso rompe el modelo tradicional y le da protagonismo al futuro educador. La separación del concurso en categoría femenina y masculina permitió una participación más equitativa y motivante. Como futuro licenciado, me quedo con la importancia del calentamiento articular específico de muñeca, codo y hombro para prevenir lesiones, que es el riesgo principal de esta práctica si se hace sin preparación.</p>
+                    </div>
+                    <span class="page-number">51</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 52: BITACORA 11 - CONCLUSIONES Y REFLEXIONES (1/2) -->
+            <div class="page">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Segundo Semestre • Bitácora 11</span>
+                    <div class="mt-5 mb-1.5">
+                        <h2 class="article-title text-xl text-upnblue leading-none">CONCLUSIONES Y REFLEXIONES</h2>
+                    </div>
+
+                    <div class="ficha">
+                        <div class="fila"><span class="k">Fecha</span><span class="v">14 de septiembre del 2026</span></div>
+                        <div class="fila"><span class="k">Lugar</span><span class="v">Campus Valmaría, salón # 19</span></div>
+                        <div class="fila"><span class="k">Dirigido a</span><span class="v">Estudiantes de segundo semestre de la licenciatura en educación física</span></div>
+                        <div class="fila mat"><span class="k">Materiales</span><span class="v">ninguno</span></div>
+                        <div class="fila"><span class="k">Tema</span><span class="v">conclusiones, reflexiones</span></div>
+                        <div class="fila"><span class="k">Subtemas</span><span class="v">opiniones personales</span></div>
+                    </div>
+
+                    <div class="box-proposito">
+                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Propósito u objetivo</h3>
+                        <p class="text-[6.5px] text-gray-700 leading-snug">Dar cierre a las actividades de experiencias corporales propuestas por cada uno de los estudiantes</p>
+                    </div>
+
+                    <h3 class="sec-h">Desarrollo</h3>
+                    <div class="bit-text">
+                        <p>se da cierre con las practicas corporales de musica y canto</p>
+                        <p><strong class="text-upnblue">Reflexiones pedagógicas clase de música</strong></p>
+                        <ul>
+                            <li>Pentagrama, ubicación de notas, llevar el ritmo</li>
+                        </ul>
+                        <p><strong class="text-upnblue">Flauta</strong></p>
+                        <ul>
+                            <li>Complejo manejar los dedos en la flauta con las notas y ritmo</li>
+                            <li>El profe Samuel acertó acompañar a los compañeros y corregir errores</li>
+                        </ul>
+                        <p><strong class="text-upnblue">Canto</strong></p>
+                        <ul>
+                            <li>Calentar cuerda vocales</li>
+                            <li>Notas agudas son más complejas que las bajas</li>
+                            <li>La respiración por medio del diafragma</li>
+                        </ul>
+                        <p><strong class="text-upnblue">Recomendaciones</strong></p>
+                        <ul>
+                            <li>No hubo organización asertiva al tema de escoger grupos ni designar funciones</li>
+                            <li>Cuando alguien tiene buen dominio del tema puede aprovechar el poder de la improvisación, pero no todas las veces</li>
+                            <li>Canto tener agua, flauta llevar la flauta</li>
+                        </ul>
+                    </div>
+                    <span class="page-number">52</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 53: BITACORA 11 - CONCLUSIONES Y REFLEXIONES (2/2) -->
+            <div class="page pattern-dots">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Segundo Semestre • Bitácora 11</span>
+                    <div class="mt-5 mb-1">
+                        <h2 class="article-title text-sm text-upnblue leading-none">CONCLUSIONES Y REFLEXIONES — FOTOS Y REFLEXIÓN</h2>
+                    </div>
+
+                    <h3 class="sec-h">Metodología</h3>
+                    <div class="bit-text bit-dense">
+                        <p>Cierre con las prácticas corporales de música y canto y reflexiones pedagógicas de cada estudiante sobre lo vivido en el semestre.</p>
+                    </div>
+
+                    <h3 class="sec-h">Reflexión pedagógica</h3>
+                    <div class="bit-text bit-dense">
+                        <p>ir de lo más fácil a lo más complejo para que la gente no se frustre y así haya una progresión del trabajo. Los profesores deben llegar a tiempo por la carga de responsabilidad de la clase, esto refleja el compromiso con el grupo de trabajo. Cómo profes tenemos que resolver, la planificación de clase es una ruta pero con diferentes caminos, debemos saber que si no nos funciona uno debemos usar el otro. Siempre reflexionar, ayuda a saber cuales son las fortalezas y debilidades tanto del educador como de los estudiantes. A los educadores físicos son los únicos que nos pagan por jugar, se debe responder física y cognitivamente, con ello no se debe perder la seriedad que lleva cada clase y que los contenidos que se impartan sean significativos. Por más que yo tenga un saber debo planificar, podemos improvisar pero siempre y cuando se de la planificación, no se debe coger de recocha. Nervios al principio de ser profesores, como educadores vamos con la expectativa de que el grupo nos responda de cierta manera, muchas veces no sucede asi y ahi es donde podemos entrar en pánico. Ensayar así se haga mal pero no sé debe quedar sin la experiencia, muchos de nosotros tuvimos la oportunidad de primer vez en alguna experiencia corporal del semestre pasado y continuidad de esta, algunos nos dimos cuenta de que somos buenos en unas, regulares en otras y no tan hábiles en las demás.</p>
+                    </div>
+
+                    <div class="fotos-row">
+                        <img src="assets/img-40.jpg" alt="Estudiante cantando con un micrófono frente a sus compañeros" class="foto-bit" style="width:92px;height:138px">
+                        <img src="assets/img-41.jpg" alt="Estudiante tocando la guacharaca en el salón de clase" class="foto-bit" style="width:92px;height:138px">
+                        <img src="assets/img-42.jpg" alt="Estudiantes practicando con flautas dulces en el salón" class="foto-bit" style="width:92px;height:138px">
+                    </div>
+
+                    <p class="text-[7px] font-bold text-gray-400 tracking-widest uppercase mt-4 text-center">Fin de las bitácoras • Taller 2</p>
+                    <span class="page-number">53</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 54: PORTADA SISTEMATIZACION 4 -->
+            <div class="page hard cover-dark">
+                <div class="w-full h-full p-5 flex flex-col justify-center items-center text-center relative overflow-hidden">
+                    <div class="my-auto flex flex-col items-center w-full relative z-10">
+                        <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-6 overflow-hidden border-[3px] border-upngold shadow-lg">
+                            <img src="assets/img-01.jpg" alt="Logo UPN" class="w-full h-full object-contain p-1.5">
+                        </div>
+                        <p class="text-upngold text-[9px] tracking-[0.3em] uppercase mb-2 font-semibold">Tercera parte</p>
+                        <h2 class="font-display text-[2.2rem] sm:text-[2.5rem] leading-[1] font-bold mb-3 text-white drop-shadow-lg">SISTEMATIZACIÓN<br><span class="text-white">4</span></h2>
+                        <div class="h-px w-20 bg-gradient-to-r from-transparent via-upngold to-transparent my-4"></div>
+                        <p class="text-[9px] font-light tracking-widest text-gray-300 uppercase">Taller de Prácticas Corporales 2</p>
+                        <p class="text-[8px] text-gray-400 mt-2">Sistematización de las prácticas corporales del segundo semestre de 2026</p>
+                        <p class="text-[8px] text-gray-400">Licenciatura en Educación Física • Campus Valmaría</p>
+                        <p class="text-[8px] text-gray-400 mt-2">Las 11 clases del semestre, con las fotos de las clases</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGINA 55: SISTEMATIZACION 4 - VIDEO EL VALOR DE GILMA -->
+            <div class="page">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Sistematización 4 • Video</span>
+                    <div class="mt-5 mb-1.5">
+                        <h2 class="article-title text-xl text-upnblue leading-tight">PRESENTACIÓN EN ESCENARIO «EL VALOR DE GILMA»</h2>
+                    </div>
+
+                    <div class="video-frame mt-2">
+                        <video controls preload="metadata" playsinline poster="assets/img-43.jpg" aria-label="Video de la presentación en escenario El valor de Gilma">
+                            <source src="assets/video_sist4_gilma.mp4" type="video/mp4">
+                            Tu navegador no puede reproducir este video.
+                        </video>
+                    </div>
+                    <p class="foto-cap">Video de la Sistematización 4 (2:11)</p>
+                    <span class="page-number">55</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 56: SISTEMATIZACION 4 - CLASE 01 PRESENTACION DEL PROGRAMA -->
+            <div class="page">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Sistematización 4 • Clase 01</span>
+                    <div class="mt-5 mb-1.5">
+                        <h2 class="article-title text-xl text-upnblue leading-tight">PRESENTACIÓN DEL PROGRAMA SEMESTRAL</h2>
+                    </div>
+
+                    <div class="ficha">
+                        <div class="fila"><span class="k">Fecha</span><span class="v">3 agosto 2026</span></div>
+                        <div class="fila"><span class="k">Lugar</span><span class="v">Campus Valmaría, salón MO 019</span></div>
+                        <div class="fila"><span class="k">Profesor</span><span class="v">Lina Rocío Egea</span></div>
+                    </div>
+
+                    <div class="box-reflexion">
+                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Lo que nos quedó</h3>
+                        <p class="text-[6.5px] text-gray-700 leading-snug">tener claros los acuerdos de la clase nos permite como estudiantes universitario programar nuestro tiempo y tener la disponibilidad actitudinal y los trabajos a tiempo así no tener ninguna dificultad al momento de realizar dichas entregas.</p>
+                    </div>
+                    <span class="page-number">56</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 57: SISTEMATIZACION 4 - CLASE 02 DEBATE CONCEPTO DE CUERPO -->
+            <div class="page pattern-dots">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Sistematización 4 • Clase 02</span>
+                    <div class="mt-5 mb-1.5">
+                        <h2 class="article-title text-xl text-upnblue leading-none">DEBATE SOBRE LA LECTURA</h2>
+                        <p class="text-[7px] text-gray-500 mt-0.5">Aproximaciones al concepto de cuerpo</p>
+                    </div>
+
+                    <div class="ficha">
+                        <div class="fila"><span class="k">Fecha</span><span class="v">3 agosto 2026</span></div>
+                        <div class="fila"><span class="k">Lugar</span><span class="v">Campus Valmaría, salón MO 019</span></div>
+                        <div class="fila"><span class="k">Profesor</span><span class="v">Lina Rocío Egea</span></div>
+                    </div>
+
+                    <div class="box-proposito">
+                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Propósito u objetivo</h3>
+                        <p class="text-[6.5px] text-gray-700 leading-snug">tratar de identificar los diferentes significados que se le han dado al cuerpo, generar debate y reflexión sobre dichas posturas</p>
+                    </div>
+                    <span class="page-number">57</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 58: SISTEMATIZACION 4 - CLASE 03 TENIS -->
+            <div class="page">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Sistematización 4 • Clase 03</span>
+                    <div class="mt-5 mb-1.5">
+                        <h2 class="article-title text-xl text-upnblue leading-none">TENIS</h2>
+                    </div>
+
+                    <div class="ficha">
+                        <div class="fila"><span class="k">Fecha</span><span class="v">10 de agosto de 2026</span></div>
+                        <div class="fila"><span class="k">Lugar</span><span class="v">Campus Valmaría — Canchas deportivas</span></div>
+                        <div class="fila"><span class="k">Profesor</span><span class="v">Samuel Calderón y Alejandro Bautista</span></div>
+                    </div>
+
+                    <div class="box-proposito">
+                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Propósito u objetivo</h3>
+                        <p class="text-[6.5px] text-gray-700 leading-snug">Reconocer y vivenciar la práctica corporal del tenis mediante la experiencia práctica, fortaleciendo la comprensión de sus elementos técnicos y reglas básicas a través del trabajo individual y colectivo.</p>
+                    </div>
+
+                    <div class="fotos-row">
+                        <div class="foto-wrap">
+                            <img src="assets/img-44.jpg" alt="Estudiantes en la cancha de tenis" class="foto-bit" style="width:200px;height:150px">
+                            <p class="foto-cap">Estudiantes en la cancha de tenis</p>
+                        </div>
+                    </div>
+
+                    <div class="box-reflexion">
+                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Lo que nos quedó</h3>
+                        <p class="text-[6.5px] text-gray-700 leading-snug">La clase permitió comprender que el aprendizaje de una práctica corporal no se limita a conocer sus reglas de manera teórica, sino que la experiencia directa facilita su apropiación. En el tenis, además, la interrupción por el terremoto mostró la importancia de priorizar la seguridad y saber responder ante situaciones imprevistas.</p>
+                    </div>
+                    <span class="page-number">58</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 59: SISTEMATIZACION 4 - CLASE 04 BEISBOL -->
+            <div class="page pattern-dots">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Sistematización 4 • Clase 04</span>
+                    <div class="mt-5 mb-1.5">
+                        <h2 class="article-title text-xl text-upnblue leading-none">BÉISBOL</h2>
+                    </div>
+
+                    <div class="ficha">
+                        <div class="fila"><span class="k">Fecha</span><span class="v">10 de agosto de 2026</span></div>
+                        <div class="fila"><span class="k">Lugar</span><span class="v">Campus Valmaría — Canchas deportivas</span></div>
+                        <div class="fila"><span class="k">Profesor</span><span class="v">Luis Romano</span></div>
+                    </div>
+
+                    <div class="box-proposito">
+                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Propósito u objetivo</h3>
+                        <p class="text-[6.5px] text-gray-700 leading-snug">Reconocer y vivenciar la práctica corporal del béisbol mediante la experiencia práctica, fortaleciendo la comprensión de sus elementos técnicos y reglas básicas a través del trabajo individual y colectivo.</p>
+                    </div>
+
+                    <div class="fotos-row">
+                        <div class="foto-wrap">
+                            <img src="assets/img-45.jpg" alt="Jugadores con guante en la cancha de béisbol" class="foto-bit" style="width:200px;height:150px">
+                            <p class="foto-cap">Jugadores con guante en la cancha de béisbol</p>
+                        </div>
+                    </div>
+
+                    <div class="box-reflexion">
+                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Lo que nos quedó</h3>
+                        <p class="text-[6.5px] text-gray-700 leading-snug">La clase permitió comprender que el aprendizaje de una práctica corporal no se limita a conocer sus reglas de manera teórica, sino que la experiencia directa facilita su apropiación. En el béisbol, el partido entre todos fue una estrategia útil para comprender las reglas desde la práctica, pues permitió aprender mientras jugábamos y compartíamos con los demás.</p>
+                    </div>
+                    <span class="page-number">59</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 60: SISTEMATIZACION 4 - CLASE 05 GIMNASIA -->
+            <div class="page pattern-dots">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Sistematización 4 • Clase 05</span>
+                    <div class="mt-5 mb-1.5">
+                        <h2 class="article-title text-xl text-upnblue leading-none">GIMNASIA</h2>
+                    </div>
+
+                    <div class="ficha">
+                        <div class="fila"><span class="k">Fecha</span><span class="v">24 de agosto de 2026</span></div>
+                        <div class="fila"><span class="k">Lugar</span><span class="v">Campus Valmaría, salón MO 019</span></div>
+                        <div class="fila"><span class="k">Profesor</span><span class="v">Daniela Narváez</span></div>
+                    </div>
+
+                    <div class="fotos-row">
+                        <div class="foto-wrap">
+                            <img src="assets/img-46.jpg" alt="Aros y conos en el pasto" class="foto-bit" style="width:160px;height:213px">
+                            <p class="foto-cap">Aros y conos en el pasto</p>
+                        </div>
+                    </div>
+
+                    <div class="box-reflexion">
+                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Lo que nos quedó</h3>
+                        <p class="text-[6.5px] text-gray-700 leading-snug">La clase mostró que la gimnasia rítmica no es solo flexibilidad, sino también disciplina, cuidado corporal y trabajo en equipo.</p>
+                    </div>
+                    <span class="page-number">60</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 61: SISTEMATIZACION 4 - CLASE 06 PORRISMO -->
+            <div class="page">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Sistematización 4 • Clase 06</span>
+                    <div class="mt-5 mb-1.5">
+                        <h2 class="article-title text-xl text-upnblue leading-none">PORRISMO</h2>
+                    </div>
+
+                    <div class="ficha">
+                        <div class="fila"><span class="k">Fecha</span><span class="v">24 de agosto de 2026</span></div>
+                        <div class="fila"><span class="k">Lugar</span><span class="v">Campus Valmaría, cancha alterna</span></div>
+                        <div class="fila"><span class="k">Profesor</span><span class="v">Dereck Sánchez</span></div>
+                    </div>
+
+                    <div class="box-proposito">
+                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Propósito u objetivo</h3>
+                        <p class="text-[6.5px] text-gray-700 leading-snug">Conocer los elementos básicos del porrismo y practicar las posiciones corporales, la coordinación y las elevaciones o figuras grupales, fortaleciendo la flexibilidad, la movilidad y la expresión corporal en el trabajo en grupo.</p>
+                    </div>
+
+                    <div class="box-reflexion">
+                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Lo que nos quedó</h3>
+                        <p class="text-[6.5px] text-gray-700 leading-snug">El porrismo muestra que el trabajo corporal no es solo individual: las posiciones y las elevaciones dependen de la coordinación con los demás y de la confianza entre quienes participan.</p>
+                    </div>
+                    <span class="page-number">61</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 62: SISTEMATIZACION 4 - CLASE 07 PATINAJE -->
+            <div class="page pattern-dots">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Sistematización 4 • Clase 07</span>
+                    <div class="mt-5 mb-1.5">
+                        <h2 class="article-title text-xl text-upnblue leading-none">PATINAJE</h2>
+                    </div>
+
+                    <div class="ficha">
+                        <div class="fila"><span class="k">Fecha</span><span class="v">24 de agosto de 2026</span></div>
+                        <div class="fila"><span class="k">Lugar</span><span class="v">Pista de atletismo</span></div>
+                        <div class="fila"><span class="k">Profesor</span><span class="v">Angela Virgüez, Ana Maria</span></div>
+                    </div>
+
+                    <div class="box-proposito">
+                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Propósito u objetivo</h3>
+                        <p class="text-[6.5px] text-gray-700 leading-snug">Conocer aspectos introductorios del patinaje y practicar posturas y desplazamientos iniciales, fortaleciendo el equilibrio, la coordinación y la agilidad</p>
+                    </div>
+
+                    <div class="fotos-row">
+                        <div class="foto-wrap">
+                            <img src="assets/img-35.jpg" alt="Patinadores en la pista con conos" class="foto-bit" style="width:118px;height:157px">
+                            <p class="foto-cap">Patinadores en la pista con conos</p>
+                        </div>
+                        <div class="foto-wrap">
+                            <img src="assets/img-36.jpg" alt="Slalom entre conos con patines" class="foto-bit" style="width:150px;height:112px">
+                            <p class="foto-cap">Slalom entre conos con patines</p>
+                        </div>
+                    </div>
+
+                    <div class="box-reflexion">
+                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Lo que nos quedó</h3>
+                        <p class="text-[6.5px] text-gray-700 leading-snug">Enseñar patinaje supone atender de manera especial a la seguridad y a la confianza.</p>
+                    </div>
+                    <span class="page-number">62</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 63: SISTEMATIZACION 4 - CLASE 08 STREET HOCKEY -->
+            <div class="page">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Sistematización 4 • Clase 08</span>
+                    <div class="mt-5 mb-1.5">
+                        <h2 class="article-title text-xl text-upnblue leading-none">STREET HOCKEY</h2>
+                    </div>
+
+                    <div class="ficha">
+                        <div class="fila"><span class="k">Fecha</span><span class="v">24 de agosto de 2026</span></div>
+                        <div class="fila"><span class="k">Lugar</span><span class="v">Cancha multipropósito</span></div>
+                        <div class="fila"><span class="k">Profesor</span><span class="v">Dereck Sánchez</span></div>
+                    </div>
+
+                    <div class="box-proposito">
+                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Propósito u objetivo</h3>
+                        <p class="text-[6.5px] text-gray-700 leading-snug">Conocer nociones teóricas y componentes del stick, y experimentar habilidades iniciales de manejo, pase y remate con stick y pelota mientras se utilizan patines, integrando lo practicado en un partido</p>
+                    </div>
+
+                    <div class="fotos-row">
+                        <div class="foto-wrap">
+                            <img src="assets/img-47.jpg" alt="Hockey sobre patines en la cancha" class="foto-bit" style="width:124px;height:165px">
+                            <p class="foto-cap">Hockey sobre patines en la cancha</p>
+                        </div>
+                        <div class="foto-wrap">
+                            <img src="assets/img-48.jpg" alt="Jugadores con palos de hockey" class="foto-bit" style="width:124px;height:165px">
+                            <p class="foto-cap">Jugadores con palos de hockey</p>
+                        </div>
+                    </div>
+
+                    <div class="box-reflexion">
+                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Lo que nos quedó</h3>
+                        <p class="text-[6.5px] text-gray-700 leading-snug">La sesión organizó los aprendizajes desde una aproximación teórica hacia la práctica y, finalmente, hacia una situación de juego.</p>
+                    </div>
+                    <span class="page-number">63</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 64: SISTEMATIZACION 4 - CLASE 09 MUSICA -->
+            <div class="page pattern-dots">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Sistematización 4 • Clase 09</span>
+                    <div class="mt-5 mb-1.5">
+                        <h2 class="article-title text-xl text-upnblue leading-none">MÚSICA</h2>
+                    </div>
+
+                    <div class="ficha">
+                        <div class="fila"><span class="k">Fecha</span><span class="v">7 de septiembre de 2026</span></div>
+                        <div class="fila"><span class="k">Lugar</span><span class="v">Campus Valmaría, salón MO 019</span></div>
+                        <div class="fila"><span class="k">Profesor</span><span class="v">Ana Ortiz, Lauren Herrera y Samuel Chávez</span></div>
+                    </div>
+
+                    <div class="box-reflexion">
+                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Lo que nos quedó</h3>
+                        <p class="text-[6.5px] text-gray-700 leading-snug">La clase evidenció que no siempre se cuenta con el material, nadie llevó guacharaca, y el docente tuvo que aplicar un plan B dividiendo el grupo.</p>
+                    </div>
+                    <span class="page-number">64</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 65: SISTEMATIZACION 4 - CLASE 10 CLASE DE PULSOS -->
+            <div class="page">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Sistematización 4 • Clase 10</span>
+                    <div class="mt-5 mb-1.5">
+                        <h2 class="article-title text-xl text-upnblue leading-none">CLASE DE PULSOS</h2>
+                    </div>
+
+                    <div class="ficha">
+                        <div class="fila"><span class="k">Fecha</span><span class="v">7 de septiembre de 2026</span></div>
+                        <div class="fila"><span class="k">Lugar</span><span class="v">Campus Valmaría, salón MO 019</span></div>
+                        <div class="fila"><span class="k">Profesor</span><span class="v">Francisco Lozada</span></div>
+                    </div>
+
+                    <div class="fotos-row">
+                        <div class="foto-wrap">
+                            <img src="assets/img-38.jpg" alt="Pulso en grupo con el trofeo de dulces" class="foto-bit" style="width:132px;height:176px">
+                            <p class="foto-cap">Pulso en grupo con el trofeo de dulces</p>
+                        </div>
+                        <div class="foto-wrap">
+                            <img src="assets/img-39.jpg" alt="Pulso en primer plano" class="foto-bit" style="width:132px;height:176px">
+                            <p class="foto-cap">Pulso en primer plano</p>
+                        </div>
+                    </div>
+
+                    <div class="box-reflexion">
+                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Lo que nos quedó</h3>
+                        <p class="text-[6.5px] text-gray-700 leading-snug">La clase mostró que los pulsos no son solo fuerza, sino respeto por el cuerpo del otro, control de la fuerza y juego limpio.</p>
+                    </div>
+                    <span class="page-number">65</span>
+                </div>
+            </div>
+
+            <!-- PAGINA 66: SISTEMATIZACION 4 - CLASE 11 CONCLUSIONES Y REFLEXIONES -->
+            <div class="page pattern-dots">
+                <div class="page-content content-z flex flex-col">
+                    <span class="header-line">Sistematización 4 • Clase 11</span>
+                    <div class="mt-5 mb-1.5">
+                        <h2 class="article-title text-xl text-upnblue leading-tight">CONCLUSIONES Y REFLEXIONES</h2>
+                    </div>
+
+                    <div class="ficha">
+                        <div class="fila"><span class="k">Fecha</span><span class="v">14 de septiembre de 2026</span></div>
+                        <div class="fila"><span class="k">Lugar</span><span class="v">Campus Valmaría, salón # 19</span></div>
+                        <div class="fila"><span class="k">Profesor</span><span class="v">sin profesor</span></div>
+                    </div>
+
+                    <div class="box-proposito">
+                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Propósito u objetivo</h3>
+                        <p class="text-[6.5px] text-gray-700 leading-snug">Dar cierre a las actividades de experiencias corporales propuestas por cada uno de los estudiantes</p>
+                    </div>
+
+                    <div class="box-reflexion">
+                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Lo que nos quedó</h3>
+                        <p class="text-[6.5px] text-gray-700 leading-snug">ir de lo más fácil a lo más complejo para que la gente no se frustre y así haya una progresión del trabajo.</p>
+                    </div>
+
+                    <p class="text-[7px] font-bold text-gray-400 tracking-widest uppercase mt-4 text-center">Fin de la Sistematización 4 • Taller 2</p>
+                    <span class="page-number">66</span>
+                </div>
+            </div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.min.js"></script>
+
+    <nav class="book-nav" aria-label="Navegación de la revista">
+        <button type="button" id="btnPrev" aria-label="Página anterior">&#8249;</button>
+        <div class="page-indicator"><span id="pageIndicator">Página 1 de 66</span><small>Toca una esquina o usa las flechas</small></div>
+        <button type="button" id="btnNext" aria-label="Página siguiente">&#8250;</button>
+    </nav>
+
+    <div id="vistaCompleta" role="dialog" aria-modal="true" aria-label="Vista completa de la revista">
+        <div class="vc-header">
+            <div>
+                <h2>En Movimiento — Vista completa</h2>
+                <p>Desplázate para leer las 66 páginas seguidas: la guía, las bitácoras del primer semestre, las del segundo semestre y la Sistematización 4. Para guardarlo como PDF, usa la opción «Imprimir» de tu navegador con esta vista abierta.</p>
+            </div>
+            <button type="button" class="vc-close" id="btnCerrarVista">Volver a la revista</button>
+        </div>
+        <div class="vc-list" id="vcList"></div>
+    </div>
+
+    <script src="assets/app.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const pageFlip = new St.PageFlip(document.getElementById('magazine'), {
@@ -1028,6 +2450,7 @@
             });
 
             pageFlip.loadFromHTML(document.querySelectorAll('.page'));
+            window.__pageFlip = pageFlip;
             
             pageFlip.on('flip', (e) => {
                 const pages = document.querySelectorAll('.page');
@@ -1041,6 +2464,77 @@
                         else page.classList.add('--left');
                     }
                 });
+            });
+        });
+    </script>
+
+    <script>
+        // Copia limpia de las páginas, capturada antes de que PageFlip las transforme.
+        var __paginasOriginales = Array.prototype.map.call(document.querySelectorAll('#magazine .page'), function (p) { return p.cloneNode(true); });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var pf = window.__pageFlip;
+            var indicator = document.getElementById('pageIndicator');
+            var btnPrev = document.getElementById('btnPrev');
+            var btnNext = document.getElementById('btnNext');
+
+            function actualizarIndicador() {
+                if (!pf) return;
+                var actual = pf.getCurrentPageIndex() + 1;
+                var total = pf.getPageCount();
+                indicator.textContent = 'Página ' + actual + ' de ' + total;
+                btnPrev.disabled = actual <= 1;
+                btnNext.disabled = actual >= total;
+            }
+            if (pf) {
+                pf.on('flip', actualizarIndicador);
+                pf.on('init', actualizarIndicador);
+                actualizarIndicador();
+            }
+            btnPrev.addEventListener('click', function () { if (pf) { pf.flipPrev(); } });
+            btnNext.addEventListener('click', function () { if (pf) { pf.flipNext(); } });
+            document.addEventListener('keydown', function (e) {
+                if (document.getElementById('vistaCompleta').classList.contains('abierta')) return;
+                if (e.key === 'ArrowLeft' && pf) pf.flipPrev();
+                if (e.key === 'ArrowRight' && pf) pf.flipNext();
+            });
+
+            // Vista completa: todas las páginas apiladas y ampliadas para leer cómodo.
+            var overlay = document.getElementById('vistaCompleta');
+            var lista = document.getElementById('vcList');
+            function construirVista() {
+                lista.innerHTML = '';
+                var ancho = Math.min(window.innerWidth - 24, 540);
+                var escala = ancho / 320;
+                __paginasOriginales.forEach(function (original) {
+                    var item = document.createElement('div');
+                    item.className = 'vc-item';
+                    item.style.width = ancho + 'px';
+                    item.style.height = (480 * escala) + 'px';
+                    var clon = original.cloneNode(true);
+                    clon.classList.remove('--left', '--right');
+                    clon.style.width = '320px';
+                    clon.style.height = '480px';
+                    clon.style.transform = 'scale(' + escala + ')';
+                    item.appendChild(clon);
+                    lista.appendChild(item);
+                });
+            }
+            document.getElementById('btnVistaCompleta').addEventListener('click', function () {
+                construirVista();
+                overlay.classList.add('abierta');
+                overlay.scrollTop = 0;
+                document.body.style.overflow = 'hidden';
+            });
+            document.getElementById('btnCerrarVista').addEventListener('click', function () {
+                overlay.classList.remove('abierta');
+                document.body.style.overflow = '';
+            });
+            var temporizador;
+            window.addEventListener('resize', function () {
+                if (!overlay.classList.contains('abierta')) return;
+                clearTimeout(temporizador);
+                temporizador = setTimeout(construirVista, 200);
             });
         });
     </script>
