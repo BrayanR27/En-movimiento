@@ -306,7 +306,7 @@
         .book-nav button.nav-arrow:active { transform: scale(0.94); }
         .book-nav button.nav-arrow:disabled { opacity: 0.35; cursor: default; transform: none; }
         /* Botones de salto entre semestres (lector y vista completa) */
-        .sem-nav { display: flex; gap: 0.4rem; justify-content: center; }
+        .sem-nav { display: flex; flex-wrap: wrap; gap: 0.4rem; justify-content: center; }
         .sem-btn {
             flex: 1 1 0; min-height: 30px; padding: 0.3rem 0.55rem; border-radius: 999px; cursor: pointer;
             background: rgba(255,255,255,0.07); border: 1px solid rgba(242, 169, 0, 0.55); color: #fff;
@@ -317,7 +317,9 @@
         .sem-btn:hover { background: rgba(242, 169, 0, 0.28); }
         .sem-btn:active { transform: scale(0.96); }
         .sem-btn.activo { background: #F2A900; color: #0B2046; border-color: #F2A900; }
-        .vc-sem-nav { flex-basis: 100%; display: flex; gap: 0.4rem; }
+        /* Tercer botón (Sistematización y PCP): mismo estilo y alto, letra un poco menor para que no quede grande */
+        .sem-btn-pcp { flex: 0 1 auto; font-size: 0.56rem; letter-spacing: 0.03em; padding-left: 0.45rem; padding-right: 0.45rem; }
+        .vc-sem-nav { flex-basis: 100%; display: flex; flex-wrap: wrap; gap: 0.4rem; }
         .vc-sem-nav .sem-btn { flex: 0 1 auto; min-height: 34px; padding: 0.35rem 0.8rem; }
         .book-nav .page-indicator {
             color: #fff; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em;
@@ -2021,6 +2023,24 @@
                 </div>
             </div>
 
+            <!-- PAGINA 54: PORTADA SISTEMATIZACIÓN Y PCP -->
+            <div class="page hard cover-dark">
+                <div class="w-full h-full p-5 flex flex-col justify-center items-center text-center relative overflow-hidden">
+                    <div class="my-auto flex flex-col items-center w-full relative z-10">
+                        <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-6 overflow-hidden border-[3px] border-upngold shadow-lg">
+                            <img src="assets/img-01.jpg" alt="Logo UPN" class="w-full h-full object-contain p-1.5">
+                        </div>
+                        <p class="text-upngold text-[9px] tracking-[0.3em] uppercase mb-2 font-semibold">Tercera parte</p>
+                        <h2 class="font-display text-[2rem] sm:text-[2.2rem] leading-[1] font-bold mb-3 text-white drop-shadow-lg">SISTEMATIZACIÓN<br><span class="text-white">Y PCP</span></h2>
+                        <div class="h-px w-20 bg-gradient-to-r from-transparent via-upngold to-transparent my-4"></div>
+                        <p class="text-[9px] font-light tracking-widest text-gray-300 uppercase">Taller de Prácticas Corporales 2</p>
+                        <p class="text-[8px] text-gray-400 mt-2">Licenciatura en Educación Física</p>
+                        <p class="text-[8px] text-gray-400">Campus Valmaría • 2026-2</p>
+                        <p class="text-[8px] text-gray-400 mt-2">Profesora titular: Lina Rocío Egea</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -2028,12 +2048,13 @@
     <nav class="book-nav" aria-label="Navegación de la revista">
         <div class="book-nav-main">
             <button type="button" id="btnPrev" class="nav-arrow" aria-label="Página anterior">&#8249;</button>
-            <div class="page-indicator"><span id="pageIndicator">Página 1 de 53</span><small>Toca una esquina o usa las flechas</small></div>
+            <div class="page-indicator"><span id="pageIndicator">Página 1 de 54</span><small>Toca una esquina o usa las flechas</small></div>
             <button type="button" id="btnNext" class="nav-arrow" aria-label="Página siguiente">&#8250;</button>
         </div>
         <div class="sem-nav" role="group" aria-label="Ir a un semestre">
             <button type="button" class="sem-btn activo" id="btnSem1">Primer semestre</button>
             <button type="button" class="sem-btn" id="btnSem2">Segundo semestre</button>
+            <button type="button" class="sem-btn sem-btn-pcp" id="btnSem3">Sistematización y PCP</button>
         </div>
     </nav>
 
@@ -2041,12 +2062,13 @@
         <div class="vc-header">
             <div>
                 <h2>En Movimiento — Vista completa</h2>
-                <p>Desplázate para leer las 53 páginas seguidas: la guía del primer semestre y las bitácoras del segundo semestre. Para guardarlo como PDF, usa la opción «Imprimir» de tu navegador con esta vista abierta.</p>
+                <p>Desplázate para leer las 54 páginas seguidas: la guía del primer semestre, las bitácoras del segundo semestre y la portada de Sistematización y PCP. Para guardarlo como PDF, usa la opción «Imprimir» de tu navegador con esta vista abierta.</p>
             </div>
             <button type="button" class="vc-close" id="btnCerrarVista">Volver a la revista</button>
             <div class="vc-sem-nav" role="group" aria-label="Ir a un semestre">
                 <button type="button" class="sem-btn activo" id="btnSem1Vc">Primer semestre</button>
                 <button type="button" class="sem-btn" id="btnSem2Vc">Segundo semestre</button>
+                <button type="button" class="sem-btn sem-btn-pcp" id="btnSem3Vc">Sistematización y PCP</button>
             </div>
         </div>
         <div class="vc-list" id="vcList"></div>
@@ -2097,8 +2119,9 @@
             return false;
         };
 
-        // Salto directo entre semestres: Primer semestre = portada del primer semestre, página 2 (índice 1),
-        // Segundo semestre = portada del segundo semestre, página 24 (índice 23).
+        // Salto directo entre secciones: Primer semestre = portada del primer semestre, página 2 (índice 1),
+        // Segundo semestre = portada del segundo semestre, página 24 (índice 23),
+        // Sistematización y PCP = su portada, página 54 (índice 53).
         // En la vista completa desplaza hasta esa página; en el lector voltea hasta ella.
         window.marcarSemestre = function (sem) {
             ['btnSem1', 'btnSem1Vc'].forEach(function (id) {
@@ -2109,9 +2132,13 @@
                 var b = document.getElementById(id);
                 if (b) { b.classList.toggle('activo', sem === 2); }
             });
+            ['btnSem3', 'btnSem3Vc'].forEach(function (id) {
+                var b = document.getElementById(id);
+                if (b) { b.classList.toggle('activo', sem === 3); }
+            });
         };
         window.irASemestre = function (sem) {
-            var indice = sem === 2 ? 23 : 1;
+            var indice = sem === 3 ? 53 : (sem === 2 ? 23 : 1);
             window.marcarSemestre(sem);
             var overlay = document.getElementById('vistaCompleta');
             if (overlay && overlay.classList.contains('abierta')) {
@@ -2138,7 +2165,7 @@
                 indicator.textContent = 'Página ' + actual + ' de ' + total;
                 btnPrev.disabled = actual <= 1;
                 btnNext.disabled = actual >= total;
-                if (window.marcarSemestre) { window.marcarSemestre(actual >= 24 ? 2 : 1); }
+                if (window.marcarSemestre) { window.marcarSemestre(actual >= 54 ? 3 : (actual >= 24 ? 2 : 1)); }
             }
             if (pf) {
                 pf.on('flip', actualizarIndicador);
@@ -2147,7 +2174,7 @@
             }
             btnPrev.addEventListener('click', function () { if (pf) { pf.flipPrev(); } });
             btnNext.addEventListener('click', function () { if (pf) { pf.flipNext(); } });
-            [['btnSem1', 1], ['btnSem2', 2], ['btnSem1Vc', 1], ['btnSem2Vc', 2]].forEach(function (par) {
+            [['btnSem1', 1], ['btnSem2', 2], ['btnSem3', 3], ['btnSem1Vc', 1], ['btnSem2Vc', 2], ['btnSem3Vc', 3]].forEach(function (par) {
                 var b = document.getElementById(par[0]);
                 if (b) { b.addEventListener('click', function () { window.irASemestre(par[1]); }); }
             });
