@@ -290,19 +290,35 @@
         .book-nav {
             position: fixed; left: 50%; transform: translateX(-50%);
             bottom: calc(0.9rem + env(safe-area-inset-bottom)); z-index: 100;
-            display: flex; align-items: center; gap: 0.5rem;
+            display: flex; flex-direction: column; align-items: stretch; gap: 0.4rem;
             background: rgba(6, 17, 38, 0.88); border: 1px solid rgba(242, 169, 0, 0.45);
-            border-radius: 999px; padding: 0.35rem 0.5rem;
+            border-radius: 26px; padding: 0.4rem 0.5rem 0.45rem;
             box-shadow: 0 6px 20px rgba(0,0,0,0.45); backdrop-filter: blur(6px);
+            max-width: calc(100vw - 1rem);
         }
-        .book-nav button {
-            width: 44px; height: 44px; min-height: 44px; border-radius: 999px; border: none; cursor: pointer;
+        .book-nav-main { display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
+        .book-nav button.nav-arrow {
+            width: 44px; height: 44px; min-height: 44px; flex: none; border-radius: 999px; border: none; cursor: pointer;
             background: #F2A900; color: #0B2046; font-size: 1.35rem; font-weight: 700; line-height: 1;
             display: flex; align-items: center; justify-content: center; transition: background .2s ease, transform .2s ease;
         }
-        .book-nav button:hover { background: #ffc21f; }
-        .book-nav button:active { transform: scale(0.94); }
-        .book-nav button:disabled { opacity: 0.35; cursor: default; transform: none; }
+        .book-nav button.nav-arrow:hover { background: #ffc21f; }
+        .book-nav button.nav-arrow:active { transform: scale(0.94); }
+        .book-nav button.nav-arrow:disabled { opacity: 0.35; cursor: default; transform: none; }
+        /* Botones de salto entre semestres (lector y vista completa) */
+        .sem-nav { display: flex; gap: 0.4rem; justify-content: center; }
+        .sem-btn {
+            flex: 1 1 0; min-height: 30px; padding: 0.3rem 0.55rem; border-radius: 999px; cursor: pointer;
+            background: rgba(255,255,255,0.07); border: 1px solid rgba(242, 169, 0, 0.55); color: #fff;
+            font-family: 'Inter', sans-serif; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.05em;
+            text-transform: uppercase; white-space: nowrap; line-height: 1.2;
+            transition: background .2s ease, color .2s ease, transform .2s ease;
+        }
+        .sem-btn:hover { background: rgba(242, 169, 0, 0.28); }
+        .sem-btn:active { transform: scale(0.96); }
+        .sem-btn.activo { background: #F2A900; color: #0B2046; border-color: #F2A900; }
+        .vc-sem-nav { flex-basis: 100%; display: flex; gap: 0.4rem; }
+        .vc-sem-nav .sem-btn { flex: 0 1 auto; min-height: 34px; padding: 0.35rem 0.8rem; }
         .book-nav .page-indicator {
             color: #fff; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em;
             min-width: 6.8rem; text-align: center; white-space: nowrap;
@@ -315,7 +331,7 @@
         }
         #vistaCompleta.abierta { display: block; }
         .vc-header {
-            position: sticky; top: 0; z-index: 5; display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+            position: sticky; top: 0; z-index: 5; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.6rem 1rem;
             background: rgba(6, 17, 38, 0.95); border-bottom: 2px solid #F2A900;
             padding: calc(0.7rem + env(safe-area-inset-top)) 1rem 0.7rem;
         }
@@ -328,7 +344,7 @@
         .vc-list { display: flex; flex-direction: column; align-items: center; gap: 1.4rem; padding: 1.4rem 0.6rem 3rem; }
         .vc-item { position: relative; flex: none; overflow: hidden; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); background: #FDFBF7; }
         .vc-item > .page { position: absolute; top: 0; left: 0; transform-origin: top left; box-shadow: none; }
-        @media print { .book-nav { display: none !important; } }
+        @media print { .book-nav, .vc-sem-nav { display: none !important; } }
         @media (max-height: 540px) { #magazine { transform: scale(0.66); } }
     </style>
 </head>
@@ -1987,388 +2003,33 @@
                 </div>
             </div>
 
-            <!-- PAGINA 53: PORTADA SISTEMATIZACION 4 -->
-            <div class="page hard cover-dark">
-                <div class="w-full h-full p-5 flex flex-col justify-center items-center text-center relative overflow-hidden">
-                    <div class="my-auto flex flex-col items-center w-full relative z-10">
-                        <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-6 overflow-hidden border-[3px] border-upngold shadow-lg">
-                            <img src="assets/img-01.jpg" alt="Logo UPN" class="w-full h-full object-contain p-1.5">
-                        </div>
-                        <p class="text-upngold text-[9px] tracking-[0.3em] uppercase mb-2 font-semibold">Tercera parte</p>
-                        <h2 class="font-display text-[2.2rem] sm:text-[2.5rem] leading-[1] font-bold mb-3 text-white drop-shadow-lg">SISTEMATIZACIÓN<br><span class="text-white">4</span></h2>
-                        <div class="h-px w-20 bg-gradient-to-r from-transparent via-upngold to-transparent my-4"></div>
-                        <p class="text-[9px] font-light tracking-widest text-gray-300 uppercase">Taller de Prácticas Corporales 2</p>
-                        <p class="text-[8px] text-gray-400 mt-2">Sistematización de las prácticas corporales del segundo semestre de 2026</p>
-                        <p class="text-[8px] text-gray-400">Licenciatura en Educación Física • Campus Valmaría</p>
-                        <p class="text-[8px] text-gray-400 mt-2">Las 11 clases del semestre, con las fotos de las clases</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PAGINA 54: SISTEMATIZACION 4 - VIDEO EL VALOR DE GILMA -->
-            <div class="page">
-                <div class="page-content content-z flex flex-col">
-                    <span class="header-line">Sistematización 4 • Video</span>
-                    <div class="mt-5 mb-1.5">
-                        <h2 class="article-title text-xl text-upnblue leading-tight">PRESENTACIÓN EN ESCENARIO «EL VALOR DE GILMA»</h2>
-                    </div>
-
-                    <div class="video-frame mt-2">
-                        <video controls preload="metadata" playsinline poster="assets/img-43.jpg" aria-label="Video de la presentación en escenario El valor de Gilma">
-                            <source src="assets/video_sist4_gilma.mp4" type="video/mp4">
-                            Tu navegador no puede reproducir este video.
-                        </video>
-                    </div>
-                    <p class="foto-cap">Video de la Sistematización 4 (2:11)</p>
-                    <span class="page-number">54</span>
-                </div>
-            </div>
-
-            <!-- PAGINA 55: SISTEMATIZACION 4 - CLASE 01 PRESENTACION DEL PROGRAMA -->
-            <div class="page">
-                <div class="page-content content-z flex flex-col">
-                    <span class="header-line">Sistematización 4 • Clase 01</span>
-                    <div class="mt-5 mb-1.5">
-                        <h2 class="article-title text-xl text-upnblue leading-tight">PRESENTACIÓN DEL PROGRAMA SEMESTRAL</h2>
-                    </div>
-
-                    <div class="ficha">
-                        <div class="fila"><span class="k">Fecha</span><span class="v">3 agosto 2026</span></div>
-                        <div class="fila"><span class="k">Lugar</span><span class="v">Campus Valmaría, salón MO 019</span></div>
-                        <div class="fila"><span class="k">Profesor</span><span class="v">Lina Rocío Egea</span></div>
-                    </div>
-
-                    <div class="box-reflexion">
-                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Lo que nos quedó</h3>
-                        <p class="text-[6.5px] text-gray-700 leading-snug">tener claros los acuerdos de la clase nos permite como estudiantes universitario programar nuestro tiempo y tener la disponibilidad actitudinal y los trabajos a tiempo así no tener ninguna dificultad al momento de realizar dichas entregas.</p>
-                    </div>
-                    <span class="page-number">55</span>
-                </div>
-            </div>
-
-            <!-- PAGINA 56: SISTEMATIZACION 4 - CLASE 02 DEBATE CONCEPTO DE CUERPO -->
-            <div class="page pattern-dots">
-                <div class="page-content content-z flex flex-col">
-                    <span class="header-line">Sistematización 4 • Clase 02</span>
-                    <div class="mt-5 mb-1.5">
-                        <h2 class="article-title text-xl text-upnblue leading-none">DEBATE SOBRE LA LECTURA</h2>
-                        <p class="text-[7px] text-gray-500 mt-0.5">Aproximaciones al concepto de cuerpo</p>
-                    </div>
-
-                    <div class="ficha">
-                        <div class="fila"><span class="k">Fecha</span><span class="v">3 agosto 2026</span></div>
-                        <div class="fila"><span class="k">Lugar</span><span class="v">Campus Valmaría, salón MO 019</span></div>
-                        <div class="fila"><span class="k">Profesor</span><span class="v">Lina Rocío Egea</span></div>
-                    </div>
-
-                    <div class="box-proposito">
-                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Propósito u objetivo</h3>
-                        <p class="text-[6.5px] text-gray-700 leading-snug">tratar de identificar los diferentes significados que se le han dado al cuerpo, generar debate y reflexión sobre dichas posturas</p>
-                    </div>
-                    <span class="page-number">56</span>
-                </div>
-            </div>
-
-            <!-- PAGINA 57: SISTEMATIZACION 4 - CLASE 03 TENIS -->
-            <div class="page">
-                <div class="page-content content-z flex flex-col">
-                    <span class="header-line">Sistematización 4 • Clase 03</span>
-                    <div class="mt-5 mb-1.5">
-                        <h2 class="article-title text-xl text-upnblue leading-none">TENIS</h2>
-                    </div>
-
-                    <div class="ficha">
-                        <div class="fila"><span class="k">Fecha</span><span class="v">10 de agosto de 2026</span></div>
-                        <div class="fila"><span class="k">Lugar</span><span class="v">Campus Valmaría — Canchas deportivas</span></div>
-                        <div class="fila"><span class="k">Profesor</span><span class="v">Samuel Calderón y Alejandro Bautista</span></div>
-                    </div>
-
-                    <div class="box-proposito">
-                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Propósito u objetivo</h3>
-                        <p class="text-[6.5px] text-gray-700 leading-snug">Reconocer y vivenciar la práctica corporal del tenis mediante la experiencia práctica, fortaleciendo la comprensión de sus elementos técnicos y reglas básicas a través del trabajo individual y colectivo.</p>
-                    </div>
-
-                    <div class="fotos-row">
-                        <div class="foto-wrap">
-                            <img src="assets/img-44.jpg" alt="Estudiantes en la cancha de tenis" class="foto-bit" style="width:200px;height:150px">
-                            <p class="foto-cap">Estudiantes en la cancha de tenis</p>
-                        </div>
-                    </div>
-
-                    <div class="box-reflexion">
-                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Lo que nos quedó</h3>
-                        <p class="text-[6.5px] text-gray-700 leading-snug">La clase permitió comprender que el aprendizaje de una práctica corporal no se limita a conocer sus reglas de manera teórica, sino que la experiencia directa facilita su apropiación. En el tenis, además, la interrupción por el terremoto mostró la importancia de priorizar la seguridad y saber responder ante situaciones imprevistas.</p>
-                    </div>
-                    <span class="page-number">57</span>
-                </div>
-            </div>
-
-            <!-- PAGINA 58: SISTEMATIZACION 4 - CLASE 04 BEISBOL -->
-            <div class="page pattern-dots">
-                <div class="page-content content-z flex flex-col">
-                    <span class="header-line">Sistematización 4 • Clase 04</span>
-                    <div class="mt-5 mb-1.5">
-                        <h2 class="article-title text-xl text-upnblue leading-none">BÉISBOL</h2>
-                    </div>
-
-                    <div class="ficha">
-                        <div class="fila"><span class="k">Fecha</span><span class="v">10 de agosto de 2026</span></div>
-                        <div class="fila"><span class="k">Lugar</span><span class="v">Campus Valmaría — Canchas deportivas</span></div>
-                        <div class="fila"><span class="k">Profesor</span><span class="v">Luis Romano</span></div>
-                    </div>
-
-                    <div class="box-proposito">
-                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Propósito u objetivo</h3>
-                        <p class="text-[6.5px] text-gray-700 leading-snug">Reconocer y vivenciar la práctica corporal del béisbol mediante la experiencia práctica, fortaleciendo la comprensión de sus elementos técnicos y reglas básicas a través del trabajo individual y colectivo.</p>
-                    </div>
-
-                    <div class="fotos-row">
-                        <div class="foto-wrap">
-                            <img src="assets/img-45.jpg" alt="Jugadores con guante en la cancha de béisbol" class="foto-bit" style="width:200px;height:150px">
-                            <p class="foto-cap">Jugadores con guante en la cancha de béisbol</p>
-                        </div>
-                    </div>
-
-                    <div class="box-reflexion">
-                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Lo que nos quedó</h3>
-                        <p class="text-[6.5px] text-gray-700 leading-snug">La clase permitió comprender que el aprendizaje de una práctica corporal no se limita a conocer sus reglas de manera teórica, sino que la experiencia directa facilita su apropiación. En el béisbol, el partido entre todos fue una estrategia útil para comprender las reglas desde la práctica, pues permitió aprender mientras jugábamos y compartíamos con los demás.</p>
-                    </div>
-                    <span class="page-number">58</span>
-                </div>
-            </div>
-
-            <!-- PAGINA 59: SISTEMATIZACION 4 - CLASE 05 GIMNASIA -->
-            <div class="page pattern-dots">
-                <div class="page-content content-z flex flex-col">
-                    <span class="header-line">Sistematización 4 • Clase 05</span>
-                    <div class="mt-5 mb-1.5">
-                        <h2 class="article-title text-xl text-upnblue leading-none">GIMNASIA</h2>
-                    </div>
-
-                    <div class="ficha">
-                        <div class="fila"><span class="k">Fecha</span><span class="v">24 de agosto de 2026</span></div>
-                        <div class="fila"><span class="k">Lugar</span><span class="v">Campus Valmaría, salón MO 019</span></div>
-                        <div class="fila"><span class="k">Profesor</span><span class="v">Daniela Narváez</span></div>
-                    </div>
-
-                    <div class="fotos-row">
-                        <div class="foto-wrap">
-                            <img src="assets/img-46.jpg" alt="Aros y conos en el pasto" class="foto-bit" style="width:160px;height:213px">
-                            <p class="foto-cap">Aros y conos en el pasto</p>
-                        </div>
-                    </div>
-
-                    <div class="box-reflexion">
-                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Lo que nos quedó</h3>
-                        <p class="text-[6.5px] text-gray-700 leading-snug">La clase mostró que la gimnasia rítmica no es solo flexibilidad, sino también disciplina, cuidado corporal y trabajo en equipo.</p>
-                    </div>
-                    <span class="page-number">59</span>
-                </div>
-            </div>
-
-            <!-- PAGINA 60: SISTEMATIZACION 4 - CLASE 06 PORRISMO -->
-            <div class="page">
-                <div class="page-content content-z flex flex-col">
-                    <span class="header-line">Sistematización 4 • Clase 06</span>
-                    <div class="mt-5 mb-1.5">
-                        <h2 class="article-title text-xl text-upnblue leading-none">PORRISMO</h2>
-                    </div>
-
-                    <div class="ficha">
-                        <div class="fila"><span class="k">Fecha</span><span class="v">24 de agosto de 2026</span></div>
-                        <div class="fila"><span class="k">Lugar</span><span class="v">Campus Valmaría, cancha alterna</span></div>
-                        <div class="fila"><span class="k">Profesor</span><span class="v">Derick Sánchez</span></div>
-                    </div>
-
-                    <div class="box-proposito">
-                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Propósito u objetivo</h3>
-                        <p class="text-[6.5px] text-gray-700 leading-snug">Conocer los elementos básicos del porrismo y practicar las posiciones corporales, la coordinación y las elevaciones o figuras grupales, fortaleciendo la flexibilidad, la movilidad y la expresión corporal en el trabajo en grupo.</p>
-                    </div>
-
-                    <div class="box-reflexion">
-                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Lo que nos quedó</h3>
-                        <p class="text-[6.5px] text-gray-700 leading-snug">El porrismo muestra que el trabajo corporal no es solo individual: las posiciones y las elevaciones dependen de la coordinación con los demás y de la confianza entre quienes participan.</p>
-                    </div>
-                    <span class="page-number">60</span>
-                </div>
-            </div>
-
-            <!-- PAGINA 61: SISTEMATIZACION 4 - CLASE 07 PATINAJE -->
-            <div class="page pattern-dots">
-                <div class="page-content content-z flex flex-col">
-                    <span class="header-line">Sistematización 4 • Clase 07</span>
-                    <div class="mt-5 mb-1.5">
-                        <h2 class="article-title text-xl text-upnblue leading-none">PATINAJE</h2>
-                    </div>
-
-                    <div class="ficha">
-                        <div class="fila"><span class="k">Fecha</span><span class="v">31 de agosto de 2026</span></div>
-                        <div class="fila"><span class="k">Lugar</span><span class="v">Pista de atletismo</span></div>
-                        <div class="fila"><span class="k">Profesor</span><span class="v">Angela Virgüez, Ana Maria</span></div>
-                    </div>
-
-                    <div class="box-proposito">
-                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Propósito u objetivo</h3>
-                        <p class="text-[6.5px] text-gray-700 leading-snug">Conocer aspectos introductorios del patinaje y practicar posturas y desplazamientos iniciales, fortaleciendo el equilibrio, la coordinación y la agilidad</p>
-                    </div>
-
-                    <div class="fotos-row">
-                        <div class="foto-wrap">
-                            <img src="assets/img-35.jpg" alt="Patinadores en la pista con conos" class="foto-bit" style="width:118px;height:157px">
-                            <p class="foto-cap">Patinadores en la pista con conos</p>
-                        </div>
-                        <div class="foto-wrap">
-                            <img src="assets/img-36.jpg" alt="Slalom entre conos con patines" class="foto-bit" style="width:150px;height:112px">
-                            <p class="foto-cap">Slalom entre conos con patines</p>
-                        </div>
-                    </div>
-
-                    <div class="box-reflexion">
-                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Lo que nos quedó</h3>
-                        <p class="text-[6.5px] text-gray-700 leading-snug">Enseñar patinaje supone atender de manera especial a la seguridad y a la confianza.</p>
-                    </div>
-                    <span class="page-number">61</span>
-                </div>
-            </div>
-
-            <!-- PAGINA 62: SISTEMATIZACION 4 - CLASE 08 STREET HOCKEY -->
-            <div class="page">
-                <div class="page-content content-z flex flex-col">
-                    <span class="header-line">Sistematización 4 • Clase 08</span>
-                    <div class="mt-5 mb-1.5">
-                        <h2 class="article-title text-xl text-upnblue leading-none">STREET HOCKEY</h2>
-                    </div>
-
-                    <div class="ficha">
-                        <div class="fila"><span class="k">Fecha</span><span class="v">31 de agosto de 2026</span></div>
-                        <div class="fila"><span class="k">Lugar</span><span class="v">Cancha multipropósito</span></div>
-                        <div class="fila"><span class="k">Profesor</span><span class="v">Derick Sánchez</span></div>
-                    </div>
-
-                    <div class="box-proposito">
-                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Propósito u objetivo</h3>
-                        <p class="text-[6.5px] text-gray-700 leading-snug">Conocer nociones teóricas y componentes del stick, y experimentar habilidades iniciales de manejo, pase y remate con stick y pelota mientras se utilizan patines, integrando lo practicado en un partido</p>
-                    </div>
-
-                    <div class="fotos-row">
-                        <div class="foto-wrap">
-                            <img src="assets/img-47.jpg" alt="Hockey sobre patines en la cancha" class="foto-bit" style="width:124px;height:165px">
-                            <p class="foto-cap">Hockey sobre patines en la cancha</p>
-                        </div>
-                        <div class="foto-wrap">
-                            <img src="assets/img-48.jpg" alt="Jugadores con palos de hockey" class="foto-bit" style="width:124px;height:165px">
-                            <p class="foto-cap">Jugadores con palos de hockey</p>
-                        </div>
-                    </div>
-
-                    <div class="box-reflexion">
-                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Lo que nos quedó</h3>
-                        <p class="text-[6.5px] text-gray-700 leading-snug">La sesión organizó los aprendizajes desde una aproximación teórica hacia la práctica y, finalmente, hacia una situación de juego.</p>
-                    </div>
-                    <span class="page-number">62</span>
-                </div>
-            </div>
-
-            <!-- PAGINA 63: SISTEMATIZACION 4 - CLASE 09 MUSICA -->
-            <div class="page pattern-dots">
-                <div class="page-content content-z flex flex-col">
-                    <span class="header-line">Sistematización 4 • Clase 09</span>
-                    <div class="mt-5 mb-1.5">
-                        <h2 class="article-title text-xl text-upnblue leading-none">MÚSICA</h2>
-                    </div>
-
-                    <div class="ficha">
-                        <div class="fila"><span class="k">Fecha</span><span class="v">7 de septiembre de 2026</span></div>
-                        <div class="fila"><span class="k">Lugar</span><span class="v">Campus Valmaría, salón MO 019</span></div>
-                        <div class="fila"><span class="k">Profesor</span><span class="v">Ana Ortiz, Lauren Herrera y Samuel Chávez</span></div>
-                    </div>
-
-                    <div class="box-reflexion">
-                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Lo que nos quedó</h3>
-                        <p class="text-[6.5px] text-gray-700 leading-snug">La clase evidenció que no siempre se cuenta con el material, nadie llevó guacharaca, y el docente tuvo que aplicar un plan B dividiendo el grupo.</p>
-                    </div>
-                    <span class="page-number">63</span>
-                </div>
-            </div>
-
-            <!-- PAGINA 64: SISTEMATIZACION 4 - CLASE 10 CLASE DE PULSOS -->
-            <div class="page">
-                <div class="page-content content-z flex flex-col">
-                    <span class="header-line">Sistematización 4 • Clase 10</span>
-                    <div class="mt-5 mb-1.5">
-                        <h2 class="article-title text-xl text-upnblue leading-none">CLASE DE PULSOS</h2>
-                    </div>
-
-                    <div class="ficha">
-                        <div class="fila"><span class="k">Fecha</span><span class="v">7 de septiembre de 2026</span></div>
-                        <div class="fila"><span class="k">Lugar</span><span class="v">Campus Valmaría, salón MO 019</span></div>
-                        <div class="fila"><span class="k">Profesor</span><span class="v">Francisco Lozada</span></div>
-                    </div>
-
-                    <div class="fotos-row">
-                        <div class="foto-wrap">
-                            <img src="assets/img-38.jpg" alt="Pulso en grupo con el trofeo de dulces" class="foto-bit" style="width:132px;height:176px">
-                            <p class="foto-cap">Pulso en grupo con el trofeo de dulces</p>
-                        </div>
-                        <div class="foto-wrap">
-                            <img src="assets/img-39.jpg" alt="Pulso en primer plano" class="foto-bit" style="width:132px;height:176px">
-                            <p class="foto-cap">Pulso en primer plano</p>
-                        </div>
-                    </div>
-
-                    <div class="box-reflexion">
-                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Lo que nos quedó</h3>
-                        <p class="text-[6.5px] text-gray-700 leading-snug">La clase mostró que los pulsos no son solo fuerza, sino respeto por el cuerpo del otro, control de la fuerza y juego limpio.</p>
-                    </div>
-                    <span class="page-number">64</span>
-                </div>
-            </div>
-
-            <!-- PAGINA 65: SISTEMATIZACION 4 - CLASE 11 MUSICA 2.0 -->
-            <div class="page pattern-dots">
-                <div class="page-content content-z flex flex-col">
-                    <span class="header-line">Sistematización 4 • Clase 11</span>
-                    <div class="mt-5 mb-1.5">
-                        <h2 class="article-title text-xl text-upnblue leading-tight">MÚSICA 2.0</h2>
-                    </div>
-
-                    <div class="ficha">
-                        <div class="fila"><span class="k">Fecha</span><span class="v">14 de septiembre de 2026</span></div>
-                        <div class="fila"><span class="k">Lugar</span><span class="v">Campus Valmaría, salón # 19</span></div>
-                        <div class="fila"><span class="k">Profesor</span><span class="v">sin profesor</span></div>
-                    </div>
-
-                    <div class="box-proposito">
-                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Propósito u objetivo</h3>
-                        <p class="text-[6.5px] text-gray-700 leading-snug">Dar cierre a las actividades de experiencias corporales propuestas por cada uno de los estudiantes</p>
-                    </div>
-
-                    <div class="box-reflexion">
-                        <h3 class="font-bold text-upnblue text-[8px] uppercase mb-0.5">Lo que nos quedó</h3>
-                        <p class="text-[6.5px] text-gray-700 leading-snug">ir de lo más fácil a lo más complejo para que la gente no se frustre y así haya una progresión del trabajo.</p>
-                    </div>
-
-                    <p class="text-[7px] font-bold text-gray-400 tracking-widest uppercase mt-4 text-center">Fin de la Sistematización 4 • Taller 2</p>
-                    <span class="page-number">65</span>
-                </div>
-            </div>
         </div>
     </div>
 
 
     <nav class="book-nav" aria-label="Navegación de la revista">
-        <button type="button" id="btnPrev" aria-label="Página anterior">&#8249;</button>
-        <div class="page-indicator"><span id="pageIndicator">Página 1 de 65</span><small>Toca una esquina o usa las flechas</small></div>
-        <button type="button" id="btnNext" aria-label="Página siguiente">&#8250;</button>
+        <div class="book-nav-main">
+            <button type="button" id="btnPrev" class="nav-arrow" aria-label="Página anterior">&#8249;</button>
+            <div class="page-indicator"><span id="pageIndicator">Página 1 de 52</span><small>Toca una esquina o usa las flechas</small></div>
+            <button type="button" id="btnNext" class="nav-arrow" aria-label="Página siguiente">&#8250;</button>
+        </div>
+        <div class="sem-nav" role="group" aria-label="Ir a un semestre">
+            <button type="button" class="sem-btn activo" id="btnSem1">Primer semestre</button>
+            <button type="button" class="sem-btn" id="btnSem2">Segundo semestre</button>
+        </div>
     </nav>
 
     <div id="vistaCompleta" role="dialog" aria-modal="true" aria-label="Vista completa de la revista">
         <div class="vc-header">
             <div>
                 <h2>En Movimiento — Vista completa</h2>
-                <p>Desplázate para leer las 65 páginas seguidas: la guía del primer semestre, las bitácoras del segundo semestre y la Sistematización 4. Para guardarlo como PDF, usa la opción «Imprimir» de tu navegador con esta vista abierta.</p>
+                <p>Desplázate para leer las 52 páginas seguidas: la guía del primer semestre y las bitácoras del segundo semestre. Para guardarlo como PDF, usa la opción «Imprimir» de tu navegador con esta vista abierta.</p>
             </div>
             <button type="button" class="vc-close" id="btnCerrarVista">Volver a la revista</button>
+            <div class="vc-sem-nav" role="group" aria-label="Ir a un semestre">
+                <button type="button" class="sem-btn activo" id="btnSem1Vc">Primer semestre</button>
+                <button type="button" class="sem-btn" id="btnSem2Vc">Segundo semestre</button>
+            </div>
         </div>
         <div class="vc-list" id="vcList"></div>
     </div>
@@ -2418,6 +2079,31 @@
             return false;
         };
 
+        // Salto directo entre semestres: Primer semestre = página 1 (índice 0),
+        // Segundo semestre = portada del segundo semestre, página 23 (índice 22).
+        // En la vista completa desplaza hasta esa página; en el lector voltea hasta ella.
+        window.marcarSemestre = function (sem) {
+            ['btnSem1', 'btnSem1Vc'].forEach(function (id) {
+                var b = document.getElementById(id);
+                if (b) { b.classList.toggle('activo', sem === 1); }
+            });
+            ['btnSem2', 'btnSem2Vc'].forEach(function (id) {
+                var b = document.getElementById(id);
+                if (b) { b.classList.toggle('activo', sem === 2); }
+            });
+        };
+        window.irASemestre = function (sem) {
+            var indice = sem === 2 ? 22 : 0;
+            window.marcarSemestre(sem);
+            var overlay = document.getElementById('vistaCompleta');
+            if (overlay && overlay.classList.contains('abierta')) {
+                var destino = document.getElementById('vc-pag-' + indice);
+                if (destino) { destino.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+                return;
+            }
+            if (window.__pageFlip) { window.__pageFlip.turnToPage(indice); }
+        };
+
         // Copia limpia de las páginas, capturada antes de que PageFlip las transforme.
         var __paginasOriginales = Array.prototype.map.call(document.querySelectorAll('#magazine .page'), function (p) { return p.cloneNode(true); });
 
@@ -2434,6 +2120,7 @@
                 indicator.textContent = 'Página ' + actual + ' de ' + total;
                 btnPrev.disabled = actual <= 1;
                 btnNext.disabled = actual >= total;
+                if (window.marcarSemestre) { window.marcarSemestre(actual >= 23 ? 2 : 1); }
             }
             if (pf) {
                 pf.on('flip', actualizarIndicador);
@@ -2442,6 +2129,10 @@
             }
             btnPrev.addEventListener('click', function () { if (pf) { pf.flipPrev(); } });
             btnNext.addEventListener('click', function () { if (pf) { pf.flipNext(); } });
+            [['btnSem1', 1], ['btnSem2', 2], ['btnSem1Vc', 1], ['btnSem2Vc', 2]].forEach(function (par) {
+                var b = document.getElementById(par[0]);
+                if (b) { b.addEventListener('click', function () { window.irASemestre(par[1]); }); }
+            });
             document.addEventListener('keydown', function (e) {
                 if (document.getElementById('vistaCompleta').classList.contains('abierta')) return;
                 if (e.key === 'ArrowLeft' && pf) pf.flipPrev();
@@ -2455,9 +2146,10 @@
                 lista.innerHTML = '';
                 var ancho = Math.min(window.innerWidth - 24, 540);
                 var escala = ancho / 320;
-                __paginasOriginales.forEach(function (original) {
+                __paginasOriginales.forEach(function (original, idx) {
                     var item = document.createElement('div');
                     item.className = 'vc-item';
+                    item.id = 'vc-pag-' + idx;
                     item.style.width = ancho + 'px';
                     item.style.height = (480 * escala) + 'px';
                     var clon = original.cloneNode(true);
